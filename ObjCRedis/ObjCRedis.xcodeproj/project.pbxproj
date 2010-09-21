@@ -12,8 +12,19 @@
 		0C1EE57E1247A25000981F9A /* ObjCRedis.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C1EE57C1247A25000981F9A /* ObjCRedis.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0C1EE57F1247A25000981F9A /* ObjCRedis.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1EE57D1247A25000981F9A /* ObjCRedis.m */; };
 		0C1EE58D1247A2D700981F9A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0867D69BFE84028FC02AAC07 /* Foundation.framework */; };
+		0C1EE61412480B8B00981F9A /* test_base.nu in Resources */ = {isa = PBXBuildFile; fileRef = 0C1EE607124809CE00981F9A /* test_base.nu */; };
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0C1EE5F1124807CD00981F9A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* ObjCRedis */;
+			remoteInfo = ObjCRedis;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -22,12 +33,23 @@
 		0C1EE530124788DA00981F9A /* credis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = credis.h; sourceTree = "<group>"; };
 		0C1EE57C1247A25000981F9A /* ObjCRedis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjCRedis.h; sourceTree = "<group>"; };
 		0C1EE57D1247A25000981F9A /* ObjCRedis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjCRedis.m; sourceTree = "<group>"; };
+		0C1EE59B1247DE0300981F9A /* ObjCRedis_Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ObjCRedis_Tests-Info.plist"; sourceTree = "<group>"; };
+		0C1EE5EC124807C700981F9A /* ObjCRedis_tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjCRedis_tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C1EE5ED124807C700981F9A /* ObjCRedis_tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ObjCRedis_tests-Info.plist"; sourceTree = "<group>"; };
+		0C1EE607124809CE00981F9A /* test_base.nu */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.nu; path = test_base.nu; sourceTree = "<group>"; };
 		32DBCF5E0370ADEE00C91783 /* ObjCRedis_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjCRedis_Prefix.pch; sourceTree = "<group>"; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* ObjCRedis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ObjCRedis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0C1EE5E9124807C700981F9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DC2EF560486A6940098B216 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -43,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				8DC2EF5B0486A6940098B216 /* ObjCRedis.framework */,
+				0C1EE5EC124807C700981F9A /* ObjCRedis_tests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -50,12 +73,15 @@
 		0867D691FE84028FC02AAC07 /* ObjCRedis */ = {
 			isa = PBXGroup;
 			children = (
+				0C1EE6061248099700981F9A /* TestCases */,
 				0C1EE52E124788B700981F9A /* credis */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				089C1665FE841158C02AAC07 /* Resources */,
 				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
 				034768DFFF38A50411DB9C8B /* Products */,
+				0C1EE59B1247DE0300981F9A /* ObjCRedis_Tests-Info.plist */,
+				0C1EE5ED124807C700981F9A /* ObjCRedis_tests-Info.plist */,
 			);
 			name = ObjCRedis;
 			sourceTree = "<group>";
@@ -96,6 +122,14 @@
 			name = credis;
 			sourceTree = "<group>";
 		};
+		0C1EE6061248099700981F9A /* TestCases */ = {
+			isa = PBXGroup;
+			children = (
+				0C1EE607124809CE00981F9A /* test_base.nu */,
+			);
+			name = TestCases;
+			sourceTree = "<group>";
+		};
 		1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +168,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		0C1EE5EB124807C700981F9A /* ObjCRedis_tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C1EE5F0124807C700981F9A /* Build configuration list for PBXNativeTarget "ObjCRedis_tests" */;
+			buildPhases = (
+				0C1EE5E7124807C700981F9A /* Resources */,
+				0C1EE5E8124807C700981F9A /* Sources */,
+				0C1EE5E9124807C700981F9A /* Frameworks */,
+				0C1EE5EA124807C700981F9A /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0C1EE5F2124807CD00981F9A /* PBXTargetDependency */,
+			);
+			name = ObjCRedis_tests;
+			productName = ObjCRedis_tests;
+			productReference = 0C1EE5EC124807C700981F9A /* ObjCRedis_tests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		8DC2EF4F0486A6940098B216 /* ObjCRedis */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "ObjCRedis" */;
@@ -167,11 +220,20 @@
 			projectRoot = "";
 			targets = (
 				8DC2EF4F0486A6940098B216 /* ObjCRedis */,
+				0C1EE5EB124807C700981F9A /* ObjCRedis_tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0C1EE5E7124807C700981F9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C1EE61412480B8B00981F9A /* test_base.nu in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DC2EF520486A6940098B216 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -182,7 +244,30 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0C1EE5EA124807C700981F9A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/nush /usr/local/bin/nutest test_*.nu";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		0C1EE5E8124807C700981F9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DC2EF540486A6940098B216 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -193,6 +278,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0C1EE5F2124807CD00981F9A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DC2EF4F0486A6940098B216 /* ObjCRedis */;
+			targetProxy = 0C1EE5F1124807CD00981F9A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		089C1666FE841158C02AAC07 /* InfoPlist.strings */ = {
@@ -206,6 +299,64 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0C1EE5EE124807C700981F9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = "ObjCRedis_tests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					SenTestingKit,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = ObjCRedis_tests;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		0C1EE5EF124807C700981F9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				INFOPLIST_FILE = "ObjCRedis_tests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					SenTestingKit,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = ObjCRedis_tests;
+				WRAPPER_EXTENSION = octest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		1DEB91AE08733DA50010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -276,6 +427,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0C1EE5F0124807C700981F9A /* Build configuration list for PBXNativeTarget "ObjCRedis_tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C1EE5EE124807C700981F9A /* Debug */,
+				0C1EE5EF124807C700981F9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "ObjCRedis" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

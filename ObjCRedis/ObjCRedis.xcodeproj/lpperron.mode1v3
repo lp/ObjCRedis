@@ -229,8 +229,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -266,22 +264,27 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateExpansionKey</key>
 							<array>
 								<string>0867D691FE84028FC02AAC07</string>
-								<string>0C1EE52E124788B700981F9A</string>
+								<string>0C1EE6061248099700981F9A</string>
 								<string>08FB77AEFE84172EC02AAC07</string>
-								<string>32C88DFF0371C24200C91783</string>
-								<string>089C1665FE841158C02AAC07</string>
 								<string>0867D69AFE84028FC02AAC07</string>
 								<string>1058C7B0FEA5585E11CA2CBB</string>
 								<string>1058C7B2FEA5585E11CA2CBB</string>
 								<string>034768DFFF38A50411DB9C8B</string>
 								<string>1C37FBAC04509CD000000102</string>
+								<string>0C1EE5F3124807DF00981F9A</string>
+								<string>0C1EE5F4124807DF00981F9A</string>
+								<string>0C1EE61712480C1000981F9A</string>
+								<string>0C1EE60F12480B5C00981F9A</string>
+								<string>0C1EE5F5124807DF00981F9A</string>
 								<string>1C37FAAC04509CD000000102</string>
 								<string>1C37FABC05509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>19</integer>
+									<integer>27</integer>
+									<integer>26</integer>
+									<integer>24</integer>
 									<integer>18</integer>
 								</array>
 							</array>
@@ -316,12 +319,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ObjCRedis.h</string>
+								<string>test_base.nu</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -329,11 +334,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ObjCRedis.h</string>
+										<string>test_base.nu</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>0C1EE5921247A2F100981F9A</string>
+										<string>0C1EE63C12483A1C00981F9A</string>
 										<key>history</key>
 										<array>
 											<string>0C1EE535124788FB00981F9A</string>
@@ -341,7 +346,9 @@
 											<string>0C1EE5801247A26600981F9A</string>
 											<string>0C1EE5811247A26600981F9A</string>
 											<string>0C1EE5821247A26600981F9A</string>
-											<string>0C1EE5831247A26600981F9A</string>
+											<string>0C1EE60912480ADA00981F9A</string>
+											<string>0C1EE63A12483A1C00981F9A</string>
+											<string>0C1EE63B12483A1C00981F9A</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -571,14 +578,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1028, 337}}</string>
+								<string>{{0, 0}, {1280, 294}}</string>
 								<key>RubberWindowFrame</key>
-								<string>42 113 1028 619 0 0 1280 778 </string>
+								<string>0 120 1280 658 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>337pt</string>
+							<string>294pt</string>
 						</dict>
 						<dict>
 							<key>BecomeActive</key>
@@ -597,18 +604,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 342}, {1028, 236}}</string>
+								<string>{{0, 299}, {1280, 318}}</string>
 								<key>RubberWindowFrame</key>
-								<string>42 113 1028 619 0 0 1280 778 </string>
+								<string>0 120 1280 658 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXBuildResultsModule</string>
 							<key>Proportion</key>
-							<string>236pt</string>
+							<string>318pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>578pt</string>
+					<string>617pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -631,7 +638,7 @@
 			<key>WindowContentMinSize</key>
 			<string>486 300</string>
 			<key>WindowString</key>
-			<string>42 113 1028 619 0 0 1280 778 </string>
+			<string>0 120 1280 658 0 0 1280 778 </string>
 			<key>WindowToolGUID</key>
 			<string>0C1EE53B124788FB00981F9A</string>
 			<key>WindowToolIsVisible</key>
