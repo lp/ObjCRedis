@@ -7,9 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#include "credis.h"
 
 @interface ObjCRedis : NSObject {
-
+	REDIS rh;
 }
+
++ (id)redis;
+
++ (id)redis:(NSString*)ipaddress on:(NSNumber*)portnumber;
+
+- (NSNumber*)connect:(NSString*)ipaddress on:(NSNumber*)portnumber;
 
 @end
