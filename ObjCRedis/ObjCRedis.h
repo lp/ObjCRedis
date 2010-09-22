@@ -21,6 +21,10 @@
 
 // General Methods
 - (NSNumber*)exists:(NSString*)key;
+- (NSNumber*)del:(NSString*)key;
+- (NSNumber*)type:(NSString*)key;
+// TODO keys
+// TODO randomkey
 
 // String Methods
 - (NSNumber*)set:(NSString*)key to:(NSString*)value;

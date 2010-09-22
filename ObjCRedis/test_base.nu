@@ -52,4 +52,28 @@
   
 )
 
+(class Test_04_TestGeneralActions is NuTestCase
+  (ivar (id) redis (id) testKey (id) testValue)
+  
+  (imethod (id) setup is
+    (set @testKey "testKey")
+    (set @testValue "testValue")
+    
+    (set @redis (ObjCRedis redis))
+    (@redis set:@testKey to:@testValue)
+  )
+  
+  (imethod (id) testExists is
+    (assert_equal @testValue (@redis get:@testKey))
+  )
+  
+  (imethod (id) testType is
+    (assert_equal 2 (@redis type:@testKey))
+  )
+  
+  (imethod (id) teardown is
+    (@redis del:@testKey)
+  )
+)
+
 

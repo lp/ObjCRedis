@@ -27,44 +27,26 @@
 	}
 }
 
-- (NSNumber*)connect:(NSString *)ipaddress on:(NSNumber *)portnumber
-{
+- (NSNumber*)connect:(NSString *)ipaddress on:(NSNumber *)portnumber {
 	rh = credis_connect([ipaddress UTF8String],[portnumber intValue], 2000);
-	
-	if (rh) { return [NSNumber numberWithBool:YES];
-	}
-	else { return [NSNumber numberWithBool:NO];
-	}
+	if (rh) { return [NSNumber numberWithBool:YES]; }
+	else { return [NSNumber numberWithBool:NO]; }
 }
 
 // General Methods
-- (NSNumber*)exists:(NSString *)key
-{
-	const char * rKey = [key UTF8String];
-	return [NSNumber numberWithInt:credis_exists(rh, rKey)];
-}
-
-- (NSNumber*)del:(NSString*)key
-{
-	const char * rKey = [key UTF8String];
-	return [NSNumber numberWithInt:credis_del(rh, rKey)];
-}
+- (NSNumber*)exists:(NSString *)key { return [NSNumber numberWithInt:credis_exists(rh, [key UTF8String])]; }
+- (NSNumber*)del:(NSString*)key { return [NSNumber numberWithInt:credis_del(rh, [key UTF8String])]; }
+- (NSNumber*)type:(NSString *)key { return [NSNumber numberWithInt:credis_type(rh, [key UTF8String])]; }
+// TODO keys
+// TODO randomkey
 
 // String Methods
-- (NSNumber*)set:(NSString *)key to:(NSString *)value
-{
-	const char * rKey = [key UTF8String];
-	const char * rValue = [value UTF8String];
-	
-	return [NSNumber numberWithInt:credis_set(rh, rKey, rValue)];
-}
+- (NSNumber*)set:(NSString *)key to:(NSString *)value {
+	return [NSNumber numberWithInt:credis_set(rh, [key UTF8String], [value UTF8String])]; }
 
-- (NSString*)get:(NSString *)key
-{
-	const char * rKey = [key UTF8String];
-	char * rValue;
-	
-	credis_get(rh, rKey, &rValue);
+- (NSString*)get:(NSString *)key {
+	char * rValue;	
+	credis_get(rh, [key UTF8String], &rValue);
 	return [NSString stringWithUTF8String:rValue];
 }
 

@@ -44,11 +44,7 @@
 		0C1EE530124788DA00981F9A /* credis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = credis.h; sourceTree = "<group>"; };
 		0C1EE57C1247A25000981F9A /* ObjCRedis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjCRedis.h; sourceTree = "<group>"; };
 		0C1EE57D1247A25000981F9A /* ObjCRedis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjCRedis.m; sourceTree = "<group>"; };
-		0C1EE59B1247DE0300981F9A /* ObjCRedis_Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ObjCRedis_Tests-Info.plist"; sourceTree = "<group>"; };
-		0C1EE5ED124807C700981F9A /* ObjCRedis_tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ObjCRedis_tests-Info.plist"; sourceTree = "<group>"; };
 		0C1EE607124809CE00981F9A /* test_base.nu */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.nu; path = test_base.nu; sourceTree = "<group>"; };
-		0C1EE6CA1249578000981F9A /* PrepareToTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PrepareToTest-Info.plist"; sourceTree = "<group>"; };
-		0C1EE7131249937100981F9A /* BuildAndTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BuildAndTest-Info.plist"; sourceTree = "<group>"; };
 		0C1EE7621249977E00981F9A /* BuildAndRunTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BuildAndRunTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C1EE7631249977E00981F9A /* BuildAndRunTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BuildAndRunTests-Info.plist"; sourceTree = "<group>"; };
 		32DBCF5E0370ADEE00C91783 /* ObjCRedis_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjCRedis_Prefix.pch; sourceTree = "<group>"; };
@@ -94,10 +90,6 @@
 				089C1665FE841158C02AAC07 /* Resources */,
 				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
 				034768DFFF38A50411DB9C8B /* Products */,
-				0C1EE59B1247DE0300981F9A /* ObjCRedis_Tests-Info.plist */,
-				0C1EE5ED124807C700981F9A /* ObjCRedis_tests-Info.plist */,
-				0C1EE6CA1249578000981F9A /* PrepareToTest-Info.plist */,
-				0C1EE7131249937100981F9A /* BuildAndTest-Info.plist */,
 				0C1EE7631249977E00981F9A /* BuildAndRunTests-Info.plist */,
 			);
 			name = ObjCRedis;
