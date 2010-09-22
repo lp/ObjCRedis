@@ -86,6 +86,11 @@
 	credis_incr(rh, [key UTF8String], &rValue);
 	return [NSNumber numberWithInt:rValue];
 }
+- (NSNumber*)incr:(NSString*)key by:(NSNumber*)incrValue {
+	int rValue;
+	credis_incrby(rh, [key UTF8String], [incrValue intValue], &rValue);
+	return [NSNumber numberWithInt:rValue];
+}
 
 - (void)dealloc
 {	

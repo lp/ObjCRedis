@@ -186,6 +186,12 @@
     (assert_equal 3 (@redis incr:"testIncr"))
   )
   
+  (imethod (id) testIncrby is
+    (@redis set:"testIncr" to:"1")
+    (assert_equal 3 (@redis incr:"testIncr" by:2))
+    (assert_equal 6 (@redis incr:"testIncr" by:3))
+  )
+  
   (imethod (id) teardown is
     (@redis flushall)
   )
