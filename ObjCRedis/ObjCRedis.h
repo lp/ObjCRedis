@@ -31,6 +31,7 @@
 - (NSNumber*)expire:(NSString*)key in:(NSNumber*)time;
 - (NSNumber*)ttl:(NSString*)key;
 - (NSNumber*)select:(NSNumber*)index;
+- (NSNumber*)move:(NSString*)key to:(NSNumber*)index;
 
 // String Methods
 - (NSNumber*)set:(NSString*)key to:(NSString*)value;

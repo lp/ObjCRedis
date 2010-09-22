@@ -56,6 +56,9 @@
 - (NSNumber*)select:(NSNumber*)index {
 	return [NSNumber numberWithInt:credis_select(rh, [index intValue])];
 }
+- (NSNumber*)move:(NSString *)key to:(NSNumber *)index {
+	return [NSNumber numberWithInt:credis_move(rh, [key UTF8String], [index intValue])];
+}
 
 // String Methods
 - (NSNumber*)set:(NSString *)key to:(NSString *)value {

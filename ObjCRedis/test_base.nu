@@ -110,6 +110,16 @@
     (assert_equal 0 (@redis exists:@testKey))
   )
   
+  (imethod (id) testMove is
+    (assert_equal 0 (@redis move:@testKey to:1))
+    (assert_equal -1 (@redis exists:@testKey))
+    (assert_equal 0 (@redis select:1))
+    (assert_equal 0 (@redis exists:@testKey))
+    (assert_equal 0 (@redis move:@testKey to:0))
+    (assert_equal 0 (@redis select:0))
+    (assert_equal 0 (@redis exists:@testKey))
+  )
+  
   (imethod (id) teardown is
     (@redis del:@testKey)
   )
