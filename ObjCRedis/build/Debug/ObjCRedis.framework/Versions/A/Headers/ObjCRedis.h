@@ -18,6 +18,11 @@
 + (id)redis:(NSString*)ipaddress on:(NSNumber*)portnumber;
 
 - (NSNumber*)connect:(NSString*)ipaddress on:(NSNumber*)portnumber;
+
+// General Methods
+- (NSNumber*)exists:(NSString*)key;
+
+// String Methods
 - (NSNumber*)set:(NSString*)key to:(NSString*)value;
 - (NSString*)get:(NSString*)key;
 

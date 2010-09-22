@@ -273,7 +273,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "rm -d -R \"${PROJECT_DIR}/ObjCRedis.framework/\"\ncp -R \"${PROJECT_DIR}/build/Debug/ObjCRedis.framework/\" \"${PROJECT_DIR}/ObjCRedis.framework/\"\ncd \"${PROJECT_DIR}/\"\n/usr/local/bin/nush /usr/local/bin/nutest test_*.nu";
+			shellScript = "rm -d -R \"${PROJECT_DIR}/ObjCRedis.framework/\"\ncp -R \"${PROJECT_DIR}/build/Debug/ObjCRedis.framework/\" \"${PROJECT_DIR}/ObjCRedis.framework/\"\ncd \"${PROJECT_DIR}/\"\n/usr/local/bin/nush /usr/local/bin/nutest -t test_*.nu";
 		};
 /* End PBXShellScriptBuildPhase section */
 

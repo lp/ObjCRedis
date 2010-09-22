@@ -37,6 +37,20 @@
 	}
 }
 
+// General Methods
+- (NSNumber*)exists:(NSString *)key
+{
+	const char * rKey = [key UTF8String];
+	return [NSNumber numberWithInt:credis_exists(rh, rKey)];
+}
+
+- (NSNumber*)del:(NSString*)key
+{
+	const char * rKey = [key UTF8String];
+	return [NSNumber numberWithInt:credis_del(rh, rKey)];
+}
+
+// String Methods
 - (NSNumber*)set:(NSString *)key to:(NSString *)value
 {
 	const char * rKey = [key UTF8String];

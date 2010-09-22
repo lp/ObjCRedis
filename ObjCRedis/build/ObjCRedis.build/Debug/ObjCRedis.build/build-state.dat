@@ -1,7 +1,7 @@
 TObjCRedis
 v7
 r0
-t306851587.782275
+t306874953.801185
 cCheck dependencies
 cSymLink /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/Debug/ObjCRedis.framework/Versions/Current A
 cSymLink /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/Debug/ObjCRedis.framework/Resources Versions/Current/Resources
@@ -129,16 +129,16 @@ t1284984956
 s48
 
 N/Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/ObjCRedis.h
-c000000004C991E7300000000000001D3
-t1285103219
-s467
+c000000004C9A505C000000000000021E
+t1285181532
+s542
 i<Foundation/Foundation.h>
 i"credis.h"
 
 N/Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/ObjCRedis.m
-c000000004C996B6400000000000004E4
-t1285122916
-s1252
+c000000004C9A52C00000000000000616
+t1285182144
+s1558
 i"ObjCRedis.h"
 
 N/Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/ObjCRedis_Prefix.pch
@@ -148,7 +148,7 @@ s160
 i<Foundation/Foundation.h>
 
 N/Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/Debug/ObjCRedis.framework
-t1285123157
+t1285182153
 s204
 
 N/Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/Debug/ObjCRedis.framework/Headers
@@ -164,16 +164,16 @@ t3
 s26
 
 N/Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/Debug/ObjCRedis.framework/Versions/A/Headers/ObjCRedis.h
-t1285123154
-s467
+t1285181682
+s542
 
 N/Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/Debug/ObjCRedis.framework/Versions/A/Headers/credis.h
 t1285123154
 s19446
 
 N/Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/Debug/ObjCRedis.framework/Versions/A/ObjCRedis
-t1285123157
-s52160
+t1285182153
+s56520
 
 N/Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/Debug/ObjCRedis.framework/Versions/A/Resources/English.lproj/InfoPlist.strings
 t1285123154
@@ -193,8 +193,8 @@ t1285123154
 s295
 
 N/Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/ObjCRedis.build/Debug/ObjCRedis.build/Objects-normal/x86_64/ObjCRedis.o
-t1285123157
-s13428
+t1285182153
+s14864
 
 N/Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/ObjCRedis.build/Debug/ObjCRedis.build/Objects-normal/x86_64/credis.o
 t1285123157
@@ -246,11 +246,11 @@ s851
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies306851587#306851587#0(0"0(0#1#0"8603767936#0"0#
+lSLF07#2@18"Check dependencies306874953#306874953#0(0"0(0#1#0"8617611072#0"0#
 
 CCompileC build/ObjCRedis.build/Debug/ObjCRedis.build/Objects-normal/x86_64/ObjCRedis.o /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/ObjCRedis.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s306815957.041918
-e306815957.198572
+s306874953.646209
+e306874953.770072
 r1
 xCompileC
 xbuild/ObjCRedis.build/Debug/ObjCRedis.build/Objects-normal/x86_64/ObjCRedis.o
@@ -259,7 +259,7 @@ xnormal
 xx86_64
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@90"Compile /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/ObjCRedis.m306815957#306815957#0(0"0(0#0#82"/Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/ObjCRedis.m8603195520#1862"    cd /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fobjc-gc -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/ObjCRedis.build/Debug/ObjCRedis.build/ObjCRedis-generated-files.hmap -I/Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/ObjCRedis.build/Debug/ObjCRedis.build/ObjCRedis-own-target-headers.hmap -I/Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/ObjCRedis.build/Debug/ObjCRedis.build/ObjCRedis-all-target-headers.hmap -iquote /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/ObjCRedis.build/Debug/ObjCRedis.build/ObjCRedis-project-headers.hmap -F/Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/Debug -I/Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/Debug/include -I/Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/ObjCRedis.build/Debug/ObjCRedis.build/DerivedSources/x86_64 -I/Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/ObjCRedis.build/Debug/ObjCRedis.build/DerivedSources -include /var/folders/mC/mCxAOxLoFCuWvYmrR7CGNE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ObjCRedis_Prefix-bpxhncxkqxuqjtezaoydpwzxctjn/ObjCRedis_Prefix.pch -c /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/ObjCRedis.m -o /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/ObjCRedis.build/Debug/ObjCRedis.build/Objects-normal/x86_64/ObjCRedis.o0#
+lSLF07#2@90"Compile /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/ObjCRedis.m306874953#306874953#0(0"0(0#0#82"/Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/ObjCRedis.m8602896640#1862"    cd /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fobjc-gc -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/ObjCRedis.build/Debug/ObjCRedis.build/ObjCRedis-generated-files.hmap -I/Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/ObjCRedis.build/Debug/ObjCRedis.build/ObjCRedis-own-target-headers.hmap -I/Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/ObjCRedis.build/Debug/ObjCRedis.build/ObjCRedis-all-target-headers.hmap -iquote /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/ObjCRedis.build/Debug/ObjCRedis.build/ObjCRedis-project-headers.hmap -F/Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/Debug -I/Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/Debug/include -I/Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/ObjCRedis.build/Debug/ObjCRedis.build/DerivedSources/x86_64 -I/Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/ObjCRedis.build/Debug/ObjCRedis.build/DerivedSources -include /var/folders/mC/mCxAOxLoFCuWvYmrR7CGNE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ObjCRedis_Prefix-bpxhncxkqxuqjtezaoydpwzxctjn/ObjCRedis_Prefix.pch -c /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/ObjCRedis.m -o /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/ObjCRedis.build/Debug/ObjCRedis.build/Objects-normal/x86_64/ObjCRedis.o0#
 
 CCompileC build/ObjCRedis.build/Debug/ObjCRedis.build/Objects-normal/x86_64/credis.o /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/credis.c normal x86_64 c com.apple.compilers.gcc.4_2
 s306815957.040688
@@ -284,13 +284,13 @@ xEnglish.lproj/InfoPlist.strings
 lSLF07#2@36"Copy English.lproj/InfoPlist.strings306815954#306815954#0(0"0(0#0#102"/Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/English.lproj/InfoPlist.strings8600877536#439"    cd /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis    setenv ICONV /usr/bin/iconv    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-8 --outputencoding UTF-16 English.lproj/InfoPlist.strings --outdir /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/Debug/ObjCRedis.framework/Versions/A/Resources/English.lproj0#
 
 CCpHeader build/Debug/ObjCRedis.framework/Versions/A/Headers/ObjCRedis.h ObjCRedis.h
-s306815954.775803
-e306815954.780356
+s306874482.174073
+e306874482.239560
 r1
 xCpHeader
 xbuild/Debug/ObjCRedis.framework/Versions/A/Headers/ObjCRedis.h
 xObjCRedis.h
-lSLF07#2@16"Copy ObjCRedis.h306815954#306815954#0(0"0(0#0#82"/Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/ObjCRedis.h8600938624#431"    cd /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/ObjCRedis.h /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/Debug/ObjCRedis.framework/Versions/A/Headers0#
+lSLF07#2@16"Copy ObjCRedis.h306874482#306874482#0(0"0(0#0#82"/Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/ObjCRedis.h8616566944#431"    cd /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/ObjCRedis.h /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/Debug/ObjCRedis.framework/Versions/A/Headers0#
 
 CCpHeader build/Debug/ObjCRedis.framework/Versions/A/Headers/credis.h credis.h
 s306815954.775106
@@ -302,14 +302,14 @@ xcredis.h
 lSLF07#2@13"Copy credis.h306815954#306815954#0(0"0(0#0#79"/Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/credis.h8601286368#428"    cd /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/credis.h /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/Debug/ObjCRedis.framework/Versions/A/Headers0#
 
 CLd /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/Debug/ObjCRedis.framework/Versions/A/ObjCRedis normal x86_64
-s306815957.251786
-e306815957.272728
+s306874953.770202
+e306874953.798559
 r1
 xLd
 x/Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/Debug/ObjCRedis.framework/Versions/A/ObjCRedis
 xnormal
 xx86_64
-lSLF07#2@128"Link /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/Debug/ObjCRedis.framework/Versions/A/ObjCRedis306815957#306815957#0(0"0(0#0#0"8604499200#880"    cd /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/gcc-4.2 -arch x86_64 -dynamiclib -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/Debug -F/Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/Debug -filelist /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/ObjCRedis.build/Debug/ObjCRedis.build/Objects-normal/x86_64/ObjCRedis.LinkFileList -install_name /Users/lpperron/Library/Frameworks/ObjCRedis.framework/Versions/A/ObjCRedis -mmacosx-version-min=10.6 -framework Foundation -single_module -compatibility_version 1 -current_version 1 -o /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/Debug/ObjCRedis.framework/Versions/A/ObjCRedis0#
+lSLF07#2@128"Link /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/Debug/ObjCRedis.framework/Versions/A/ObjCRedis306874953#306874953#0(0"0(0#0#0"8616538144#880"    cd /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/gcc-4.2 -arch x86_64 -dynamiclib -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/Debug -F/Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/Debug -filelist /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/ObjCRedis.build/Debug/ObjCRedis.build/Objects-normal/x86_64/ObjCRedis.LinkFileList -install_name /Users/lpperron/Library/Frameworks/ObjCRedis.framework/Versions/A/ObjCRedis -mmacosx-version-min=10.6 -framework Foundation -single_module -compatibility_version 1 -current_version 1 -o /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/Debug/ObjCRedis.framework/Versions/A/ObjCRedis0#
 
 CProcessInfoPlistFile /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/Debug/ObjCRedis.framework/Versions/A/Resources/Info.plist Info.plist
 s306815954.770569
@@ -396,10 +396,10 @@ xA
 lSLF07#2@127"Process /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/Debug/ObjCRedis.framework/Versions/Current306815954#306815954#0(0"0(0#0#0"8603237280#216"    cd /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis    /bin/ln -sf A /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/Debug/ObjCRedis.framework/Versions/Current0#
 
 CTouch /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/Debug/ObjCRedis.framework
-s306815957.272930
-e306815957.275748
+s306874953.798648
+e306874953.801152
 r1
 xTouch
 x/Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/Debug/ObjCRedis.framework
-lSLF07#2@108"Touch /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/Debug/ObjCRedis.framework306815957#306815957#0(0"0(0#0#0"8604322208#203"    cd /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis    /usr/bin/touch -c /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/Debug/ObjCRedis.framework0#
+lSLF07#2@108"Touch /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/Debug/ObjCRedis.framework306874953#306874953#0(0"0(0#0#0"8618128800#203"    cd /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis    /usr/bin/touch -c /Users/lpperron/Documents/lllaptop/git_repos/Redis/ObjCRedis/ObjCRedis/build/Debug/ObjCRedis.framework0#
 
