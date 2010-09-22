@@ -180,6 +180,12 @@
     (assert_equal "anyValue" (@redis get:"anyKey"))
   )
   
+  (imethod (id) testIncr is
+    (@redis set:"testIncr" to:"1")
+    (assert_equal 2 (@redis incr:"testIncr"))
+    (assert_equal 3 (@redis incr:"testIncr"))
+  )
+  
   (imethod (id) teardown is
     (@redis flushall)
   )

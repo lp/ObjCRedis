@@ -41,5 +41,6 @@
 - (NSString*)getset:(NSString*)key to:(NSString*)value;
 // TODO mget
 - (NSNumber*)setnx:(NSString*)key to:(NSString*)value;
+- (NSNumber*)incr:(NSString*)key;
 
 @end

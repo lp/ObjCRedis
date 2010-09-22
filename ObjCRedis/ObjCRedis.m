@@ -81,6 +81,11 @@
 - (NSNumber*)setnx:(NSString *)key to:(NSString *)value {
 	return [NSNumber numberWithInt:credis_setnx(rh, [key UTF8String], [value UTF8String])];
 }
+- (NSNumber*)incr:(NSString *)key {
+	int rValue;
+	credis_incr(rh, [key UTF8String], &rValue);
+	return [NSNumber numberWithInt:rValue];
+}
 
 - (void)dealloc
 {	
