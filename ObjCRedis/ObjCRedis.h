@@ -27,6 +27,7 @@
 // TODO randomkey
 - (NSNumber*)rename:(NSString*)key to:(NSString*)newKey;
 - (NSNumber*)renamenx:(NSString*)key to:(NSString*)newKey;
+- (NSNumber*)dbsize;
 
 // String Methods
 - (NSNumber*)set:(NSString*)key to:(NSString*)value;

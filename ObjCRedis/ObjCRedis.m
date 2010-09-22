@@ -45,6 +45,7 @@
 - (NSNumber*)renamenx:(NSString *)key to:(NSString *)newKey {
 	return [NSNumber numberWithInt:credis_renamenx(rh, [key UTF8String], [newKey UTF8String])];
 }
+- (NSNumber*)dbsize { return [NSNumber numberWithInt:credis_dbsize(rh)]; }
 
 // String Methods
 - (NSNumber*)set:(NSString *)key to:(NSString *)value {

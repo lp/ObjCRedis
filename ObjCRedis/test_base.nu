@@ -92,6 +92,10 @@
     (@redis del:newKey)
   )
   
+  (imethod (id) testDBSize is
+    (assert_true (> (@redis dbsize) 0))
+  )
+  
   (imethod (id) teardown is
     (@redis del:@testKey)
   )
