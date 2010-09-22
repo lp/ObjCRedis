@@ -53,6 +53,9 @@
 - (NSNumber*)ttl:(NSString*)key {
 	return [NSNumber numberWithInt:credis_ttl(rh, [key UTF8String])];
 }
+- (NSNumber*)select:(NSNumber*)index {
+	return [NSNumber numberWithInt:credis_select(rh, [index intValue])];
+}
 
 // String Methods
 - (NSNumber*)set:(NSString *)key to:(NSString *)value {

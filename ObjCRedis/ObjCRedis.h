@@ -30,6 +30,7 @@
 - (NSNumber*)dbsize;
 - (NSNumber*)expire:(NSString*)key in:(NSNumber*)time;
 - (NSNumber*)ttl:(NSString*)key;
+- (NSNumber*)select:(NSNumber*)index;
 
 // String Methods
 - (NSNumber*)set:(NSString*)key to:(NSString*)value;

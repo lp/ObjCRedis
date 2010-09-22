@@ -103,6 +103,13 @@
     (assert_equal -1 (@redis expire:"dummyKey" in:10))
   )
   
+  (imethod (id) testSelect is
+    (assert_equal 0 (@redis select:1))
+    (assert_equal -1 (@redis exists:@testKey))
+    (assert_equal 0 (@redis select:0))
+    (assert_equal 0 (@redis exists:@testKey))
+  )
+  
   (imethod (id) teardown is
     (@redis del:@testKey)
   )
