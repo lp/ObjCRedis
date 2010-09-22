@@ -125,6 +125,22 @@
     (assert_equal 0 (@redis dbsize))
   )
   
+  (imethod (id) testFlushAll is
+    (assert_equal 0 (@redis flushall))
+    (assert_equal 0 (@redis dbsize))
+    
+    (@redis set:"aKey" to:"aValue")
+    (assert_equal 1 (@redis dbsize))
+    (@redis select:1)
+    (@redis set:"aKey" to:"aValue")
+    (assert_equal 1 (@redis dbsize))
+    
+    (assert_equal 0 (@redis flushall))
+    (assert_equal 0 (@redis dbsize))
+    (@redis select:0)
+    (assert_equal 0 (@redis dbsize))
+  )
+  
   (imethod (id) teardown is
     (@redis del:@testKey)
   )

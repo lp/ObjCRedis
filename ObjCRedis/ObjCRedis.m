@@ -60,6 +60,7 @@
 	return [NSNumber numberWithInt:credis_move(rh, [key UTF8String], [index intValue])];
 }
 - (NSNumber*)flushdb { return [NSNumber numberWithInt:credis_flushdb(rh)]; }
+- (NSNumber*)flushall { return [NSNumber numberWithInt:credis_flushall(rh)]; }
 
 // String Methods
 - (NSNumber*)set:(NSString *)key to:(NSString *)value {
