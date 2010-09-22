@@ -96,6 +96,13 @@
     (assert_true (> (@redis dbsize) 0))
   )
   
+  (imethod (id) testExpire is
+    (assert_equal -1 (@redis ttl:@testKey))
+    (assert_equal 0 (@redis expire:@testKey in:10))
+    (assert_equal 10 (@redis ttl:@testKey))
+    (assert_equal -1 (@redis expire:"dummyKey" in:10))
+  )
+  
   (imethod (id) teardown is
     (@redis del:@testKey)
   )

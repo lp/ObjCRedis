@@ -39,6 +39,7 @@
 - (NSNumber*)type:(NSString *)key { return [NSNumber numberWithInt:credis_type(rh, [key UTF8String])]; }
 // TODO keys
 // TODO randomkey
+
 - (NSNumber*)rename:(NSString *)key to:(NSString *)newKey {
 	return [NSNumber numberWithInt:credis_rename(rh, [key UTF8String], [newKey UTF8String])];
 }
@@ -46,6 +47,12 @@
 	return [NSNumber numberWithInt:credis_renamenx(rh, [key UTF8String], [newKey UTF8String])];
 }
 - (NSNumber*)dbsize { return [NSNumber numberWithInt:credis_dbsize(rh)]; }
+- (NSNumber*)expire:(NSString *)key in:(NSNumber *)time {
+	return [NSNumber numberWithInt:credis_expire(rh, [key UTF8String], [time intValue])];
+}
+- (NSNumber*)ttl:(NSString*)key {
+	return [NSNumber numberWithInt:credis_ttl(rh, [key UTF8String])];
+}
 
 // String Methods
 - (NSNumber*)set:(NSString *)key to:(NSString *)value {

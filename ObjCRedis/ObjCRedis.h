@@ -28,6 +28,8 @@
 - (NSNumber*)rename:(NSString*)key to:(NSString*)newKey;
 - (NSNumber*)renamenx:(NSString*)key to:(NSString*)newKey;
 - (NSNumber*)dbsize;
+- (NSNumber*)expire:(NSString*)key in:(NSNumber*)time;
+- (NSNumber*)ttl:(NSString*)key;
 
 // String Methods
 - (NSNumber*)set:(NSString*)key to:(NSString*)value;
