@@ -76,6 +76,12 @@
 	return [NSString stringWithUTF8String:rValue];
 }
 
+// TODO mget
+
+- (NSNumber*)setnx:(NSString *)key to:(NSString *)value {
+	return [NSNumber numberWithInt:credis_setnx(rh, [key UTF8String], [value UTF8String])];
+}
+
 - (void)dealloc
 {	
 	credis_close(rh);

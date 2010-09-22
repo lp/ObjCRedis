@@ -171,6 +171,15 @@
     (assert_equal "anyValue" (@redis get:@testKey))
   )
   
+  ; todo mget
+  
+  (imethod (id) testSetnx is
+    (assert_equal -1 (@redis setnx:@testKey to:"anyValue"))
+    (assert_equal @testValue (@redis get:@testKey))
+    (assert_equal 0 (@redis setnx:"anyKey" to:"anyValue"))
+    (assert_equal "anyValue" (@redis get:"anyKey"))
+  )
+  
   (imethod (id) teardown is
     (@redis flushall)
   )
