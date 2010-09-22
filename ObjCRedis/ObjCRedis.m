@@ -42,6 +42,9 @@
 - (NSNumber*)rename:(NSString *)key to:(NSString *)newKey {
 	return [NSNumber numberWithInt:credis_rename(rh, [key UTF8String], [newKey UTF8String])];
 }
+- (NSNumber*)renamenx:(NSString *)key to:(NSString *)newKey {
+	return [NSNumber numberWithInt:credis_renamenx(rh, [key UTF8String], [newKey UTF8String])];
+}
 
 // String Methods
 - (NSNumber*)set:(NSString *)key to:(NSString *)value {

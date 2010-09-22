@@ -79,6 +79,19 @@
     (assert_equal 0 (@redis rename:newKey to:@testKey))
   )
   
+  (imethod (id) testRenamenx is
+    (set newKey "newKey")
+    (assert_equal 0 (@redis renamenx:@testKey to:newKey))
+    (assert_equal -1 (@redis exists:@testKey))
+    (assert_equal 0 (@redis exists:newKey))
+    (assert_equal 0 (@redis renamenx:newKey to:@testKey))
+    
+    (@redis set:newKey to:"anyValue")
+    (assert_equal -1 (@redis renamenx:@testKey to:newKey))
+    (assert_equal 0 (@redis exists:@testKey))
+    (@redis del:newKey)
+  )
+  
   (imethod (id) teardown is
     (@redis del:@testKey)
   )
