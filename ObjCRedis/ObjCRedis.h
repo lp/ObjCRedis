@@ -25,6 +25,7 @@
 - (NSNumber*)type:(NSString*)key;
 // TODO keys
 // TODO randomkey
+- (NSNumber*)rename:(NSString*)key to:(NSString*)newKey;
 
 // String Methods
 - (NSNumber*)set:(NSString*)key to:(NSString*)value;

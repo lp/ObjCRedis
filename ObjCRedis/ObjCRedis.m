@@ -39,6 +39,9 @@
 - (NSNumber*)type:(NSString *)key { return [NSNumber numberWithInt:credis_type(rh, [key UTF8String])]; }
 // TODO keys
 // TODO randomkey
+- (NSNumber*)rename:(NSString *)key to:(NSString *)newKey {
+	return [NSNumber numberWithInt:credis_rename(rh, [key UTF8String], [newKey UTF8String])];
+}
 
 // String Methods
 - (NSNumber*)set:(NSString *)key to:(NSString *)value {

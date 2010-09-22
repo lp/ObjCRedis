@@ -64,11 +64,19 @@
   )
   
   (imethod (id) testExists is
-    (assert_equal @testValue (@redis get:@testKey))
+    (assert_equal 0 (@redis exists:@testKey))
   )
   
   (imethod (id) testType is
     (assert_equal 2 (@redis type:@testKey))
+  )
+  
+  (imethod (id) testRename is
+    (set newKey "newKey")
+    (assert_equal 0 (@redis rename:@testKey to:newKey))
+    (assert_equal -1 (@redis exists:@testKey))
+    (assert_equal 0 (@redis exists:newKey))
+    (assert_equal 0 (@redis rename:newKey to:@testKey))
   )
   
   (imethod (id) teardown is
