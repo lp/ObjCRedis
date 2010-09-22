@@ -91,6 +91,16 @@
 	credis_incrby(rh, [key UTF8String], [incrValue intValue], &rValue);
 	return [NSNumber numberWithInt:rValue];
 }
+- (NSNumber*)decr:(NSString *)key {
+	int rValue;
+	credis_decr(rh, [key UTF8String], &rValue);
+	return [NSNumber numberWithInt:rValue];
+}
+- (NSNumber*)decr:(NSString*)key by:(NSNumber*)decrValue {
+	int rValue;
+	credis_decrby(rh, [key UTF8String], [decrValue intValue], &rValue);
+	return [NSNumber numberWithInt:rValue];
+}
 
 - (void)dealloc
 {	

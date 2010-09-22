@@ -43,5 +43,7 @@
 - (NSNumber*)setnx:(NSString*)key to:(NSString*)value;
 - (NSNumber*)incr:(NSString*)key;
 - (NSNumber*)incr:(NSString*)key by:(NSNumber*)incrValue;
+- (NSNumber*)decr:(NSString*)key;
+- (NSNumber*)decr:(NSString*)key by:(NSNumber*)decrValue;
 
 @end
