@@ -18,5 +18,7 @@
 + (id)redis:(NSString*)ipaddress on:(NSNumber*)portnumber;
 
 - (NSNumber*)connect:(NSString*)ipaddress on:(NSNumber*)portnumber;
+- (NSNumber*)set:(NSString*)key to:(NSString*)value;
+- (NSString*)get:(NSString*)key;
 
 @end

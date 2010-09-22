@@ -12,7 +12,6 @@
 
 + (id)redis
 {	
-	return NULL;
 	return [ObjCRedis redis:@"localhost" on:[NSNumber numberWithInt:6379]];
 }
 
@@ -36,6 +35,29 @@
 	}
 	else { return [NSNumber numberWithBool:NO];
 	}
+}
+
+- (NSNumber*)set:(NSString *)key to:(NSString *)value
+{
+	const char * rKey = [key UTF8String];
+	const char * rValue = [value UTF8String];
+	
+	return [NSNumber numberWithInt:credis_set(rh, rKey, rValue)];
+}
+
+- (NSString*)get:(NSString *)key
+{
+	const char * rKey = [key UTF8String];
+	char * rValue;
+	
+	credis_get(rh, rKey, &rValue);
+	return [NSString stringWithUTF8String:rValue];
+}
+
+- (void)dealloc
+{	
+	credis_close(rh);
+	[super dealloc];
 }
 
 
