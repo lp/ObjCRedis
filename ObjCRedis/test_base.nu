@@ -142,7 +142,37 @@
   )
   
   (imethod (id) teardown is
-    (@redis del:@testKey)
+    (@redis flushall)
+  )
+)
+
+(class Test_05_testStringActions is NuTestCase
+  (ivar (id) redis (id) testKey (id) testValue)
+  
+  (imethod (id) setup is
+    (set @testKey "testKey")
+    (set @testValue "testValue")
+    
+    (set @redis (ObjCRedis redis))
+    (@redis set:@testKey to:@testValue)
+  )
+  
+  (imethod (id) testSet is
+    (assert_equal 0 (@redis set:"aKey" to:"aValue"))
+    (assert_equal "aValue" (@redis get:"aKey"))
+  )
+  
+  (imethod (id) testGet is
+    (assert_equal @testValue (@redis get:@testKey))
+  )
+  
+  (imethod (id) testGetSet is
+    (assert_equal @testValue (@redis getset:@testKey to:"anyValue"))
+    (assert_equal "anyValue" (@redis get:@testKey))
+  )
+  
+  (imethod (id) teardown is
+    (@redis flushall)
   )
 )
 

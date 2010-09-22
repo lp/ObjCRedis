@@ -65,10 +65,14 @@
 // String Methods
 - (NSNumber*)set:(NSString *)key to:(NSString *)value {
 	return [NSNumber numberWithInt:credis_set(rh, [key UTF8String], [value UTF8String])]; }
-
 - (NSString*)get:(NSString *)key {
 	char * rValue;	
 	credis_get(rh, [key UTF8String], &rValue);
+	return [NSString stringWithUTF8String:rValue];
+}
+- (NSString*)getset:(NSString *)key to:(NSString *)value {
+	char * rValue;
+	credis_getset(rh, [key UTF8String], [value UTF8String], &rValue);
 	return [NSString stringWithUTF8String:rValue];
 }
 

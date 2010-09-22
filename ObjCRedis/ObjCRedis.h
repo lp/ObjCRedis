@@ -38,5 +38,6 @@
 // String Methods
 - (NSNumber*)set:(NSString*)key to:(NSString*)value;
 - (NSString*)get:(NSString*)key;
+- (NSString*)getset:(NSString*)key to:(NSString*)value;
 
 @end
