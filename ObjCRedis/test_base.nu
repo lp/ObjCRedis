@@ -120,6 +120,11 @@
     (assert_equal 0 (@redis exists:@testKey))
   )
   
+  (imethod (id) testFlushDB is
+    (assert_equal 0 (@redis flushdb))
+    (assert_equal 0 (@redis dbsize))
+  )
+  
   (imethod (id) teardown is
     (@redis del:@testKey)
   )

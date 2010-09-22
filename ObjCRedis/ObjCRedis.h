@@ -32,6 +32,7 @@
 - (NSNumber*)ttl:(NSString*)key;
 - (NSNumber*)select:(NSNumber*)index;
 - (NSNumber*)move:(NSString*)key to:(NSNumber*)index;
+- (NSNumber*)flushdb;
 
 // String Methods
 - (NSNumber*)set:(NSString*)key to:(NSString*)value;
