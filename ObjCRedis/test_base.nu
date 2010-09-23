@@ -65,10 +65,12 @@
   
   (- (id) testExists is
     (assert_equal 0 (@redis exists:@testKey))
+    (assert_equal -1 (@redis exists:"dummyKey"))
   )
   
   (- (id) testType is
     (assert_equal 2 (@redis type:@testKey))
+    (assert_equal 1 (@redis type:"dummyKey"))
   )
   
   (- (id) testRename is
@@ -184,29 +186,39 @@
     (@redis set:"testIncr" to:"1")
     (assert_equal 2 (@redis incr:"testIncr"))
     (assert_equal 3 (@redis incr:"testIncr"))
+    (assert_equal 0 (@redis incr:@testKey))
   )
   
   (- (id) testIncrby is
     (@redis set:"testIncr" to:"1")
     (assert_equal 3 (@redis incr:"testIncr" by:2))
     (assert_equal 6 (@redis incr:"testIncr" by:3))
+    (assert_equal 1 (@redis incr:@testKey by:100)) ; ?????
   )
   
   (- (id) testDecr is
     (@redis set:"testDecr" to:"100")
     (assert_equal 99 (@redis decr:"testDecr"))
     (assert_equal 98 (@redis decr:"testDecr"))
+    (assert_equal 0 (@redis decr:@testKey))
+    (assert_equal -1 (@redis decr:"dummyKey"))
   )
   
   (- (id) testDecrby is
     (@redis set:"testDecr" to:"100")
     (assert_equal 90 (@redis decr:"testDecr" by:10))
     (assert_equal 70 (@redis decr:"testDecr" by:20))
+    (assert_equal 1 (@redis decr:@testKey by:200)) ; ?????
   )
   
   (- (id) testAppend is
     (assert_not_equal (@testValue length) (@redis append:"-add" to:@testKey))
     (assert_equal (+ (@testValue length) ("-add" length)) ((@redis get:@testKey) length))
+  )
+  
+  (- (id) testSubstr is
+    (assert_equal "test" (@redis substr:@testKey from:0 to:3))
+    (assert_equal "" (@redis substr:@testKey from:9 to:12))
   )
   
   (- (id) teardown is

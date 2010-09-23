@@ -104,6 +104,12 @@
 - (NSNumber*)append:(NSString *)value to:(NSString*)key {
 	return [NSNumber numberWithInt:credis_append(rh, [key UTF8String], [value UTF8String])];
 }
+- (NSString*)substr:(NSString *)key from:(NSNumber *)from to:(NSNumber *)to {
+	char * rValue;
+	credis_substr(rh, [key UTF8String], [from intValue], [to intValue], &rValue);
+	if (rValue != NULL) { return [NSString stringWithUTF8String:rValue]; } 
+	else { return @""; }
+}
 
 - (void)dealloc
 {	
