@@ -204,6 +204,11 @@
     (assert_equal 70 (@redis decr:"testDecr" by:20))
   )
   
+  (- (id) testAppend is
+    (assert_not_equal (@testValue length) (@redis append:"-add" to:@testKey))
+    (assert_equal (+ (@testValue length) ("-add" length)) ((@redis get:@testKey) length))
+  )
+  
   (- (id) teardown is
     (@redis flushall)
   )

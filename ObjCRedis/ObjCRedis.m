@@ -101,6 +101,9 @@
 	credis_decrby(rh, [key UTF8String], [decrValue intValue], &rValue);
 	return [NSNumber numberWithInt:rValue];
 }
+- (NSNumber*)append:(NSString *)value to:(NSString*)key {
+	return [NSNumber numberWithInt:credis_append(rh, [key UTF8String], [value UTF8String])];
+}
 
 - (void)dealloc
 {	

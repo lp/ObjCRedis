@@ -45,5 +45,6 @@
 - (NSNumber*)incr:(NSString*)key by:(NSNumber*)incrValue;
 - (NSNumber*)decr:(NSString*)key;
 - (NSNumber*)decr:(NSString*)key by:(NSNumber*)decrValue;
+- (NSNumber*)append:(NSString*)value to:(NSString*)key;
 
 @end
