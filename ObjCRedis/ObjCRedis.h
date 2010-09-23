@@ -188,4 +188,9 @@
 */
 - (NSString*)substr:(NSString*)key from:(NSNumber*)from to:(NSNumber*)to;
 
+// List Methods
+
+- (NSNumber*)rpush:(NSString*)value in:(NSString*)key;
+- (NSNumber*)lset:(NSString*)key at:(NSNumber*)index to:(NSString*)value;
+
 @end

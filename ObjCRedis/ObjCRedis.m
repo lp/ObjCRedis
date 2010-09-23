@@ -111,6 +111,16 @@
 	else { return @""; }
 }
 
+// List Methods
+
+- (NSNumber*)rpush:(NSString *)value in:(NSString *)key {
+	return [NSNumber numberWithInt:credis_rpush(rh, [key UTF8String], [value UTF8String])];
+}
+- (NSNumber*)lset:(NSString *)key at:(NSNumber *)index to:(NSString *)value {
+	return [NSNumber numberWithInt:credis_lset(rh, [key UTF8String], [index intValue], [value UTF8String])];
+}
+
+
 - (void)dealloc
 {	
 	credis_close(rh);

@@ -226,4 +226,27 @@
   )
 )
 
+(class Test_06_testListActions is NuTestCase
+  (ivar (id) redis (id) testKey)
+  
+  (- (id) setup is
+    (set @testKey "testlist")
+    
+    (set @redis (ObjCRedis redis))
+  )
+  
+  (- (id) testRpush is
+    (assert_equal -97 (@redis rpush:"anyValue" in:@testKey))
+  )
+  
+  (- (id) testLset is
+    (assert_equal -97 (@redis lset:@testKey at:0 to:"anyValue"))
+  )
+  
+  (- (id) teardown is
+    (@redis flushall)
+  )
+  
+)
+
 
