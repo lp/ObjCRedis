@@ -173,7 +173,9 @@
     (assert_equal "anyValue" (@redis get:@testKey))
   )
   
-  ; todo mget
+  ; (- (id) testMget is
+  ;     (assert_equal 1 (@redis ))
+  ;   )
   
   (- (id) testSetnx is
     (assert_equal -1 (@redis setnx:@testKey to:"anyValue"))
@@ -231,20 +233,48 @@
   
   (- (id) setup is
     (set @testKey "testlist")
-    
+    (@redis rpush:"initValue1" to:@testKey)
+    (@redis lpush:"initValue2" to:@testKey)
     (set @redis (ObjCRedis redis))
   )
   
-  (- (id) testRpush is
-    (assert_equal -97 (@redis rpush:"anyValue" in:@testKey))
+  (- (id) test_01_rpush is
+    (assert_equal -97 (@redis rpush:"anyValue" to:@testKey))
   )
   
+  (- (id) test_02_lpush is
+    (assert_equal -97 (@redis lpush:"lpushValue" to:@testKey))
+  )
+  
+  (- (id) test_03_llen is
+    (@redis rpush:"anyValue" to:@testKey)
+    (@redis lpush:"lpushValue" to:@testKey)
+    (assert_equal 4 (@redis llen:@testKey))
+    (@redis lpush:"lpushValue2" to:@testKey)
+    (assert_equal 5 (@redis llen:@testKey))
+  )
+  
+  (- (id) test04_lrange is
+    (@redis rpush:"anyValue" to:@testKey)
+    (@redis lpush:"lpushValue" to:@testKey)
+    (assert_equal 2 ((@redis lrange:@testKey from:0 to:3) count))
+  )
+  
+  (- (id) test_05_ltrim is
+    (@redis rpush:"anyValue" to:@testKey)
+    (@redis lpush:"lpushValue" to:@testKey)
+    (assert_equal 4 (@redis llen:@testKey))
+    (assert_equal 0 (@redis ltrim:@testKey from:0 to:2))
+    (assert_equal 3 (@redis llen:@testKey))
+  )
+  
+  
   (- (id) testLset is
-    (assert_equal -97 (@redis lset:@testKey at:0 to:"anyValue"))
+    (assert_equal 0 (@redis lset:@testKey at:0 to:"anyValue"))
   )
   
   (- (id) teardown is
-    (@redis flushall)
+    (@redis flushdb)
   )
   
 )

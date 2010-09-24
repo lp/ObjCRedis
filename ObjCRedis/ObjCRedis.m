@@ -113,9 +113,31 @@
 
 // List Methods
 
-- (NSNumber*)rpush:(NSString *)value in:(NSString *)key {
+- (NSNumber*)rpush:(NSString *)value to:(NSString *)key {
 	return [NSNumber numberWithInt:credis_rpush(rh, [key UTF8String], [value UTF8String])];
 }
+- (NSNumber*)lpush:(NSString *)value to:(NSString *)key {
+	return [NSNumber numberWithInt:credis_lpush(rh, [key UTF8String], [value UTF8String])];
+}
+- (NSNumber*)llen:(NSString *)key {
+	return [NSNumber numberWithInt:credis_llen(rh, [key UTF8String])];
+}
+// TODO lrange
+
+- (NSArray*)lrange:(NSString *)key from:(NSNumber *)from to:(NSNumber *)to {
+	char ** vec;
+	int numItems = credis_lrange(rh, [key UTF8String], [from intValue], [to intValue], &vec);
+	NSMutableArray * buildArray = [NSMutableArray array];
+	for (int i; i < numItems; i++) {
+		[buildArray addObject:[NSString stringWithUTF8String:vec[i]]];
+	}
+	return [NSArray arrayWithArray:buildArray];
+}
+
+- (NSNumber*)ltrim:(NSString *)key from:(NSNumber *)from to:(NSNumber *)to {
+	return [NSNumber numberWithInt:credis_ltrim(rh, [key UTF8String], [from intValue], [to intValue])];
+}
+
 - (NSNumber*)lset:(NSString *)key at:(NSNumber *)index to:(NSString *)value {
 	return [NSNumber numberWithInt:credis_lset(rh, [key UTF8String], [index intValue], [value UTF8String])];
 }

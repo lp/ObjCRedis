@@ -190,7 +190,11 @@
 
 // List Methods
 
-- (NSNumber*)rpush:(NSString*)value in:(NSString*)key;
+- (NSNumber*)rpush:(NSString*)value to:(NSString*)key;
+- (NSNumber*)lpush:(NSString*)value to:(NSString*)key;
+- (NSArray*)lrange:(NSString*)key from:(NSNumber*)from to:(NSNumber*)to;
+- (NSNumber*)ltrim:(NSString*)key from:(NSNumber*)from to:(NSNumber*)to;
 - (NSNumber*)lset:(NSString*)key at:(NSNumber*)index to:(NSString*)value;
+- (NSNumber*)llen:(NSString*)key;
 
 @end
