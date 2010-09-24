@@ -7,6 +7,7 @@
 //
 
 #import "ObjCRedis.h"
+#import "NSArray+WithCVector.h"
 
 @implementation ObjCRedis
 
@@ -127,11 +128,7 @@
 - (NSArray*)lrange:(NSString *)key from:(NSNumber *)from to:(NSNumber *)to {
 	char ** vec;
 	int numItems = credis_lrange(rh, [key UTF8String], [from intValue], [to intValue], &vec);
-	NSMutableArray * buildArray = [NSMutableArray array];
-	for (int i; i < numItems; i++) {
-		[buildArray addObject:[NSString stringWithUTF8String:vec[i]]];
-	}
-	return [NSArray arrayWithArray:buildArray];
+	return [NSArray arrayWithCVector:vec ofSize:numItems];
 }
 
 - (NSNumber*)ltrim:(NSString *)key from:(NSNumber *)from to:(NSNumber *)to {
