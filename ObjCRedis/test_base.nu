@@ -173,9 +173,18 @@
     (assert_equal "anyValue" (@redis get:@testKey))
   )
   
-  ; (- (id) testMget is
-  ;     (assert_equal 1 (@redis ))
-  ;   )
+  (- (id) testMget is
+    (@redis set:"testKey2" to:"testValue2")
+    (assert_equal 1 ((@redis mget:(NSArray arrayWithList:(list @testKey))) count))
+    (assert_equal @testValue ((@redis mget:(NSArray arrayWithList:(list @testKey))) 0))
+    
+    (assert_equal 2 ((@redis mget:(NSArray arrayWithList:(list @testKey "testKey2"))) count))
+    (assert_equal @testValue ((@redis mget:(NSArray arrayWithList:(list @testKey "testKey2"))) 0))
+    (assert_equal "testValue2" ((@redis mget:(NSArray arrayWithList:(list @testKey "testKey2"))) 1))
+    
+    (assert_equal 1 ((@redis mget:(NSArray arrayWithList:(list "dummyKey"))) count))
+    (assert_equal nil ((@redis mget:(NSArray arrayWithList:(list "dummyKey"))) 0))
+  )
   
   (- (id) testSetnx is
     (assert_equal -1 (@redis setnx:@testKey to:"anyValue"))

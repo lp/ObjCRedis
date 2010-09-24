@@ -14,9 +14,28 @@
 {
 	NSMutableArray * buildArray = [NSMutableArray array];
 	for (int i; i < size; i++) {
-		[buildArray addObject:[NSString stringWithUTF8String:vec[i]]];
+		if (vec[i] != NULL) {
+			[buildArray addObject:[NSString stringWithUTF8String:vec[i]]];
+		} else {
+			[buildArray addObject:nil];
+		}
+
 	}
 	return [NSArray arrayWithArray:buildArray];
+}
+
+- (const char**)cVector
+{
+	char ** vector = malloc(sizeof(char*) * (int)[self count]);
+	NSEnumerator * e = [self objectEnumerator];
+	id o;
+	
+	while (o = [e nextObject]) {
+		int i = (int)[self indexOfObject:o];
+		vector[i] = (char*)[o UTF8String];
+	}
+	
+	return (const char**)vector;
 }
 
 @end

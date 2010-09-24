@@ -76,8 +76,12 @@
 	credis_getset(rh, [key UTF8String], [value UTF8String], &rValue);
 	return [NSString stringWithUTF8String:rValue];
 }
+- (NSArray*)mget:(NSArray *)keys {
+	char ** rVec;
+	int vLen = credis_mget(rh, (int)[keys count], [keys cVector], &rVec);
+	return [NSArray arrayWithCVector:rVec ofSize:vLen];
+}
 
-// TODO mget
 
 - (NSNumber*)setnx:(NSString *)key to:(NSString *)value {
 	return [NSNumber numberWithInt:credis_setnx(rh, [key UTF8String], [value UTF8String])];

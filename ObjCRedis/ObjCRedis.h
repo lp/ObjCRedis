@@ -143,7 +143,7 @@
 */
 - (NSString*)getset:(NSString*)key to:(NSString*)value;
 
-// TODO mget
+- (NSArray*)mget:(NSArray*)keys;
 
 /*!
  @method setnx:to:

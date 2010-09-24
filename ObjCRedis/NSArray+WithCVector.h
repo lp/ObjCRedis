@@ -11,6 +11,7 @@
 @interface NSArray (WithCVector)
 
 + (NSArray*)arrayWithCVector:(char**)vec ofSize:(int)size;
+- (const char**)cVector;
 
 
 @end
