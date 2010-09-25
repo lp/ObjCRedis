@@ -64,7 +64,7 @@
 */
 - (NSNumber*)type:(NSString*)key;
 
-// TODO keys
+- (NSArray*)keys:(NSString*)pattern;
 // TODO randomkey
 
 /*!

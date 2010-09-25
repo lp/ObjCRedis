@@ -38,7 +38,11 @@
 - (NSNumber*)exists:(NSString *)key { return [NSNumber numberWithInt:credis_exists(rh, [key UTF8String])]; }
 - (NSNumber*)del:(NSString*)key { return [NSNumber numberWithInt:credis_del(rh, [key UTF8String])]; }
 - (NSNumber*)type:(NSString *)key { return [NSNumber numberWithInt:credis_type(rh, [key UTF8String])]; }
-// TODO keys
+- (NSArray*)keys:(NSString *)pattern {
+	char **keys;
+	int nKeys = credis_keys(rh, [pattern UTF8String], &keys);
+	return [NSArray arrayWithCVector:keys ofSize:nKeys];
+}
 // TODO randomkey
 
 - (NSNumber*)rename:(NSString *)key to:(NSString *)newKey {

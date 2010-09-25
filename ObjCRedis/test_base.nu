@@ -73,6 +73,17 @@
     (assert_equal 1 (@redis type:"dummyKey"))
   )
   
+  (- (id) testKeys is
+    (@redis set:"testKey2" to:"testValue2")
+    (@redis set:"otherKey" to:"otherValue")
+    
+    (assert_equal 1 ((@redis keys:@testKey) count))
+    (assert_equal @testKey ((@redis keys:@testKey) 0))
+    
+    (assert_equal 2 ((@redis keys:"testK*") count))
+    (assert_true (((@redis keys:"testK*") includes:(NSArray arrayWithList:(list @testKey "testKey2"))) boolValue))
+  )
+  
   (- (id) testRename is
     (set newKey "newKey")
     (assert_equal 0 (@redis rename:@testKey to:newKey))
