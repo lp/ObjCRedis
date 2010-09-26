@@ -211,6 +211,9 @@
 	int numret = credis_sunion(rh, (int)[members count], [members cVector], &vec);
 	return [NSArray arrayWithCVector:vec ofSize:numret];
 }
+- (NSNumber*)sunionstore:(NSArray *)members to:(NSString *)key {
+	return [NSNumber numberWithInt:credis_sunionstore(rh, [key UTF8String], (int)[members count], [members cVector])];
+}
 
 - (void)dealloc
 {	

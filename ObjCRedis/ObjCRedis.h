@@ -212,5 +212,6 @@
 - (NSArray*)sinter:(NSArray*)members;
 - (NSNumber*)sinterstore:(NSArray*)members to:(NSString*)key;
 - (NSArray*)sunion:(NSArray*)members;
+- (NSNumber*)sunionstore:(NSArray*)members to:(NSString*)key;
 
 @end
