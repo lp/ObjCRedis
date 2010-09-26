@@ -290,6 +290,10 @@
     (@redis rpush:"anyValue" to:@testKey)
     (@redis lpush:"lpushValue" to:@testKey)
     (assert_equal 2 ((@redis lrange:@testKey from:0 to:1) count))
+    
+    (set rArray (@redis lrange:@testKey from:0 to:1))
+    (assert_equal "lpushValue" (rArray 0))
+    (assert_equal "initValue1" (rArray 1))
   )
   
   (- (id) test_05_ltrim is
