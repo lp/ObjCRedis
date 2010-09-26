@@ -196,8 +196,9 @@
 - (NSArray*)lrange:(NSString*)key from:(NSNumber*)from to:(NSNumber*)to;
 - (NSNumber*)ltrim:(NSString*)key from:(NSNumber*)from to:(NSNumber*)to;
 - (NSString*)lindex:(NSNumber*)index of:(NSString*)key;
-
 - (NSNumber*)lset:(NSString*)key at:(NSNumber*)index to:(NSString*)value;
+//- (NSNumber*)lrem:(NSString*)value of:(NSString*)key count:(NSNumber*)count;
+- (NSString*)lpop:(NSString*)key;
 
 
 @end

@@ -306,8 +306,22 @@
     (assert_equal nil (@redis lindex:2 of:@testKey))
   )
   
-  (- (id) testLset is
+  (- (id) test_07_lset is
     (assert_equal 0 (@redis lset:@testKey at:0 to:"anyValue"))
+  )
+  
+  ; Fail!
+  ; (- (id) test_08_lrem is
+  ;     (assert_equal 1 (@redis lrem:"initValue1" of:@testKey max:1))
+  ;     (@redis lpush:"idem" to:@testKey)
+  ;     (@redis lpush:"idem" to:@testKey)
+  ;     (assert_equal 2 (@redis lrem:"idem" of:@testKey count:0))
+  ;   )
+  
+  (- (id) test_08_lpop is
+    (assert_equal "initValue1" (@redis lpop:@testKey))
+    (assert_equal "initValue2" (@redis lpop:@testKey))
+    (assert_equal nil (@redis lpop:@testKey))
   )
   
   (- (id) teardown is

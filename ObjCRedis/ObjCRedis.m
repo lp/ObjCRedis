@@ -148,18 +148,24 @@
 - (NSNumber*)ltrim:(NSString *)key from:(NSNumber *)from to:(NSNumber *)to {
 	return [NSNumber numberWithInt:credis_ltrim(rh, [key UTF8String], [from intValue], [to intValue])];
 }
-
-- (NSNumber*)lset:(NSString *)key at:(NSNumber *)index to:(NSString *)value {
-	return [NSNumber numberWithInt:credis_lset(rh, [key UTF8String], [index intValue], [value UTF8String])];
-}
 - (NSString*)lindex:(NSNumber *)index of:(NSString *)key {
 	char * value = NULL;
 	int exist = credis_lindex(rh, [key UTF8String], [index intValue], &value);
-	if (exist != -1) {
-		return [NSString stringWithUTF8String:value];
-	} else {
-		return nil;
-	}
+	if (exist != -1) { return [NSString stringWithUTF8String:value]; }
+	else { return nil; }
+}
+- (NSNumber*)lset:(NSString *)key at:(NSNumber *)index to:(NSString *)value {
+	return [NSNumber numberWithInt:credis_lset(rh, [key UTF8String], [index intValue], [value UTF8String])];
+}
+//- (NSNumber*)lrem:(NSString *)value of:(NSString *)key count:(NSNumber *)count {
+//	return [NSNumber numberWithInt:credis_lrem(rh, [key UTF8String], [count intValue], [value UTF8String])];
+//}
+
+- (NSString*)lpop:(NSString *)key {
+	char * value;
+	int success = credis_lpop(rh, [key UTF8String], &value);
+	if (success != -1) { return [NSString stringWithUTF8String:value]; }
+	else { return nil; }
 }
 
 
