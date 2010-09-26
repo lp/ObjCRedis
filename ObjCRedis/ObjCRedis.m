@@ -182,6 +182,12 @@
 - (NSNumber*)srem:(NSString*)value of:(NSString*)key {
 	return [NSNumber numberWithInt:credis_srem(rh, [key UTF8String], [value UTF8String])];
 }
+- (NSString*)spop:(NSString *)key {
+	char * value;
+	int success = credis_spop(rh, [key UTF8String], &value);
+	if (success != -1) { return [NSString stringWithUTF8String:value]; } 
+	else { return nil; }
+}
 
 
 - (void)dealloc

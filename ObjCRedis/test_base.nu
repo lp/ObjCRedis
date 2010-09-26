@@ -358,6 +358,10 @@
     (assert_equal 0 (@redis srem:@testValue of:@testKey))
   )
   
+  (- (id) test_03_spop is
+    (assert_equal @testValue (@redis spop:@testKey))
+  )
+  
   
   
   (- (id) teardown is
