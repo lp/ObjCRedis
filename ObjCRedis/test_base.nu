@@ -382,32 +382,38 @@
   (- (id) test_07_sinter is
     (@redis sadd:"add2value" to:"interKey")
     (@redis sadd:"add2value" to:"interKey2")
-    (assert_equal 1 ((@redis sinter:(NSArray arrayWithList:(list "interKey" "interKey2"))) count))
+    (assert_equal 1 ((@redis sinter:(NSSet setWithList:(list "interKey" "interKey2"))) count))
     (@redis sadd:"add3value" to:"interKey")
     (@redis sadd:"add3value" to:"interKey2")
-    (assert_equal 2 ((@redis sinter:(NSArray arrayWithList:(list "interKey" "interKey2"))) count))
+    (set rset (@redis sinter:(NSSet setWithList:(list "interKey" "interKey2"))))
+    (assert_equal 2 (rset count))
+    (assert_equal 1 ((NSSet setWithList:(list "add2value" "add3value")) isSubsetOfSet:rset))
+    (assert_equal 1 ((NSSet setWithList:(list "add2value" "add3value")) isEqualToSet:rset))
   )
   
   (- (id) test_08_sinterstore is
     (@redis sadd:"add2value" to:"interKey")
     (@redis sadd:"add2value" to:"interKey2")
-    (assert_equal -97 (@redis sinterstore:(NSArray arrayWithList:(list "interKey" "interKey2")) to:"saveInterKey"))  ; should be 0!!!
+    (assert_equal -97 (@redis sinterstore:(NSSet setWithList:(list "interKey" "interKey2")) to:"saveInterKey"))  ; should be 0!!!
     (assert_equal 0 (@redis sismember:"add2value" of:"saveInterKey"))
   )
   
   (- (id) test_09_sunion is
     (@redis sadd:"add2value" to:"interKey")
     (@redis sadd:"add3value" to:"interKey2")
-    (assert_equal 2 ((@redis sunion:(NSArray arrayWithList:(list "interKey" "interKey2"))) count))
+    (assert_equal 2 ((@redis sunion:(NSSet setWithList:(list "interKey" "interKey2"))) count))
     (@redis sadd:"add4value" to:"interKey")
     (@redis sadd:"add5value" to:"interKey2")
-    (assert_equal 4 ((@redis sunion:(NSArray arrayWithList:(list "interKey" "interKey2"))) count))
+    (set rset (@redis sunion:(NSSet setWithList:(list "interKey" "interKey2"))))
+    (assert_equal 4 (rset count))
+    (assert_equal 1 ((NSSet setWithList:(list "add2value" "add3value" "add4value" "add5value")) isSubsetOfSet:rset))
+    (assert_equal 1 ((NSSet setWithList:(list "add2value" "add3value" "add4value" "add5value")) isEqualToSet:rset))
   )
   
   (- (id) test_10_sunionstore is
     (@redis sadd:"add2value" to:"interKey")
     (@redis sadd:"add3value" to:"interKey2")
-    (assert_equal -97 (@redis sunionstore:(NSArray arrayWithList:(list "interKey" "interKey2")) to:"saveInterKey"))  ; should be 0!!!
+    (assert_equal -97 (@redis sunionstore:(NSSet setWithList:(list "interKey" "interKey2")) to:"saveInterKey"))  ; should be 0!!!
     (assert_equal 0 (@redis sismember:"add2value" of:"saveInterKey"))
   )
   

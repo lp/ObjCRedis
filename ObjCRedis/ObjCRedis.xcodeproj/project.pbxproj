@@ -12,6 +12,8 @@
 		0C1EE57E1247A25000981F9A /* ObjCRedis.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C1EE57C1247A25000981F9A /* ObjCRedis.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0C1EE57F1247A25000981F9A /* ObjCRedis.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1EE57D1247A25000981F9A /* ObjCRedis.m */; };
 		0C1EE58D1247A2D700981F9A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0867D69BFE84028FC02AAC07 /* Foundation.framework */; };
+		0C8BD58E124FA75A0041F072 /* NSSet+WithCVector.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C8BD58C124FA75A0041F072 /* NSSet+WithCVector.h */; };
+		0C8BD58F124FA75A0041F072 /* NSSet+WithCVector.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8BD58D124FA75A0041F072 /* NSSet+WithCVector.m */; };
 		0CA595F4124D09AE00EC403D /* NSArray+WithCVector.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CA595F2124D09AE00EC403D /* NSArray+WithCVector.h */; settings = {ATTRIBUTES = (); }; };
 		0CA595F5124D09AE00EC403D /* NSArray+WithCVector.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA595F3124D09AE00EC403D /* NSArray+WithCVector.m */; };
 		0CA596D3124DBB9200EC403D /* NSArray+includesHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CA596D1124DBB9200EC403D /* NSArray+includesHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -51,6 +53,8 @@
 		0C1EE607124809CE00981F9A /* test_base.nu */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.nu; path = test_base.nu; sourceTree = "<group>"; };
 		0C1EE7621249977E00981F9A /* BuildAndRunTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BuildAndRunTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C1EE7631249977E00981F9A /* BuildAndRunTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BuildAndRunTests-Info.plist"; sourceTree = "<group>"; };
+		0C8BD58C124FA75A0041F072 /* NSSet+WithCVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet+WithCVector.h"; sourceTree = "<group>"; };
+		0C8BD58D124FA75A0041F072 /* NSSet+WithCVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSet+WithCVector.m"; sourceTree = "<group>"; };
 		0CA595F2124D09AE00EC403D /* NSArray+WithCVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+WithCVector.h"; sourceTree = "<group>"; };
 		0CA595F3124D09AE00EC403D /* NSArray+WithCVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+WithCVector.m"; sourceTree = "<group>"; };
 		0CA596D1124DBB9200EC403D /* NSArray+includesHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+includesHelpers.h"; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 			children = (
 				0C1EE57C1247A25000981F9A /* ObjCRedis.h */,
 				0C1EE57D1247A25000981F9A /* ObjCRedis.m */,
+				0C8BD58C124FA75A0041F072 /* NSSet+WithCVector.h */,
+				0C8BD58D124FA75A0041F072 /* NSSet+WithCVector.m */,
 				0CA595F2124D09AE00EC403D /* NSArray+WithCVector.h */,
 				0CA595F3124D09AE00EC403D /* NSArray+WithCVector.m */,
 				0CA596D1124DBB9200EC403D /* NSArray+includesHelpers.h */,
@@ -185,6 +191,7 @@
 				0C1EE57E1247A25000981F9A /* ObjCRedis.h in Headers */,
 				0CA595F4124D09AE00EC403D /* NSArray+WithCVector.h in Headers */,
 				0CA596D3124DBB9200EC403D /* NSArray+includesHelpers.h in Headers */,
+				0C8BD58E124FA75A0041F072 /* NSSet+WithCVector.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +306,7 @@
 				0C1EE57F1247A25000981F9A /* ObjCRedis.m in Sources */,
 				0CA595F5124D09AE00EC403D /* NSArray+WithCVector.m in Sources */,
 				0CA596D4124DBB9200EC403D /* NSArray+includesHelpers.m in Sources */,
+				0C8BD58F124FA75A0041F072 /* NSSet+WithCVector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

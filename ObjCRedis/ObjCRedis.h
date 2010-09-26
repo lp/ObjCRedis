@@ -209,9 +209,9 @@
 - (NSNumber*)smove:(NSString*)value from:(NSString*)from to:(NSString*)to;
 - (NSNumber*)scard:(NSString*)value;
 - (NSNumber*)sismember:(NSString*)member of:(NSString*)key;
-- (NSArray*)sinter:(NSArray*)members;
+- (NSSet*)sinter:(NSSet*)members;
 - (NSNumber*)sinterstore:(NSArray*)members to:(NSString*)key;
-- (NSArray*)sunion:(NSArray*)members;
+- (NSSet*)sunion:(NSSet*)members;
 - (NSNumber*)sunionstore:(NSArray*)members to:(NSString*)key;
 
 @end
