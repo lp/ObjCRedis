@@ -341,17 +341,24 @@
 )
 
 (class test_07_testSetsActions is NuTestCase
-  (ivar (id) redis (id) testKey)
+  (ivar (id) redis (id) testKey (id) testValue)
   
   (- (id) setup is
     (set @testKey "testset")
-    (@redis sadd:"add1value" to:@testKey)
+    (set @testValue "testValue")
+    (@redis sadd:@testValue to:@testKey)
     (set @redis (ObjCRedis redis))
   )
   
-  (- (id) test01_sadd is
+  (- (id) test_01_sadd is
     (assert_equal 0 (@redis sadd:"add2value" to:@testKey))
   )
+  
+  (- (id) test_02_srem is
+    (assert_equal 0 (@redis srem:@testValue of:@testKey))
+  )
+  
+  
   
   (- (id) teardown is
     (@redis flushdb)

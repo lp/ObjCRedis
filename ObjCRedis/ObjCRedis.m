@@ -179,6 +179,9 @@
 - (NSNumber*)sadd:(NSString *)value to:(NSString *)key {
 	return [NSNumber numberWithInt:credis_sadd(rh, [key UTF8String], [value UTF8String])];
 }
+- (NSNumber*)srem:(NSString*)value of:(NSString*)key {
+	return [NSNumber numberWithInt:credis_srem(rh, [key UTF8String], [value UTF8String])];
+}
 
 
 - (void)dealloc

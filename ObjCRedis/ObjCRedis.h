@@ -204,6 +204,6 @@
 // Sets Methods
 
 - (NSNumber*)sadd:(NSString*)value to:(NSString*)key;
-
+- (NSNumber*)srem:(NSString*)value of:(NSString*)key;
 
 @end
