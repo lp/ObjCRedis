@@ -84,6 +84,18 @@
     (assert_true (((@redis keys:"testK*") includes:(NSArray arrayWithList:(list @testKey "testKey2"))) boolValue))
   )
   
+  ; Fail!!!
+  ; (- (id) testRandomKey is
+  ;       (@redis set:"testKey2" to:"testValue2")
+  ;       (@redis set:"otherKey" to:"otherValue")
+  ;       (@redis set:"testKey3" to:"testValue3")
+  ;       (@redis set:"otherKey2" to:"otherValue2")
+  ;       (@redis set:"testKey4" to:"testValue4")
+  ;       (@redis set:"otherKey3" to:"otherValue3")
+  ;       (assert_equal 7 (@redis dbsize))
+  ;       (assert_equal @testKey (@redis randomKey))
+  ;   )
+  
   (- (id) testRename is
     (set newKey "newKey")
     (assert_equal 0 (@redis rename:@testKey to:newKey))
@@ -253,8 +265,8 @@
   
   (- (id) setup is
     (set @testKey "testlist")
-    (@redis rpush:"initValue1" to:@testKey)
-    (@redis lpush:"initValue2" to:@testKey)
+    (@redis lpush:"initValue1" to:@testKey)
+    (@redis rpush:"initValue2" to:@testKey)
     (set @redis (ObjCRedis redis))
   )
   
@@ -288,6 +300,11 @@
     (assert_equal 3 (@redis llen:@testKey))
   )
   
+  (- (id) test_06_lindex is
+    (assert_equal "initValue1" (@redis lindex:0 of:@testKey))
+    (assert_equal "initValue2" (@redis lindex:1 of:@testKey))
+    (assert_equal nil (@redis lindex:2 of:@testKey))
+  )
   
   (- (id) testLset is
     (assert_equal 0 (@redis lset:@testKey at:0 to:"anyValue"))

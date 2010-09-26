@@ -65,7 +65,7 @@
 - (NSNumber*)type:(NSString*)key;
 
 - (NSArray*)keys:(NSString*)pattern;
-// TODO randomkey
+- (NSString*)randomKey;
 
 /*!
  @method rename:to:
@@ -192,9 +192,12 @@
 
 - (NSNumber*)rpush:(NSString*)value to:(NSString*)key;
 - (NSNumber*)lpush:(NSString*)value to:(NSString*)key;
+- (NSNumber*)llen:(NSString*)key;
 - (NSArray*)lrange:(NSString*)key from:(NSNumber*)from to:(NSNumber*)to;
 - (NSNumber*)ltrim:(NSString*)key from:(NSNumber*)from to:(NSNumber*)to;
+- (NSString*)lindex:(NSNumber*)index of:(NSString*)key;
+
 - (NSNumber*)lset:(NSString*)key at:(NSNumber*)index to:(NSString*)value;
-- (NSNumber*)llen:(NSString*)key;
+
 
 @end

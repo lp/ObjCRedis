@@ -43,7 +43,14 @@
 	int nKeys = credis_keys(rh, [pattern UTF8String], &keys);
 	return [NSArray arrayWithCVector:keys ofSize:nKeys];
 }
-// TODO randomkey
+
+// Not working???
+- (NSString*)randomKey {
+	char * rkey = NULL;
+	credis_randomkey(rh, &rkey);
+	if (rkey == NULL) { return nil; }
+	return [NSString stringWithUTF8String:rkey];
+}
 
 - (NSNumber*)rename:(NSString *)key to:(NSString *)newKey {
 	return [NSNumber numberWithInt:credis_rename(rh, [key UTF8String], [newKey UTF8String])];
@@ -131,7 +138,6 @@
 - (NSNumber*)llen:(NSString *)key {
 	return [NSNumber numberWithInt:credis_llen(rh, [key UTF8String])];
 }
-// TODO lrange
 
 - (NSArray*)lrange:(NSString *)key from:(NSNumber *)from to:(NSNumber *)to {
 	char ** vec;
@@ -145,6 +151,15 @@
 
 - (NSNumber*)lset:(NSString *)key at:(NSNumber *)index to:(NSString *)value {
 	return [NSNumber numberWithInt:credis_lset(rh, [key UTF8String], [index intValue], [value UTF8String])];
+}
+- (NSString*)lindex:(NSNumber *)index of:(NSString *)key {
+	char * value = NULL;
+	int exist = credis_lindex(rh, [key UTF8String], [index intValue], &value);
+	if (exist != -1) {
+		return [NSString stringWithUTF8String:value];
+	} else {
+		return nil;
+	}
 }
 
 
