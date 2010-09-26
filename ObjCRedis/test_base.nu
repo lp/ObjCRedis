@@ -286,10 +286,10 @@
     (assert_equal 5 (@redis llen:@testKey))
   )
   
-  (- (id) test04_lrange is
+  (- (id) test_04_lrange is
     (@redis rpush:"anyValue" to:@testKey)
     (@redis lpush:"lpushValue" to:@testKey)
-    (assert_equal 2 ((@redis lrange:@testKey from:0 to:3) count))
+    (assert_equal 2 ((@redis lrange:@testKey from:0 to:1) count))
   )
   
   (- (id) test_05_ltrim is
@@ -322,6 +322,12 @@
     (assert_equal "initValue1" (@redis lpop:@testKey))
     (assert_equal "initValue2" (@redis lpop:@testKey))
     (assert_equal nil (@redis lpop:@testKey))
+  )
+  
+  (- (id) test_09_rpop is
+    (assert_equal "initValue2" (@redis rpop:@testKey))
+    (assert_equal "initValue1" (@redis rpop:@testKey))
+    (assert_equal nil (@redis rpop:@testKey))
   )
   
   (- (id) teardown is

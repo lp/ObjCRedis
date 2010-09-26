@@ -167,6 +167,12 @@
 	if (success != -1) { return [NSString stringWithUTF8String:value]; }
 	else { return nil; }
 }
+- (NSString*)rpop:(NSString *)key {
+	char * value;
+	int success = credis_rpop(rh, [key UTF8String], &value);
+	if (success != -1) { return [NSString stringWithUTF8String:value]; }
+	else { return nil; }
+}
 
 
 - (void)dealloc

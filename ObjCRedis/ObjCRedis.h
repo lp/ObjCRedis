@@ -199,6 +199,7 @@
 - (NSNumber*)lset:(NSString*)key at:(NSNumber*)index to:(NSString*)value;
 //- (NSNumber*)lrem:(NSString*)value of:(NSString*)key count:(NSNumber*)count;
 - (NSString*)lpop:(NSString*)key;
+- (NSString*)rpop:(NSString*)key;
 
 
 @end
