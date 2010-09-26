@@ -213,5 +213,6 @@
 - (NSNumber*)sinterstore:(NSArray*)members to:(NSString*)key;
 - (NSSet*)sunion:(NSSet*)members;
 - (NSNumber*)sunionstore:(NSArray*)members to:(NSString*)key;
+- (NSSet*)sdiff:(NSArray*)members;
 
 @end

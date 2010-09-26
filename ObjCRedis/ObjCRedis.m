@@ -215,6 +215,11 @@
 - (NSNumber*)sunionstore:(NSArray *)members to:(NSString *)key {
 	return [NSNumber numberWithInt:credis_sunionstore(rh, [key UTF8String], (int)[members count], [members cVector])];
 }
+- (NSSet*)sdiff:(NSArray*)members {
+	char ** vec;
+	int numret = credis_sdiff(rh, (int)[members count], [members cVector], &vec);
+	return [NSSet setWithCVector:vec ofSize:numret];
+}
 
 - (void)dealloc
 {	

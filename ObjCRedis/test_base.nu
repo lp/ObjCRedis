@@ -315,10 +315,11 @@
   )
   
   (- (id) test_08_lrem is
-    (assert_equal 0 (@redis lrem:"initValue1" of:@testKey count:1)) ; should return number removed, returns success
+    (assert_equal 0 (@redis lrem:"initValue1" of:@testKey count:1)) ; should return number removed, returns 0
     (assert_equal 1 (@redis llen:@testKey))
     (assert_equal 0 (@redis lrem:"initValue2" of:@testKey count:1))
     (assert_equal 0 (@redis llen:@testKey))
+    (assert_equal 0 (@redis lrem:"initValue100" of:@testKey count:1)) ; should be -1?
   )
   
   (- (id) test_08_lpop is
@@ -415,6 +416,18 @@
     (@redis sadd:"add3value" to:"interKey2")
     (assert_equal -97 (@redis sunionstore:(NSSet setWithList:(list "interKey" "interKey2")) to:"saveInterKey"))  ; should be 0!!!
     (assert_equal 0 (@redis sismember:"add2value" of:"saveInterKey"))
+  )
+  
+  (- (id) test_11_sdiff is
+    (@redis sadd:"add2value" to:"interKey")
+    (@redis sadd:"add3value" to:"interKey")
+    (@redis sadd:"add4value" to:"interKey")
+    (@redis sadd:"add3value" to:"interKey2")
+    (@redis sadd:"add4value" to:"interKey3")
+    
+    (set rset (@redis sdiff:(NSArray arrayWithList:(list "interKey" "interKey2" "interKey3"))))
+    (assert_equal 1 (rset count))
+    (assert_equal 1 ((NSSet setWithList:(list "add2value")) isEqualToSet:rset))
   )
   
   (- (id) teardown is
