@@ -369,6 +369,9 @@
   
   (- (id) test_05_scard is
     (assert_equal 1 (@redis scard:@testKey))
+    (@redis sadd:"testValue2" to:@testKey)
+    (assert_equal 2 (@redis scard:@testKey))
+    (assert_equal 0 (@redis scard:"dummyKey"))
   )
   
   (- (id) teardown is
