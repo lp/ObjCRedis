@@ -379,6 +379,15 @@
     (assert_equal -1 (@redis sismember:"otherValue" of:@testKey))
   )
   
+  (- (id) test_07_sinter is
+    (@redis sadd:"add2value" to:"interKey")
+    (@redis sadd:"add2value" to:"interKey2")
+    (assert_equal 1 ((@redis sinter:(NSArray arrayWithList:(list "interKey" "interKey2"))) count))
+    (@redis sadd:"add3value" to:"interKey")
+    (@redis sadd:"add3value" to:"interKey2")
+    (assert_equal 2 ((@redis sinter:(NSArray arrayWithList:(list "interKey" "interKey2"))) count))
+  )
+  
   (- (id) teardown is
     (@redis flushdb)
   )

@@ -198,6 +198,11 @@
 - (NSNumber*)sismember:(NSString *)member of:(NSString*)key {
 	return [NSNumber numberWithInt:credis_sismember(rh, [key UTF8String], [member UTF8String])];
 }
+- (NSArray*)sinter:(NSArray *)members {
+	char ** vec;
+	int numret = credis_sinter(rh, (int)[members count], [members cVector], &vec);
+	return [NSArray arrayWithCVector:vec ofSize:numret];
+}
 
 
 - (void)dealloc
