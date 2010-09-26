@@ -157,9 +157,9 @@
 - (NSNumber*)lset:(NSString *)key at:(NSNumber *)index to:(NSString *)value {
 	return [NSNumber numberWithInt:credis_lset(rh, [key UTF8String], [index intValue], [value UTF8String])];
 }
-//- (NSNumber*)lrem:(NSString *)value of:(NSString *)key count:(NSNumber *)count {
-//	return [NSNumber numberWithInt:credis_lrem(rh, [key UTF8String], [count intValue], [value UTF8String])];
-//}
+- (NSNumber*)lrem:(NSString *)value of:(NSString *)key count:(NSNumber *)count {
+	return [NSNumber numberWithInt:credis_lrem(rh, [key UTF8String], [count intValue], [value UTF8String])];
+}
 
 - (NSString*)lpop:(NSString *)key {
 	char * value;
@@ -172,6 +172,12 @@
 	int success = credis_rpop(rh, [key UTF8String], &value);
 	if (success != -1) { return [NSString stringWithUTF8String:value]; }
 	else { return nil; }
+}
+
+// Sets
+
+- (NSNumber*)sadd:(NSString *)value to:(NSString *)key {
+	return [NSNumber numberWithInt:credis_sadd(rh, [key UTF8String], [value UTF8String])];
 }
 
 

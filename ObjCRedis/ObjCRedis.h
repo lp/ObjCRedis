@@ -197,9 +197,13 @@
 - (NSNumber*)ltrim:(NSString*)key from:(NSNumber*)from to:(NSNumber*)to;
 - (NSString*)lindex:(NSNumber*)index of:(NSString*)key;
 - (NSNumber*)lset:(NSString*)key at:(NSNumber*)index to:(NSString*)value;
-//- (NSNumber*)lrem:(NSString*)value of:(NSString*)key count:(NSNumber*)count;
+- (NSNumber*)lrem:(NSString*)value of:(NSString*)key count:(NSNumber*)count;
 - (NSString*)lpop:(NSString*)key;
 - (NSString*)rpop:(NSString*)key;
+
+// Sets Methods
+
+- (NSNumber*)sadd:(NSString*)value to:(NSString*)key;
 
 
 @end
