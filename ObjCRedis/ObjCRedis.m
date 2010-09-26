@@ -188,6 +188,13 @@
 	if (success != -1) { return [NSString stringWithUTF8String:value]; } 
 	else { return nil; }
 }
+- (NSNumber*)smove:(NSString *)value from:(NSString *)from to:(NSString *)to {
+	return [NSNumber numberWithInt:
+			credis_smove(rh, [from UTF8String], [to UTF8String], [value UTF8String])];
+}
+- (NSNumber*)scard:(NSString*)value {
+	return [NSNumber numberWithInt:credis_scard(rh, [value UTF8String])];
+}
 
 
 - (void)dealloc

@@ -362,7 +362,14 @@
     (assert_equal @testValue (@redis spop:@testKey))
   )
   
+  ; Fail
+  ; (- (id) test_04_smove is
+  ;     (assert_equal 0 (@redis smove:@testValue from:@testKey to:"testset2"))
+  ;   )
   
+  (- (id) test_05_scard is
+    (assert_equal 1 (@redis scard:@testKey))
+  )
   
   (- (id) teardown is
     (@redis flushdb)

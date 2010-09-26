@@ -206,5 +206,7 @@
 - (NSNumber*)sadd:(NSString*)value to:(NSString*)key;
 - (NSNumber*)srem:(NSString*)value of:(NSString*)key;
 - (NSString*)spop:(NSString*)key;
+- (NSNumber*)smove:(NSString*)value from:(NSString*)from to:(NSString*)to;
+- (NSNumber*)scard:(NSString*)value;
 
 @end
