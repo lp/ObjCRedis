@@ -203,7 +203,14 @@
 	int numret = credis_sinter(rh, (int)[members count], [members cVector], &vec);
 	return [NSArray arrayWithCVector:vec ofSize:numret];
 }
-
+- (NSNumber*)sinterstore:(NSArray *)members to:(NSString *)key {
+	return [NSNumber numberWithInt:credis_sinterstore(rh, [key UTF8String], (int)[members count], [members cVector])];
+}
+- (NSArray*)sunion:(NSArray *)members {
+	char ** vec;
+	int numret = credis_sunion(rh, (int)[members count], [members cVector], &vec);
+	return [NSArray arrayWithCVector:vec ofSize:numret];
+}
 
 - (void)dealloc
 {	

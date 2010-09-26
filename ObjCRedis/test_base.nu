@@ -388,6 +388,23 @@
     (assert_equal 2 ((@redis sinter:(NSArray arrayWithList:(list "interKey" "interKey2"))) count))
   )
   
+  ; Fail!
+  ; (- (id) test_08_sinterstore is
+  ;     (@redis sadd:"add2value" to:"interKey")
+  ;     (@redis sadd:"add2value" to:"interKey2")
+  ;     (assert_equal 0 (@redis sinterstore:(NSArray arrayWithList:(list "interKey" "interKey2")) to:"saveInterKey"))
+  ;   )
+  
+  (- (id) test_09_sunion is
+    (@redis sadd:"add2value" to:"interKey")
+    (@redis sadd:"add3value" to:"interKey2")
+    (assert_equal 2 ((@redis sunion:(NSArray arrayWithList:(list "interKey" "interKey2"))) count))
+    (@redis sadd:"add4value" to:"interKey")
+    (@redis sadd:"add5value" to:"interKey2")
+    (assert_equal 4 ((@redis sunion:(NSArray arrayWithList:(list "interKey" "interKey2"))) count))
+  )
+  
+  
   (- (id) teardown is
     (@redis flushdb)
   )

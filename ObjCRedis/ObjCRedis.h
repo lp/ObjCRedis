@@ -210,5 +210,7 @@
 - (NSNumber*)scard:(NSString*)value;
 - (NSNumber*)sismember:(NSString*)member of:(NSString*)key;
 - (NSArray*)sinter:(NSArray*)members;
+- (NSNumber*)sinterstore:(NSArray*)members to:(NSString*)key;
+- (NSArray*)sunion:(NSArray*)members;
 
 @end
