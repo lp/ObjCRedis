@@ -314,13 +314,12 @@
     (assert_equal 0 (@redis lset:@testKey at:0 to:"anyValue"))
   )
   
-  ; Fail!
-  ; (- (id) test_08_lrem is
-  ;     (assert_equal 1 (@redis lrem:"initValue1" of:@testKey max:1))
-  ;     (@redis lpush:"idem" to:@testKey)
-  ;     (@redis lpush:"idem" to:@testKey)
-  ;     (assert_equal 2 (@redis lrem:"idem" of:@testKey count:0))
-  ;   )
+  (- (id) test_08_lrem is
+    (assert_equal 0 (@redis lrem:"initValue1" of:@testKey count:1)) ; should return number removed, returns success
+    (assert_equal 1 (@redis llen:@testKey))
+    (assert_equal 0 (@redis lrem:"initValue2" of:@testKey count:1))
+    (assert_equal 0 (@redis llen:@testKey))
+  )
   
   (- (id) test_08_lpop is
     (assert_equal "initValue1" (@redis lpop:@testKey))
@@ -364,7 +363,8 @@
   
   ; Fail
   ; (- (id) test_04_smove is
-  ;     (assert_equal 0 (@redis smove:@testValue from:@testKey to:"testset2"))
+  ;     (assert_equal -95 (@redis smove:@testValue from:@testKey to:"testset2"))
+  ;     (assert_equal 0 (@redis sismember:@testValue of:"testset2"))
   ;   )
   
   (- (id) test_05_scard is
