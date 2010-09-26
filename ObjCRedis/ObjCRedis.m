@@ -195,6 +195,9 @@
 - (NSNumber*)scard:(NSString*)value {
 	return [NSNumber numberWithInt:credis_scard(rh, [value UTF8String])];
 }
+- (NSNumber*)sismember:(NSString *)member of:(NSString*)key {
+	return [NSNumber numberWithInt:credis_sismember(rh, [key UTF8String], [member UTF8String])];
+}
 
 
 - (void)dealloc

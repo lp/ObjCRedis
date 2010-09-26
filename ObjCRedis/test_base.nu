@@ -374,6 +374,11 @@
     (assert_equal 0 (@redis scard:"dummyKey"))
   )
   
+  (- (id) test_06_sismember is
+    (assert_equal 0 (@redis sismember:@testValue of:@testKey))
+    (assert_equal -1 (@redis sismember:"otherValue" of:@testKey))
+  )
+  
   (- (id) teardown is
     (@redis flushdb)
   )

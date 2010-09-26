@@ -208,5 +208,6 @@
 - (NSString*)spop:(NSString*)key;
 - (NSNumber*)smove:(NSString*)value from:(NSString*)from to:(NSString*)to;
 - (NSNumber*)scard:(NSString*)value;
+- (NSNumber*)sismember:(NSString*)member of:(NSString*)key;
 
 @end
