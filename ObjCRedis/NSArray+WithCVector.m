@@ -3,7 +3,7 @@
 //  ObjCRedis
 //
 //  Created by Louis-Philippe on 10-09-24.
-//  Copyright 2010 Modul. All rights reserved.
+//  Copyright 2010 Louis-Philippe Perron. All rights reserved.
 //
 
 #import "NSArray+WithCVector.h"
