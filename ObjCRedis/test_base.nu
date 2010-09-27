@@ -430,6 +430,17 @@
     (assert_equal 1 ((NSSet setWithList:(list "add2value")) isEqualToSet:rset))
   )
   
+  (- (id) test_11_sdiffstore is
+    (@redis sadd:"add2value" to:"interKey")
+    (@redis sadd:"add3value" to:"interKey")
+    (@redis sadd:"add4value" to:"interKey")
+    (@redis sadd:"add3value" to:"interKey2")
+    (@redis sadd:"add4value" to:"interKey3")
+    
+    (assert_equal -97 (@redis sdiffstore:(NSArray arrayWithList:(list "interKey" "interKey2" "interKey3")) to:"saveDiffKey"))
+    (assert_equal 0 (@redis sismember:"add2value" of:"saveDiffKey"))
+  )
+  
   (- (id) teardown is
     (@redis flushdb)
   )

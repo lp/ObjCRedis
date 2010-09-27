@@ -220,6 +220,9 @@
 	int numret = credis_sdiff(rh, (int)[members count], [members cVector], &vec);
 	return [NSSet setWithCVector:vec ofSize:numret];
 }
+- (NSNumber*)sdiffstore:(NSArray *)members to:(NSString *)key {
+	return [NSNumber numberWithInt:credis_sdiffstore(rh, [key UTF8String], (int)[members count], [members cVector])];
+}
 
 - (void)dealloc
 {	
