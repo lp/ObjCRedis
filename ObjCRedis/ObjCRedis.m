@@ -248,6 +248,12 @@
 	return [NSSet setWithCVector:vec ofSize:numret];
 }
 
+// Sorted Sets
+
+- (NSNumber*)zadd:(NSString *)value to:(NSString *)key at:(NSNumber *)score {
+	return [NSNumber numberWithInt:credis_zadd(rh, [key UTF8String], [score doubleValue], [value UTF8String])];
+}
+
 - (void)dealloc
 {	
 	credis_close(rh);

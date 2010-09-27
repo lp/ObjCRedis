@@ -235,4 +235,8 @@
 - (NSNumber*)sdiffstore:(NSArray*)members to:(NSString*)key;
 - (NSSet*)smembers:(NSString*)key;
 
+// Sorted Sets Methods
+
+- (NSNumber*)zadd:(NSString*)value to:(NSString*)key at:(NSNumber*)score;
+
 @end
