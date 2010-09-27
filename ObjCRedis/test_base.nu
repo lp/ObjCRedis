@@ -441,6 +441,18 @@
     (assert_equal 0 (@redis sismember:"add2value" of:"saveDiffKey"))
   )
   
+  (- (id) test_12_smembers is
+    (@redis sadd:"add2value" to:"interKey")
+    (@redis sadd:"add3value" to:"interKey")
+    (@redis sadd:"add4value" to:"interKey")
+    (@redis sadd:"add5value" to:"interKey")
+    (@redis sadd:"add6value" to:"interKey")
+    (set rset (@redis smembers:"interKey"))
+    (assert_equal 5 (rset count))
+    (assert_equal 1 ((NSSet setWithList:(list "add2value" "add3value" "add4value" "add5value" "add6value")) isEqualToSet:rset))
+    (assert_equal 1 (rset containsObject:"add2value"))
+  )
+  
   (- (id) teardown is
     (@redis flushdb)
   )
