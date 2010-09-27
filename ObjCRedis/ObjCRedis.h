@@ -238,5 +238,6 @@
 // Sorted Sets Methods
 
 - (NSNumber*)zadd:(NSString*)value to:(NSString*)key at:(NSNumber*)score;
+- (NSNumber*)zrem:(NSString*)value of:(NSString*)key;
 
 @end

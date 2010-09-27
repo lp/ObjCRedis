@@ -253,6 +253,9 @@
 - (NSNumber*)zadd:(NSString *)value to:(NSString *)key at:(NSNumber *)score {
 	return [NSNumber numberWithInt:credis_zadd(rh, [key UTF8String], [score doubleValue], [value UTF8String])];
 }
+- (NSNumber*)zrem:(NSString *)value of:(NSString *)key {
+	return [NSNumber numberWithInt:credis_zrem(rh, [key UTF8String], [value UTF8String])];
+}
 
 - (void)dealloc
 {	

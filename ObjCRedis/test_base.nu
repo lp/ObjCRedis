@@ -498,6 +498,11 @@
     (assert_equal -97 (@redis zadd:"Salvador" to:"name" at:2))
   )
   
+  (- (id) test_02_zrem is
+    (assert_equal 0 (@redis zrem:@testValue of:@testKey))
+    (assert_equal -1 (@redis zrem:"testValue2" of:@testKey))
+  )
+  
   (- (id) teardown is
     (@redis flushdb)
   )
