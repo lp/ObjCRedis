@@ -256,6 +256,13 @@
 - (NSNumber*)zrem:(NSString *)value of:(NSString *)key {
 	return [NSNumber numberWithInt:credis_zrem(rh, [key UTF8String], [value UTF8String])];
 }
+- (NSNumber*)zincr:(NSString *)value by:(NSNumber *)incr of:(NSString *)key {
+	double rscore;
+	if (credis_zincrby(rh, [key UTF8String], [incr doubleValue], [value UTF8String], &rscore) == 0) {
+		return [NSNumber numberWithDouble:rscore]; }
+	else {
+		return nil; }
+}
 
 - (void)dealloc
 {	

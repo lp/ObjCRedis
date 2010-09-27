@@ -460,7 +460,7 @@
     (@redis sadd:"add3value" to:"interKey2")
     (@redis sadd:"add4value" to:"interKey3")
     
-    (assert_equal -97 (@redis sdiffstore:(NSArray arrayWithList:(list "interKey" "interKey2" "interKey3")) to:"saveDiffKey"))
+    (assert_equal -97 (@redis sdiffstore:(NSArray arrayWithList:(list "interKey" "interKey2" "interKey3")) to:"saveDiffKey")) ; should be 0
     (assert_equal 0 (@redis sismember:"add2value" of:"saveDiffKey"))
   )
   
@@ -501,6 +501,12 @@
   (- (id) test_02_zrem is
     (assert_equal 0 (@redis zrem:@testValue of:@testKey))
     (assert_equal -1 (@redis zrem:"testValue2" of:@testKey))
+  )
+  
+  (- (id) test_03_zincrby is
+    (assert_equal 2 (@redis zincr:@testValue by:1 of:@testKey))
+    (assert_equal 4 (@redis zincr:@testValue by:2 of:@testKey))
+    (assert_equal 1 (@redis zincr:"testValue2" by:1 of:@testKey)) ; should be nil
   )
   
   (- (id) teardown is

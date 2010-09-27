@@ -239,5 +239,6 @@
 
 - (NSNumber*)zadd:(NSString*)value to:(NSString*)key at:(NSNumber*)score;
 - (NSNumber*)zrem:(NSString*)value of:(NSString*)key;
+- (NSNumber*)zincr:(NSString*)value by:(NSNumber*)incr of:(NSString*)key;
 
 @end
