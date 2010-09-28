@@ -247,5 +247,6 @@
 - (NSNumber*)zcard:(NSString*)key;
 - (NSNumber*)zscore:(NSString*)value of:(NSString*)key;
 - (NSNumber*)zremrangebyscore:(NSString*)key from:(NSNumber*)from to:(NSNumber*)to;
+- (NSNumber*)zremrangebyrank:(NSString*)key from:(NSNumber*)from to:(NSNumber*)to;
 
 @end

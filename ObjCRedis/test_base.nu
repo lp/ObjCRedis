@@ -565,6 +565,14 @@
     (assert_equal 1 (@redis zcard:@testKey))
   )
   
+  (- (id) test_11_zremrangebyrank is
+    (@redis zadd:"testValue2" to:@testKey at:2)
+    (@redis zadd:"testValue3" to:@testKey at:3)
+    (assert_equal 3 (@redis zcard:@testKey))
+    (assert_equal 2 (@redis zremrangebyrank:@testKey from:0 to:1))
+    (assert_equal 1 (@redis zcard:@testKey))
+  )
+  
   (- (id) teardown is
     (@redis flushdb)
   )

@@ -291,6 +291,9 @@
 - (NSNumber*)zremrangebyscore:(NSString *)key from:(NSNumber *)from to:(NSNumber *)to {
 	return [NSNumber numberWithInt:credis_zremrangebyscore(rh, [key UTF8String], [from doubleValue], [to doubleValue])];
 }
+- (NSNumber*)zremrangebyrank:(NSString *)key from:(NSNumber *)from to:(NSNumber *)to {
+	return [NSNumber numberWithInt:credis_zremrangebyrank(rh, [key UTF8String], [from intValue], [to intValue])];
+}
 
 - (void)dealloc
 {	
