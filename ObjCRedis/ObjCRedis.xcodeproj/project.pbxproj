@@ -6,6 +6,21 @@
 	objectVersion = 45;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		0C8BDA4412525BAA0041F072 /* BuildAndTestWithNu */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 0C8BDA4912525BCD0041F072 /* Build configuration list for PBXAggregateTarget "BuildAndTestWithNu" */;
+			buildPhases = (
+				0C8BDA4312525BAA0041F072 /* ShellScript */,
+			);
+			dependencies = (
+				0C8BDA4812525BAF0041F072 /* PBXTargetDependency */,
+			);
+			name = BuildAndTestWithNu;
+			productName = BuildAndTestWithNu;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		0C1EE531124788DA00981F9A /* credis.c in Sources */ = {isa = PBXBuildFile; fileRef = 0C1EE52F124788DA00981F9A /* credis.c */; };
 		0C1EE532124788DA00981F9A /* credis.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C1EE530124788DA00981F9A /* credis.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -22,11 +37,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0C1EE7671249978400981F9A /* PBXContainerItemProxy */ = {
+		0C8BDA4712525BAF0041F072 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* ObjCRedis */;
 			remoteInfo = ObjCRedis;
 		};
 /* End PBXContainerItemProxy section */
@@ -51,7 +66,6 @@
 		0C1EE57C1247A25000981F9A /* ObjCRedis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjCRedis.h; sourceTree = "<group>"; };
 		0C1EE57D1247A25000981F9A /* ObjCRedis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjCRedis.m; sourceTree = "<group>"; };
 		0C1EE607124809CE00981F9A /* test_base.nu */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.nu; path = test_base.nu; sourceTree = "<group>"; };
-		0C1EE7621249977E00981F9A /* BuildAndRunTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BuildAndRunTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C1EE7631249977E00981F9A /* BuildAndRunTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BuildAndRunTests-Info.plist"; sourceTree = "<group>"; };
 		0C8BD58C124FA75A0041F072 /* NSSet+WithCVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet+WithCVector.h"; sourceTree = "<group>"; };
 		0C8BD58D124FA75A0041F072 /* NSSet+WithCVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSet+WithCVector.m"; sourceTree = "<group>"; };
@@ -65,13 +79,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0C1EE75F1249977E00981F9A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8DC2EF560486A6940098B216 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -87,7 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				8DC2EF5B0486A6940098B216 /* ObjCRedis.framework */,
-				0C1EE7621249977E00981F9A /* BuildAndRunTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -198,25 +204,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0C1EE7611249977E00981F9A /* BuildAndRunTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0C1EE7661249977F00981F9A /* Build configuration list for PBXNativeTarget "BuildAndRunTests" */;
-			buildPhases = (
-				0C1EE75D1249977E00981F9A /* Resources */,
-				0C1EE75E1249977E00981F9A /* Sources */,
-				0C1EE75F1249977E00981F9A /* Frameworks */,
-				0C1EE7601249977E00981F9A /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0C1EE7681249978400981F9A /* PBXTargetDependency */,
-			);
-			name = BuildAndRunTests;
-			productName = BuildAndRunTests;
-			productReference = 0C1EE7621249977E00981F9A /* BuildAndRunTests.octest */;
-			productType = "com.apple.product-type.bundle";
-		};
 		8DC2EF4F0486A6940098B216 /* ObjCRedis */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "ObjCRedis" */;
@@ -251,19 +238,12 @@
 			projectRoot = "";
 			targets = (
 				8DC2EF4F0486A6940098B216 /* ObjCRedis */,
-				0C1EE7611249977E00981F9A /* BuildAndRunTests */,
+				0C8BDA4412525BAA0041F072 /* BuildAndTestWithNu */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0C1EE75D1249977E00981F9A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8DC2EF520486A6940098B216 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -275,7 +255,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0C1EE7601249977E00981F9A /* ShellScript */ = {
+		0C8BDA4312525BAA0041F072 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -286,18 +266,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "rm -d -R \"${PROJECT_DIR}/ObjCRedis.framework/\"\ncp -R \"${PROJECT_DIR}/build/Debug/ObjCRedis.framework/\" \"${PROJECT_DIR}/ObjCRedis.framework/\"\ncd \"${PROJECT_DIR}/\"\n/usr/local/bin/nush /usr/local/bin/nutest -t test_*.nu";
+			shellScript = "function testsource {\nrm -d -R \"${PROJECT_DIR}/$1/\"\ncp -R \"${PROJECT_DIR}/build/Debug/$1/\" \"${PROJECT_DIR}/$1/\"\n}\n\n# add a testsource for each tested framework\ntestsource ObjCRedis.framework\n\ncd \"${PROJECT_DIR}/\"\n/usr/local/bin/nush /usr/local/bin/nutest -t test_*.nu";
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0C1EE75E1249977E00981F9A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8DC2EF540486A6940098B216 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -313,10 +286,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0C1EE7681249978400981F9A /* PBXTargetDependency */ = {
+		0C8BDA4812525BAF0041F072 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8DC2EF4F0486A6940098B216 /* ObjCRedis */;
-			targetProxy = 0C1EE7671249978400981F9A /* PBXContainerItemProxy */;
+			targetProxy = 0C8BDA4712525BAF0041F072 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -332,56 +305,23 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		0C1EE7641249977F00981F9A /* Debug */ = {
+		0C8BDA4512525BAA0041F072 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
-				INFOPLIST_FILE = "BuildAndRunTests-Info.plist";
-				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Cocoa,
-					"-framework",
-					SenTestingKit,
-				);
-				PREBINDING = NO;
-				PRODUCT_NAME = BuildAndRunTests;
-				WRAPPER_EXTENSION = octest;
+				PRODUCT_NAME = BuildAndTestWithNu;
 			};
 			name = Debug;
 		};
-		0C1EE7651249977F00981F9A /* Release */ = {
+		0C8BDA4612525BAA0041F072 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_MODEL_TUNING = G5;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
-				INFOPLIST_FILE = "BuildAndRunTests-Info.plist";
-				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Cocoa,
-					"-framework",
-					SenTestingKit,
-				);
-				PREBINDING = NO;
-				PRODUCT_NAME = BuildAndRunTests;
-				WRAPPER_EXTENSION = octest;
+				PRODUCT_NAME = BuildAndTestWithNu;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -456,11 +396,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0C1EE7661249977F00981F9A /* Build configuration list for PBXNativeTarget "BuildAndRunTests" */ = {
+		0C8BDA4912525BCD0041F072 /* Build configuration list for PBXAggregateTarget "BuildAndTestWithNu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0C1EE7641249977F00981F9A /* Debug */,
-				0C1EE7651249977F00981F9A /* Release */,
+				0C8BDA4512525BAA0041F072 /* Debug */,
+				0C8BDA4612525BAA0041F072 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
