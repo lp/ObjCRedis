@@ -282,6 +282,12 @@
 - (NSNumber*)zcard:(NSString *)key {
 	return [NSNumber numberWithInt:credis_zcard(rh, [key UTF8String])];
 }
+- (NSNumber*)zscore:(NSString *)value of:(NSString *)key {
+	double score;
+	if (credis_zscore(rh, [key UTF8String], [value UTF8String], &score) == 0) {
+		return [NSNumber numberWithDouble:score]; }
+	else { return nil; }
+}
 
 - (void)dealloc
 {	

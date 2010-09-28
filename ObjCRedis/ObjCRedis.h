@@ -245,6 +245,7 @@
 - (NSArray*)zrange:(NSString*)key from:(NSNumber*)from to:(NSNumber*)to;
 - (NSArray*)zrevrange:(NSString*)key from:(NSNumber*)from to:(NSNumber*)to;
 - (NSNumber*)zcard:(NSString*)key;
+- (NSNumber*)zscore:(NSString*)value of:(NSString*)key;
 
 
 @end
