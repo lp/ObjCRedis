@@ -65,10 +65,10 @@
 		0C1EE530124788DA00981F9A /* credis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = credis.h; sourceTree = "<group>"; };
 		0C1EE57C1247A25000981F9A /* ObjCRedis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjCRedis.h; sourceTree = "<group>"; };
 		0C1EE57D1247A25000981F9A /* ObjCRedis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjCRedis.m; sourceTree = "<group>"; };
-		0C1EE607124809CE00981F9A /* test_base.nu */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.nu; path = test_base.nu; sourceTree = "<group>"; };
 		0C1EE7631249977E00981F9A /* BuildAndRunTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BuildAndRunTests-Info.plist"; sourceTree = "<group>"; };
 		0C8BD58C124FA75A0041F072 /* NSSet+WithCVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet+WithCVector.h"; sourceTree = "<group>"; };
 		0C8BD58D124FA75A0041F072 /* NSSet+WithCVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSet+WithCVector.m"; sourceTree = "<group>"; };
+		0C8BDB45125284200041F072 /* test_base.nu */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.nu; path = test_base.nu; sourceTree = "<group>"; };
 		0CA595F2124D09AE00EC403D /* NSArray+WithCVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+WithCVector.h"; sourceTree = "<group>"; };
 		0CA595F3124D09AE00EC403D /* NSArray+WithCVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+WithCVector.m"; sourceTree = "<group>"; };
 		0CA596D1124DBB9200EC403D /* NSArray+includesHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+includesHelpers.h"; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 		0867D691FE84028FC02AAC07 /* ObjCRedis */ = {
 			isa = PBXGroup;
 			children = (
-				0C1EE6061248099700981F9A /* TestCases */,
+				0C8BDB44125284200041F072 /* Tests */,
 				0C1EE52E124788B700981F9A /* credis */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
@@ -155,12 +155,12 @@
 			name = credis;
 			sourceTree = "<group>";
 		};
-		0C1EE6061248099700981F9A /* TestCases */ = {
+		0C8BDB44125284200041F072 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				0C1EE607124809CE00981F9A /* test_base.nu */,
+				0C8BDB45125284200041F072 /* test_base.nu */,
 			);
-			name = TestCases;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */ = {
@@ -266,7 +266,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "function testsource {\nrm -d -R \"${PROJECT_DIR}/$1/\"\ncp -R \"${PROJECT_DIR}/build/Debug/$1/\" \"${PROJECT_DIR}/$1/\"\n}\n\n# add a testsource for each tested framework\ntestsource ObjCRedis.framework\n\ncd \"${PROJECT_DIR}/\"\n/usr/local/bin/nush /usr/local/bin/nutest -t test_*.nu";
+			shellScript = "function testsource {\nrm -d -R \"${PROJECT_DIR}/Tests/$1/\"\ncp -R \"${PROJECT_DIR}/build/Debug/$1/\" \"${PROJECT_DIR}/Tests/$1/\"\n}\n\n# add a testsource for each tested framework\ntestsource ObjCRedis.framework\n\ncd \"${PROJECT_DIR}/Tests/\"\n/usr/local/bin/nush /usr/local/bin/nutest -t test_*.nu";
 		};
 /* End PBXShellScriptBuildPhase section */
 
