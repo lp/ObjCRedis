@@ -509,6 +509,21 @@
     (assert_equal 1 (@redis zincr:"testValue2" by:1 of:@testKey)) ; should be nil
   )
   
+  (- (id) test_04_zrank is
+    (assert_equal -97 (@redis zrank:@testValue of:@testKey)) ; Fail!!!
+  )
+  
+  (- (id) test_05_zrange is
+    (assert_equal 1 ((@redis zrange:@testKey from:0 to:1) count))
+    (@redis zadd:"testValue2" to:@testKey at:2)
+    (@redis zadd:"testValue3" to:@testKey at:3)
+    (set rSet (@redis zrange:@testKey from:0 to:3))
+    (assert_equal 3 (rSet count))
+    (assert_equal "testValue2" (rSet 1))
+    (assert_equal "testValue3" (rSet 2))
+    (assert_equal nil (rSet 3))
+  )
+  
   (- (id) teardown is
     (@redis flushdb)
   )

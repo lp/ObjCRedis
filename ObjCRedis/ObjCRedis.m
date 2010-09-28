@@ -263,6 +263,14 @@
 	else {
 		return nil; }
 }
+- (NSNumber*)zrank:(NSString *)value of:(NSString *)key {
+	return [NSNumber numberWithInt:credis_zrank(rh, [key UTF8String], [value UTF8String])];
+}
+- (NSArray*)zrange:(NSString *)key from:(NSNumber *)from to:(NSNumber *)to {
+	char ** vec;
+	int numret = credis_zrange(rh, [key UTF8String], [from intValue], [to intValue], &vec);
+	return [NSArray arrayWithCVector:vec ofSize:numret];
+}
 
 - (void)dealloc
 {	
