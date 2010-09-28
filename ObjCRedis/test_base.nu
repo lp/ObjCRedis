@@ -511,9 +511,15 @@
   
   (- (id) test_04_zrank is
     (assert_equal -97 (@redis zrank:@testValue of:@testKey)) ; Fail!!!
+    ; (assert_equal -1 (@redis zrank:"testValue2" of:@testKey))
   )
   
-  (- (id) test_05_zrange is
+  (- (id) test_05_zrevrank is
+    (assert_equal -97 (@redis zrevrank:@testValue of:@testKey)) ; Fail!!!
+    ; (assert_equal -1 (@redis zrevrank:"testValue2" of:@testKey))
+  )
+  
+  (- (id) test_06_zrange is
     (assert_equal 1 ((@redis zrange:@testKey from:0 to:1) count))
     (@redis zadd:"testValue2" to:@testKey at:2)
     (@redis zadd:"testValue3" to:@testKey at:3)
@@ -521,6 +527,17 @@
     (assert_equal 3 (rSet count))
     (assert_equal "testValue2" (rSet 1))
     (assert_equal "testValue3" (rSet 2))
+    (assert_equal nil (rSet 3))
+  )
+  
+  (- (id) test_07_zrevrange is
+    (assert_equal 1 ((@redis zrevrange:@testKey from:0 to:1) count))
+    (@redis zadd:"testValue2" to:@testKey at:2)
+    (@redis zadd:"testValue3" to:@testKey at:3)
+    (set rSet (@redis zrevrange:@testKey from:0 to:3))
+    (assert_equal 3 (rSet count))
+    (assert_equal "testValue2" (rSet 1))
+    (assert_equal "testValue3" (rSet 0))
     (assert_equal nil (rSet 3))
   )
   

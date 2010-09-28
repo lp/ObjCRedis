@@ -241,7 +241,9 @@
 - (NSNumber*)zrem:(NSString*)value of:(NSString*)key;
 - (NSNumber*)zincr:(NSString*)value by:(NSNumber*)incr of:(NSString*)key;
 - (NSNumber*)zrank:(NSString*)value of:(NSString*)key;
+- (NSNumber*)zrevrank:(NSString*)value of:(NSString*)key;
 - (NSArray*)zrange:(NSString*)key from:(NSNumber*)from to:(NSNumber*)to;
+- (NSArray*)zrevrange:(NSString*)key from:(NSNumber*)from to:(NSNumber*)to;
 
 
 @end

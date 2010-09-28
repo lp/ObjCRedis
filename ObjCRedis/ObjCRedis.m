@@ -266,9 +266,17 @@
 - (NSNumber*)zrank:(NSString *)value of:(NSString *)key {
 	return [NSNumber numberWithInt:credis_zrank(rh, [key UTF8String], [value UTF8String])];
 }
+- (NSNumber*)zrevrank:(NSString *)value of:(NSString *)key {
+	return [NSNumber numberWithInt:credis_zrevrank(rh, [key UTF8String], [value UTF8String])];
+}
 - (NSArray*)zrange:(NSString *)key from:(NSNumber *)from to:(NSNumber *)to {
 	char ** vec;
 	int numret = credis_zrange(rh, [key UTF8String], [from intValue], [to intValue], &vec);
+	return [NSArray arrayWithCVector:vec ofSize:numret];
+}
+- (NSArray*)zrevrange:(NSString *)key from:(NSNumber *)from to:(NSNumber *)to {
+	char ** vec;
+	int numret = credis_zrevrange(rh, [key UTF8String], [from intValue], [to intValue], &vec);
 	return [NSArray arrayWithCVector:vec ofSize:numret];
 }
 
