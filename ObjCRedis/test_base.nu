@@ -541,6 +541,13 @@
     (assert_equal nil (rSet 3))
   )
   
+  (- (id) test_08_zcard is
+    (assert_equal 1 (@redis zcard:@testKey))
+    (@redis zadd:"testValue2" to:@testKey at:2)
+    (@redis zadd:"testValue3" to:@testKey at:3)
+    (assert_equal 3 (@redis zcard:@testKey))
+  )
+  
   (- (id) teardown is
     (@redis flushdb)
   )

@@ -279,6 +279,9 @@
 	int numret = credis_zrevrange(rh, [key UTF8String], [from intValue], [to intValue], &vec);
 	return [NSArray arrayWithCVector:vec ofSize:numret];
 }
+- (NSNumber*)zcard:(NSString *)key {
+	return [NSNumber numberWithInt:credis_zcard(rh, [key UTF8String])];
+}
 
 - (void)dealloc
 {	
