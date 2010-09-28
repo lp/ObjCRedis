@@ -550,11 +550,19 @@
   
   (- (id) test_09_zscore is
     (assert_equal 1 (@redis zscore:@testValue of:@testKey))
+    (@redis zadd:"testValue2" to:@testKey at:2.2)
+    (@redis zadd:"testValue3" to:@testKey at:3.3)
+    (assert_equal 2.2 (@redis zscore:"testValue2" of:@testKey))
+    (assert_equal 3.3 (@redis zscore:"testValue3" of:@testKey))
+    (assert_equal nil (@redis zscore:"testValue4" of:@testKey))
+  )
+  
+  (- (id) test_10_zremrangebyscore is
     (@redis zadd:"testValue2" to:@testKey at:2)
     (@redis zadd:"testValue3" to:@testKey at:3)
-    (assert_equal 2 (@redis zscore:"testValue2" of:@testKey))
-    (assert_equal 3 (@redis zscore:"testValue3" of:@testKey))
-    (assert_equal nil (@redis zscore:"testValue4" of:@testKey))
+    (assert_equal 3 (@redis zcard:@testKey))
+    (assert_equal 2 (@redis zremrangebyscore:@testKey from:0 to:2))
+    (assert_equal 1 (@redis zcard:@testKey))
   )
   
   (- (id) teardown is
