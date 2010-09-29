@@ -262,8 +262,8 @@
 // Publish Subscribe
 
 // Persistence
-
 - (NSNumber*)save;
+- (NSNumber*)bgsave;
 
 // Helper Method
 - (REDIS_AGGREGATE)aggregate:(NSString*)aggregate;

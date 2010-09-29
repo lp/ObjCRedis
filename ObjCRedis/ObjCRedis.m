@@ -340,9 +340,8 @@
 }
 
 // Persistence
-- (NSNumber*)save {
-	return [NSNumber numberWithInt:credis_save(rh)];
-}
+- (NSNumber*)save { return [NSNumber numberWithInt:credis_save(rh)]; }
+- (NSNumber*)bgsave { return [NSNumber numberWithInt:credis_bgsave(rh)]; }
 
 
 // Helper Method

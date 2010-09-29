@@ -683,5 +683,9 @@
   (- (id) test_01_save is
     (assert_equal 0 (@redis save))
   )
+  
+  (- (id) test_02_bgsave is
+    (assert_equal 0 (@redis bgsave))
+  )
 )
 
