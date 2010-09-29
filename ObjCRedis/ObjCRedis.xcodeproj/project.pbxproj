@@ -266,7 +266,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "function testsource {\nrm -d -R \"${PROJECT_DIR}/Tests/$1/\"\ncp -R \"${PROJECT_DIR}/build/Debug/$1/\" \"${PROJECT_DIR}/Tests/$1/\"\n}\n\n# add a testsource for each tested framework\ntestsource ObjCRedis.framework\n\ncd \"${PROJECT_DIR}/Tests/\"\n/usr/local/bin/nush /usr/local/bin/nutest -t test_*.nu";
+			shellScript = "function testsource {\nif [ -d \"${PROJECT_DIR}/Tests/$1/\" ]\n\tthen\n\t rm -d -R \"${PROJECT_DIR}/Tests/$1/\"\nfi\ncp -R \"${PROJECT_DIR}/build/Debug/$1/\" \"${PROJECT_DIR}/Tests/$1/\"\n}\n\n# add a testsource for each tested framework\ntestsource ObjCRedis.framework\n\ncd \"${PROJECT_DIR}/Tests/\"\n/usr/local/bin/nush /usr/local/bin/nutest -t test_*.nu";
 		};
 /* End PBXShellScriptBuildPhase section */
 

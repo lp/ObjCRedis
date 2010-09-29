@@ -31,5 +31,7 @@
 
 + (NSArray*)arrayWithCVector:(char**)vec ofSize:(int)size;
 - (const char**)cVector;
++ (NSArray*)arrayWithNumber:(NSNumber*)num ofSize:(NSInteger)size;
+- (const int*)intArray;
 
 @end

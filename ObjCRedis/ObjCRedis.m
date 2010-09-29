@@ -294,6 +294,40 @@
 - (NSNumber*)zremrangebyrank:(NSString *)key from:(NSNumber *)from to:(NSNumber *)to {
 	return [NSNumber numberWithInt:credis_zremrangebyrank(rh, [key UTF8String], [from intValue], [to intValue])];
 }
+- (NSNumber*)zinterstore:(NSArray *)keys to:(NSString *)key {
+	return [NSNumber numberWithInt:
+			credis_zinterstore(rh,
+							   [key UTF8String],
+							   (int)[keys count],
+							   [keys cVector],
+							   [[NSArray arrayWithNumber:[NSNumber numberWithInt:1] ofSize:[keys count]] intArray],
+							   SUM)];
+}
+
+- (NSNumber*)zinterstore:(NSArray *)keys to:(NSString *)key weights:(NSArray*)weights aggregate:(NSString*)aggr {
+	return [NSNumber numberWithInt:
+			credis_zinterstore(rh,
+							   [key UTF8String],
+							   (int)[keys count],
+							   [keys cVector],
+							   [weights intArray],
+							   [self aggregate:aggr])];
+}
+- (REDIS_AGGREGATE)aggregate:(NSString *)aggregate {
+	if ([aggregate isEqualToString:@"NONE"]) {
+		return NONE;
+	} else if ([aggregate isEqualToString:@"MIN"]) {
+		return MIN;
+	} else if ([aggregate isEqualToString:@"MAX"]) {
+		return MAX;
+	} else if ([aggregate isEqualToString:@"SUM"]) {
+		return SUM;
+	} else {
+		return SUM;
+	}
+}
+
+
 
 - (void)dealloc
 {	

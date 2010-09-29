@@ -248,5 +248,8 @@
 - (NSNumber*)zscore:(NSString*)value of:(NSString*)key;
 - (NSNumber*)zremrangebyscore:(NSString*)key from:(NSNumber*)from to:(NSNumber*)to;
 - (NSNumber*)zremrangebyrank:(NSString*)key from:(NSNumber*)from to:(NSNumber*)to;
+- (NSNumber*)zinterstore:(NSArray*)keys to:(NSString*)key;
+- (NSNumber*)zinterstore:(NSArray*)keys to:(NSString*)key weights:(NSArray*)weights aggregate:(NSString*)aggregate;
+- (REDIS_AGGREGATE)aggregate:(NSString*)aggregate;
 
 @end

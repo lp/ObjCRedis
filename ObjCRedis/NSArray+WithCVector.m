@@ -57,4 +57,26 @@
 	return (const char**)vector;
 }
 
++ (NSArray*)arrayWithNumber:(NSNumber*)num ofSize:(NSInteger)size
+{
+	NSMutableArray * bufferArray = [NSMutableArray array];
+	for (NSInteger i = 0; i < size; i++) {
+		[bufferArray addObject:num];
+	}
+	return [NSArray arrayWithArray:bufferArray];
+}
+
+- (const int*)intArray
+{
+	int * iArr = malloc(sizeof(int) * (int)[self count]);
+	NSEnumerator * e = [self objectEnumerator];
+	id o;
+	
+	while (o = [e nextObject]) {
+		int i = (int)[self indexOfObject:o];
+		iArr[i] = [o intValue];
+	}
+	return (const int*)iArr;
+}
+
 @end

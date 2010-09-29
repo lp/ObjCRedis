@@ -573,6 +573,24 @@
     (assert_equal 1 (@redis zcard:@testKey))
   )
   
+  (- (id) test_12_zinterstore is
+    (@redis zadd:"testValue2" to:@testKey at:2)
+    (@redis zadd:"testValue3" to:@testKey at:3)
+    (@redis zadd:"testValue2" to:"testKey2" at:2)
+    (@redis zadd:"testValue3" to:"testKey2" at:3)
+    
+    (assert_equal -97 (@redis zinterstore:(NSArray arrayWithList:(list @testKey "testKey2")) to:"storeInterKey")) ; Fail!!!
+    ; (set rSet (@redis zrange:"storeInterKey" from:0 to:1))
+    ; (assert_equal 1 (rSet count))
+    
+    (assert_equal -97 (@redis zinterstore:(NSArray arrayWithList:(list @testKey "testKey2")) ; Fail!!!
+                  to:"storeInterKey2"
+                  weights:(NSArray arrayWithList:(list 1 1 1))
+                  aggregate:"SUM"))
+   ; (set rSet (@redis zrange:"storeInterKey2" from:0 to:1))
+   ; (assert_equal 1 (rSet count))
+  )
+  
   (- (id) teardown is
     (@redis flushdb)
   )
