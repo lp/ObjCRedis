@@ -648,6 +648,18 @@
     (assert_equal nil (rArray 3))
   )
   
+  (- (id) test_sort_sortedSet is
+    (@redis zadd:"zzz" to:@testKey at:1)
+    (@redis zadd:"ppp" to:@testKey at:2)
+    (@redis zadd:"aaa" to:@testKey at:3)
+    
+    (set rArray (@redis sort:@testKey))
+    (assert_equal 3 (rArray count))
+    (assert_equal "aaa" (rArray 0))
+    (assert_equal "zzz" (rArray 2))
+    (assert_equal nil (rArray 3))
+  )
+  
   (- (id) teardown is
     (@redis flushdb)
   )
