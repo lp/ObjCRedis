@@ -79,10 +79,9 @@
   (ivar (id) redis (id) testKey (id) testValue)
   
   (- (id) setup is
+    (set @redis (ObjCRedis redis))
     (set @testKey "testKey")
     (set @testValue "testValue")
-    
-    (set @redis (ObjCRedis redis))
     (@redis set:@testKey to:@testValue)
   )
   
@@ -194,10 +193,9 @@
   (ivar (id) redis (id) testKey (id) testValue)
   
   (- (id) setup is
+    (set @redis (ObjCRedis redis))
     (set @testKey "testKey")
     (set @testValue "testValue")
-    
-    (set @redis (ObjCRedis redis))
     (@redis set:@testKey to:@testValue)
   )
   
@@ -367,10 +365,10 @@
   (ivar (id) redis (id) testKey (id) testValue)
   
   (- (id) setup is
+    (set @redis (ObjCRedis redis))
     (set @testKey "testset")
     (set @testValue "testValue")
     (@redis sadd:@testValue to:@testKey)
-    (set @redis (ObjCRedis redis))
   )
   
   (- (id) test_01_sadd is
@@ -484,10 +482,10 @@
   (ivar (id) redis (id) testKey (id) testValue)
   
   (- (id) setup is
+    (set @redis (ObjCRedis redis))
     (set @testKey "testset")
     (set @testValue "testValue")
     (@redis zadd:@testValue to:@testKey at:1)
-    (set @redis (ObjCRedis redis))
   )
   
   (- (id) test_01_zadd is
@@ -588,6 +586,11 @@
                   aggregate:"SUM"))
    ; (set rSet (@redis zrange:"storeInterKey2" from:0 to:1))
    ; (assert_equal 1 (rSet count))
+  )
+  
+  (- (id) test_13_zunionstore is
+    (@redis zadd:"testValue2" to:"testKey2" at:2)
+    (@redis zadd:"testValue3" to:"testKey2" at:3)
   )
   
   (- (id) teardown is
