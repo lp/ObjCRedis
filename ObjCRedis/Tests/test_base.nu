@@ -107,17 +107,13 @@
     (assert_true (((@redis keys:"testK*") includes:(NSArray arrayWithList:(list @testKey "testKey2"))) boolValue))
   )
   
-  ; Fail!!!
-  ; (- (id) testRandomKey is
-  ;       (@redis set:"testKey2" to:"testValue2")
-  ;       (@redis set:"otherKey" to:"otherValue")
-  ;       (@redis set:"testKey3" to:"testValue3")
-  ;       (@redis set:"otherKey2" to:"otherValue2")
-  ;       (@redis set:"testKey4" to:"testValue4")
-  ;       (@redis set:"otherKey3" to:"otherValue3")
-  ;       (assert_equal 7 (@redis dbsize))
-  ;       (assert_equal @testKey (@redis randomKey))
-  ;   )
+  (- (id) testRandomKey is
+    (set testArray ((NSArray arrayWithList:(list "testKey2" "otherKey" "testKey3" "otherKey2" "testKey4" "otherKey3")) each:(do (item) (
+      (@redis set:item to:(item stringByReplacingOccurrencesOfString:"Key" withString:"Value"))
+      ))))
+          (assert_equal (+ 1 (testArray count)) (@redis dbsize))
+          (assert_equal 1 (testArray containsObject:(@redis randomKey))) ; Why does this bring back 1?
+      )
   
   (- (id) testRename is
     (set newKey "newKey")
@@ -298,7 +294,6 @@
     (assert_equal 1 (@redis rpush:"anyValue" to:testKey2))
     (assert_equal 2 (@redis rpush:"anyValue2" to:testKey2))
     (assert_equal 3 (@redis rpush:"anyValue3" to:testKey2))
-     ; Fail should be 3
   )
   
   (- (id) test_02_lpush is
@@ -390,11 +385,10 @@
     (assert_equal @testValue (@redis spop:@testKey))
   )
   
-  ; Fail
-  ; (- (id) test_04_smove is
-  ;     (assert_equal -95 (@redis smove:@testValue from:@testKey to:"testset2"))
-  ;     (assert_equal 0 (@redis sismember:@testValue of:"testset2"))
-  ;   )
+  (- (id) test_04_smove is
+    (assert_equal 0 (@redis smove:@testValue from:@testKey to:"testset2"))
+    (assert_equal 0 (@redis sismember:@testValue of:"testset2"))
+  )
   
   (- (id) test_05_scard is
     (assert_equal 1 (@redis scard:@testKey))
@@ -515,13 +509,13 @@
   )
   
   (- (id) test_04_zrank is
-    (assert_equal -97 (@redis zrank:@testValue of:@testKey)) ; Fail!!!
-    ; (assert_equal -1 (@redis zrank:"testValue2" of:@testKey))
+    (assert_equal 0 (@redis zrank:@testValue of:@testKey))
+    (assert_equal -1 (@redis zrank:"testValue2" of:@testKey))
   )
   
   (- (id) test_05_zrevrank is
-    (assert_equal -97 (@redis zrevrank:@testValue of:@testKey)) ; Fail!!!
-    ; (assert_equal -1 (@redis zrevrank:"testValue2" of:@testKey))
+    (assert_equal 0 (@redis zrevrank:@testValue of:@testKey))
+    (assert_equal -1 (@redis zrevrank:"testValue2" of:@testKey))
   )
   
   (- (id) test_06_zrange is
