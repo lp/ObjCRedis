@@ -27,7 +27,7 @@
 (class Test_01_Reality is NuTestCase
   
   (- (id) testArray is
-    (set a (NSMutableArray arrayWithList:'( 1 2)))
+    (set a (NSMutableArray arrayWithList:(list 1 2)))
     (a << "three")
     (assert_equal 3 (a count))
     (assert_equal 2 (a 1))
@@ -510,7 +510,9 @@
   (- (id) test_03_zincrby is
     (assert_equal 2 (@redis zincr:@testValue by:1 of:@testKey))
     (assert_equal 4 (@redis zincr:@testValue by:2 of:@testKey))
-    (assert_equal 1 (@redis zincr:"testValue2" by:1 of:@testKey)) ; should be nil
+    (assert_equal 1 (@redis zincr:"testValue2" by:1 of:@testKey))
+    (assert_equal 2 (@redis zincr:"testValue2" by:1 of:@testKey))
+    (assert_equal 2 (@redis zscore:"testValue2" of:@testKey))
   )
   
   (- (id) test_04_zrank is
@@ -664,5 +666,22 @@
     (@redis flushdb)
   )
   
+)
+
+; Test 10 Hashes
+
+; Test 11 Subscribe API
+
+(class test_12_testPersistence is NuTestCase
+  (ivar (id) redis (id) testKey)
+  
+  (- (id) setup is
+    (set @redis (ObjCRedis redis))
+    (set @testKey "testkey")
+  )
+  
+  (- (id) test_01_save is
+    (assert_equal 0 (@redis save))
+  )
 )
 

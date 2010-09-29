@@ -339,6 +339,11 @@
 	return [NSArray arrayWithCVector:vec ofSize:numret];
 }
 
+// Persistence
+- (NSNumber*)save {
+	return [NSNumber numberWithInt:credis_save(rh)];
+}
+
 
 // Helper Method
 - (REDIS_AGGREGATE)aggregate:(NSString *)aggregate {

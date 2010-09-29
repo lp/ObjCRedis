@@ -41,7 +41,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* ObjCRedis */;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = ObjCRedis;
 		};
 /* End PBXContainerItemProxy section */
@@ -68,7 +68,7 @@
 		0C1EE7631249977E00981F9A /* BuildAndRunTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BuildAndRunTests-Info.plist"; sourceTree = "<group>"; };
 		0C8BD58C124FA75A0041F072 /* NSSet+WithCVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet+WithCVector.h"; sourceTree = "<group>"; };
 		0C8BD58D124FA75A0041F072 /* NSSet+WithCVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSet+WithCVector.m"; sourceTree = "<group>"; };
-		0C8BDB45125284200041F072 /* test_base.nu */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.nu; path = test_base.nu; sourceTree = "<group>"; };
+		0C8BDB45125284200041F072 /* test_base.nu */ = {isa = PBXFileReference; explicitFileType = sourcecode.nu; fileEncoding = 4; path = test_base.nu; sourceTree = "<group>"; };
 		0CA595F2124D09AE00EC403D /* NSArray+WithCVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+WithCVector.h"; sourceTree = "<group>"; };
 		0CA595F3124D09AE00EC403D /* NSArray+WithCVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+WithCVector.m"; sourceTree = "<group>"; };
 		0CA596D1124DBB9200EC403D /* NSArray+includesHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+includesHelpers.h"; sourceTree = "<group>"; };
@@ -140,8 +140,8 @@
 				0C8BD58D124FA75A0041F072 /* NSSet+WithCVector.m */,
 				0CA595F2124D09AE00EC403D /* NSArray+WithCVector.h */,
 				0CA595F3124D09AE00EC403D /* NSArray+WithCVector.m */,
-				0CA596D1124DBB9200EC403D /* NSArray+includesHelpers.h */,
 				0CA596D2124DBB9200EC403D /* NSArray+includesHelpers.m */,
+				0CA596D1124DBB9200EC403D /* NSArray+includesHelpers.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";

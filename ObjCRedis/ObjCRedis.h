@@ -253,9 +253,17 @@
 - (NSNumber*)zunionstore:(NSArray*)keys to:(NSString*)key;
 - (NSNumber*)zunionstore:(NSArray*)keys to:(NSString*)key weights:(NSArray*)weights aggregate:(NSString*)aggr;
 
+// Hashes
+
 // Sort
 
 - (NSArray*)sort:(NSString*)key;
+
+// Publish Subscribe
+
+// Persistence
+
+- (NSNumber*)save;
 
 // Helper Method
 - (REDIS_AGGREGATE)aggregate:(NSString*)aggregate;
