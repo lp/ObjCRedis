@@ -695,5 +695,11 @@
   (- (id) test_04_bgrewriteaof is
     (assert_equal 0 (@redis bgrewriteaof))
   )
+  
+  ; (- (id) test_05_shutdown is
+  ;     (assert_equal -95 (@redis shutdown)) ; Fail!!! but server stopped...
+  ;   )
 )
+
+
 

@@ -344,6 +344,7 @@
 - (NSNumber*)bgsave { return [NSNumber numberWithInt:credis_bgsave(rh)]; }
 - (NSNumber*)lastsave { return [NSNumber numberWithInt:credis_lastsave(rh)]; }
 - (NSNumber*)bgrewriteaof { return [NSNumber numberWithInt:credis_bgrewriteaof(rh)]; }
+- (NSNumber*)shutdown { return [NSNumber numberWithInt:credis_shutdown(rh)]; }
 
 // Helper Method
 - (REDIS_AGGREGATE)aggregate:(NSString *)aggregate {
