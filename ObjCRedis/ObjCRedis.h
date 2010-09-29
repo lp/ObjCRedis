@@ -253,6 +253,11 @@
 - (NSNumber*)zunionstore:(NSArray*)keys to:(NSString*)key;
 - (NSNumber*)zunionstore:(NSArray*)keys to:(NSString*)key weights:(NSArray*)weights aggregate:(NSString*)aggr;
 
+// Sort
+
+- (NSArray*)sort:(NSString*)key;
+
+// Helper Method
 - (REDIS_AGGREGATE)aggregate:(NSString*)aggregate;
 
 @end

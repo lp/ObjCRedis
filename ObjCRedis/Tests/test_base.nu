@@ -61,16 +61,23 @@
   )
   
   (- (id) test_02_Get is
+    (@redis set:"name" to:"Salvador")
     (assert_equal "Salvador" (@redis get:"name"))
   )
   
   (- (id) test_03_Exists is
+    (@redis set:"name" to:"Salvador")
     (assert_equal 0 (@redis exists:"name"))
   )
   
   (- (id) test_04_Del is
+    (@redis set:"name" to:"Salvador")
     (assert_equal 0 (@redis del:"name"))
     (assert_equal -1 (@redis del:"name"))
+  )
+  
+  (- (id) teardown is
+    (@redis flushdb)
   )
   
 )
@@ -607,7 +614,31 @@
   (- (id) teardown is
     (@redis flushdb)
   )
+)
+
+(class test_09_testSort is NuTestCase
+  (ivar (id) redis (id) testKey)
   
+  (- (id) setup is
+    (set @redis (ObjCRedis redis))
+    (set @testKey "testset")
+  )
+  
+  (- (id) test_sort_list is
+    (@redis rpush:"testValue1" to:@testKey)
+    (@redis rpush:"testValue2" to:@testKey)
+    (@redis rpush:"testValue3" to:@testKey)
+    
+    (set rArray (@redis sort:@testKey))
+    (assert_equal 3 (rArray count))
+    (assert_equal "testValue1" (rArray 0))
+    (assert_equal "testValue3" (rArray 2))
+    (assert_equal nil (rArray 3))
+  )
+  
+  (- (id) teardown is
+    (@redis flushdb)
+  )
   
 )
 

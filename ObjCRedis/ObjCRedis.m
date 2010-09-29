@@ -332,6 +332,15 @@
 							   [self aggregate:aggr])];
 }
 
+// Sort
+- (NSArray*)sort:(NSString *)key {
+	char ** vec;
+	int numret = credis_sort(rh, [key UTF8String], &vec);
+	return [NSArray arrayWithCVector:vec ofSize:numret];
+}
+
+
+// Helper Method
 - (REDIS_AGGREGATE)aggregate:(NSString *)aggregate {
 	if ([aggregate isEqualToString:@"NONE"]) {
 		return NONE;
