@@ -287,18 +287,23 @@
   (ivar (id) redis (id) testKey)
   
   (- (id) setup is
+    (set @redis (ObjCRedis redis))
     (set @testKey "testlist")
     (@redis lpush:"initValue1" to:@testKey)
     (@redis rpush:"initValue2" to:@testKey)
-    (set @redis (ObjCRedis redis))
   )
   
   (- (id) test_01_rpush is
-    (assert_equal -97 (@redis rpush:"anyValue" to:@testKey))
+    (set testKey2 "testList2")
+    (assert_equal 1 (@redis rpush:"anyValue" to:testKey2))
+    (assert_equal 2 (@redis rpush:"anyValue2" to:testKey2))
+    (assert_equal 3 (@redis rpush:"anyValue3" to:testKey2))
+     ; Fail should be 3
   )
   
   (- (id) test_02_lpush is
-    (assert_equal -97 (@redis lpush:"lpushValue" to:@testKey))
+    (set rList (@redis lpush:"lpushValue" to:@testKey))
+    (assert_equal 3 rList)
   )
   
   (- (id) test_03_llen is
@@ -338,11 +343,11 @@
   )
   
   (- (id) test_08_lrem is
-    (assert_equal 0 (@redis lrem:"initValue1" of:@testKey count:1)) ; should return number removed, returns 0
+    (assert_equal 1 (@redis lrem:"initValue1" of:@testKey count:0)) ; should return number removed, returns 0
     (assert_equal 1 (@redis llen:@testKey))
-    (assert_equal 0 (@redis lrem:"initValue2" of:@testKey count:1))
+    (assert_equal 1 (@redis lrem:"initValue2" of:@testKey count:0))
     (assert_equal 0 (@redis llen:@testKey))
-    (assert_equal 0 (@redis lrem:"initValue100" of:@testKey count:1)) ; should be -1?
+    (assert_equal 0 (@redis lrem:"initValue100" of:@testKey count:0)) ; should be -1?
   )
   
   (- (id) test_08_lpop is
