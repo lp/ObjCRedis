@@ -423,7 +423,7 @@
   (- (id) test_08_sinterstore is
     (@redis sadd:"add2value" to:"interKey")
     (@redis sadd:"add2value" to:"interKey2")
-    (assert_equal -97 (@redis sinterstore:(NSSet setWithList:(list "interKey" "interKey2")) to:"saveInterKey"))  ; should be 0!!!
+    (assert_equal 1 (@redis sinterstore:(NSSet setWithList:(list "interKey" "interKey2")) to:"saveInterKey"))  ; should be 0!!!
     (assert_equal 0 (@redis sismember:"add2value" of:"saveInterKey"))
   )
   
@@ -442,7 +442,7 @@
   (- (id) test_10_sunionstore is
     (@redis sadd:"add2value" to:"interKey")
     (@redis sadd:"add3value" to:"interKey2")
-    (assert_equal -97 (@redis sunionstore:(NSSet setWithList:(list "interKey" "interKey2")) to:"saveInterKey"))  ; should be 0!!!
+    (assert_equal 2 (@redis sunionstore:(NSSet setWithList:(list "interKey" "interKey2")) to:"saveInterKey"))  ; should be 0!!!
     (assert_equal 0 (@redis sismember:"add2value" of:"saveInterKey"))
   )
   
