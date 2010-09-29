@@ -687,5 +687,9 @@
   (- (id) test_02_bgsave is
     (assert_equal 0 (@redis bgsave))
   )
+  
+  (- (id) test_03_lastsave is
+    (assert_true (>= ((NSDate date) timeIntervalSince1970) (@redis lastsave)))
+  )
 )
 

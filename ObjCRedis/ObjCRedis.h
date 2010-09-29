@@ -264,6 +264,7 @@
 // Persistence
 - (NSNumber*)save;
 - (NSNumber*)bgsave;
+- (NSNumber*)lastsave;
 
 // Helper Method
 - (REDIS_AGGREGATE)aggregate:(NSString*)aggregate;

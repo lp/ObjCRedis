@@ -342,7 +342,7 @@
 // Persistence
 - (NSNumber*)save { return [NSNumber numberWithInt:credis_save(rh)]; }
 - (NSNumber*)bgsave { return [NSNumber numberWithInt:credis_bgsave(rh)]; }
-
+- (NSNumber*)lastsave { return [NSNumber numberWithInt:credis_lastsave(rh)]; }
 
 // Helper Method
 - (REDIS_AGGREGATE)aggregate:(NSString *)aggregate {
