@@ -621,7 +621,7 @@
   
   (- (id) setup is
     (set @redis (ObjCRedis redis))
-    (set @testKey "testset")
+    (set @testKey "testkey")
   )
   
   (- (id) test_sort_list is
@@ -633,6 +633,18 @@
     (assert_equal 3 (rArray count))
     (assert_equal "testValue1" (rArray 0))
     (assert_equal "testValue3" (rArray 2))
+    (assert_equal nil (rArray 3))
+  )
+  
+  (- (id) test_sort_set is
+    (@redis sadd:"1" to:@testKey)
+    (@redis sadd:"2" to:@testKey)
+    (@redis sadd:"3" to:@testKey)
+    
+    (set rArray (@redis sort:@testKey))
+    (assert_equal 3 (rArray count))
+    (assert_equal "1" (rArray 0))
+    (assert_equal "3" (rArray 2))
     (assert_equal nil (rArray 3))
   )
   
