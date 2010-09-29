@@ -265,6 +265,7 @@
 - (NSNumber*)save;
 - (NSNumber*)bgsave;
 - (NSNumber*)lastsave;
+- (NSNumber*)bgrewriteaof;
 
 // Helper Method
 - (REDIS_AGGREGATE)aggregate:(NSString*)aggregate;

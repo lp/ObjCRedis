@@ -691,5 +691,9 @@
   (- (id) test_03_lastsave is
     (assert_true (>= ((NSDate date) timeIntervalSince1970) (@redis lastsave)))
   )
+  
+  (- (id) test_04_bgrewriteaof is
+    (assert_equal 0 (@redis bgrewriteaof))
+  )
 )
 
