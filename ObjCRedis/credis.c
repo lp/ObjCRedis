@@ -64,6 +64,7 @@ void close(int fd) {
 #define CR_BULK '$'
 #define CR_MULTIBULK '*'
 #define CR_INT ':'
+#define CR_ANY '?'
 #define CR_NONE ' '
 
 #define CR_BUFFER_SIZE 4096
@@ -109,6 +110,7 @@ typedef struct _cr_multibulk {
 } cr_multibulk;
 
 typedef struct _cr_reply {
+  char type;
   int integer;
   char *line;
   char *bulk;
@@ -238,6 +240,7 @@ static int cr_splitstrtomultibulk(REDIS rhnd, char *str, const char token)
  * Returns:
  *   0  on success
  *  <0  on error, i.e. more memory not available */
+__attribute__ ((format(printf,2,3)))
 static int cr_appendstrf(cr_buffer *buf, const char *format, ...)
 {
   int rc, avail;
@@ -249,16 +252,29 @@ static int cr_appendstrf(cr_buffer *buf, const char *format, ...)
   rc = vsnprintf(buf->data + buf->len, avail, format, ap);
   va_end(ap);
 
-  if (rc < 0)
+  if (rc < 0) {
+#ifdef WIN32
+    rc = avail * 2;
+#else
     return -1;
+#endif
+  }
 
-  if (rc >= avail) {
+  while (rc >= avail) {
     if (cr_moremem(buf, rc - avail + 1))
       return CREDIS_ERR_NOMEM;
 
     va_start(ap, format);
     rc = vsnprintf(buf->data + buf->len, buf->size - buf->len, format, ap);
     va_end(ap);
+
+    if (rc < 0) {
+#ifdef WIN32
+      rc = avail * 2;
+#else
+      return -1;
+#endif
+    }
   }
   buf->len += rc;
 
@@ -560,8 +576,10 @@ static int cr_receivereply(REDIS rhnd, char recvtype)
   if (cr_readln(rhnd, 0, &line, NULL) > 0) {
     prefix = *(line++);
  
-    if (prefix != recvtype && prefix != CR_ERROR)
+    if (recvtype != CR_ANY && prefix != recvtype && prefix != CR_ERROR)
       return CREDIS_ERR_PROTOCOL;
+
+    rhnd->reply.type = prefix;
 
     switch(prefix) {
     case CR_ERROR:
@@ -648,10 +666,16 @@ static int cr_sendfandreceive(REDIS rhnd, char recvtype, const char *format, ...
   rc = vsnprintf(buf->data, buf->size, format, ap);
   va_end(ap);
 
-  if (rc < 0)
+  if (rc < 0) {
+#ifdef WIN32
+    /* handle the fact that vnsprintf() returns -1 if the buffer is too small */
+    rc = buf->size * 2;
+#else
     return -1;
+#endif
+  }
 
-  if (rc >= buf->size) {
+  while (rc >= buf->size) {
     DEBUG("truncated, get more memory and try again");
     if (cr_moremem(buf, rc - buf->size + 1))
       return CREDIS_ERR_NOMEM;
@@ -659,6 +683,14 @@ static int cr_sendfandreceive(REDIS rhnd, char recvtype, const char *format, ...
     va_start(ap, format);
     rc = vsnprintf(buf->data, buf->size, format, ap);
     va_end(ap);
+
+    if (rc < 0) {
+#ifdef WIN32
+      rc = buf->size * 2;
+#else
+      return -1;
+#endif
+    }
   }
 
   buf->len = rc;
@@ -683,11 +715,35 @@ void credis_close(REDIS rhnd)
   }
 }
 
+/* Requests Redis server information and tries to fill handle with server version 
+ * information */ 
+static int cr_getredisversion(REDIS rhnd)
+{
+  /* We can receive 2 version formats: x.yz and x.y.z, where x.yz was only used prior 
+   * first 1.1.0 release(?), e.g. stable releases 1.02 and 1.2.6 */
+  /* TODO check returned error string, "-ERR operation not permitted", to detect if 
+   * server require password? */
+  if (cr_sendfandreceive(rhnd, CR_BULK, "INFO\r\n") == 0) {
+    int items = sscanf(rhnd->reply.bulk,
+                       "redis_version:%d.%d.%d\r\n",
+                       &(rhnd->version.major),
+                       &(rhnd->version.minor),
+                       &(rhnd->version.patch));
+    if (items == 2) {
+      rhnd->version.patch = rhnd->version.minor;
+      rhnd->version.minor = 0;
+    }
+    DEBUG("Connected to Redis version: %d.%d.%d\n", 
+          rhnd->version.major, rhnd->version.minor, rhnd->version.patch);
+  }
+
+  return 0;
+}
+
 REDIS credis_connect(const char *host, int port, int timeout)
 {
-  int fd, rc, flags, yes = 1, use_he = 0;
+  int fd, rc, flags, yes = 1;
   struct sockaddr_in sa;  
-  struct hostent *he;
   REDIS rhnd;
 
 #ifdef WIN32
@@ -724,28 +780,34 @@ REDIS credis_connect(const char *host, int port, int timeout)
   sa.sin_port = htons(port);
 
 #ifdef WIN32
+  struct hostent *he;
+
   /* TODO use getaddrinfo() instead! */
   addr = inet_addr(host);
-  if (addr == INADDR_NONE) {
+  if (addr == INADDR_NONE)
     he = gethostbyname(host);
-    use_he = 1;
-  }
-  else {
+  else
     he = gethostbyaddr((char *)&addr, sizeof(addr), AF_INET);
-    use_he = 1;
-  }
+
+  if (he == NULL)
+    goto error;
+
+  memcpy(&sa.sin_addr, he->h_addr, sizeof(struct in_addr));
 #else
+  int err;
+  struct addrinfo hints, *info;
+ 
   if (inet_aton(host, &sa.sin_addr) == 0) {
-    he = gethostbyname(host);
-    use_he = 1;
+    memset(&hints, 0, sizeof(hints));
+    hints.ai_family = AF_INET;
+    hints.ai_socktype = SOCK_STREAM;
+    err = getaddrinfo(host, NULL, &hints, &info);
+    if (err)
+      DEBUG("getaddrinfo error: %s\n", gai_strerror(err));
+    memcpy(&sa.sin_addr.s_addr, &(info->ai_addr->sa_data[2]), sizeof(in_addr_t));
+    freeaddrinfo(info);
   }
 #endif
-
-  if (use_he) {
-    if (he == NULL)
-      goto error;
-    memcpy(&sa.sin_addr, he->h_addr, sizeof(struct in_addr));
-  } 
 
   /* connect with user specified timeout */
 
@@ -774,23 +836,8 @@ REDIS credis_connect(const char *host, int port, int timeout)
   rhnd->fd = fd;
   rhnd->timeout = timeout;
 
-  /* We can receive 2 version formats: x.yz and x.y.z, where x.yz was only used prior 
-   * first 1.1.0 release(?), e.g. stable releases 1.02 and 1.2.6 */
-  if (cr_sendfandreceive(rhnd, CR_BULK, "INFO\r\n") == 0) {
-    int items = sscanf(rhnd->reply.bulk,
-                       "redis_version:%d.%d.%d\r\n",
-                       &(rhnd->version.major),
-                       &(rhnd->version.minor),
-                       &(rhnd->version.patch));
-    if (items < 2)
-      goto error;
-    if (items == 2) {
-      rhnd->version.patch = rhnd->version.minor;
-      rhnd->version.minor = 0;
-    }
-    DEBUG("Connected to Redis version: %d.%d.%d\n", 
-          rhnd->version.major, rhnd->version.minor, rhnd->version.patch);
-  }
+  if (cr_getredisversion(rhnd) != 0)
+    goto error;
 
   return rhnd;
 
@@ -798,7 +845,6 @@ error:
   if (fd > 0)
     close(fd);
   cr_delete(rhnd);
-
   return NULL;
 }
 
@@ -841,7 +887,13 @@ int credis_ping(REDIS rhnd)
 
 int credis_auth(REDIS rhnd, const char *password)
 {
-  return cr_sendfandreceive(rhnd, CR_INLINE, "AUTH %s\r\n", password);
+  int rc = cr_sendfandreceive(rhnd, CR_INLINE, "AUTH %s\r\n", password);
+
+  /* Request Redis server version once we have been authenticated */
+  if (rc == 0)
+    return cr_getredisversion(rhnd);
+
+  return rc;
 }
 
 static int cr_multikeybulkcommand(REDIS rhnd, const char *cmd, int keyc, 
@@ -877,7 +929,11 @@ static int cr_multikeystorecommand(REDIS rhnd, const char *cmd, const char *dest
   if ((rc = cr_appendstrarray(buf, keyc, keyv, 1)) != 0)
     return rc;
 
-  return cr_sendandreceive(rhnd, CR_INLINE);
+  /* integer reply and not inline as documentation specifies */
+  if ((rc = cr_sendandreceive(rhnd, CR_INT)) == 0)
+    rc = rhnd->reply.integer;
+
+  return rc;
 }
 
 int credis_mget(REDIS rhnd, int keyc, const char **keyv, char ***valv)
@@ -1020,10 +1076,21 @@ int credis_keys(REDIS rhnd, const char *pattern, char ***keyv)
 
 int credis_randomkey(REDIS rhnd, char **key)
 {
-  int rc = cr_sendfandreceive(rhnd, CR_INLINE, "RANDOMKEY\r\n");
+  int rc;
 
-  if (rc == 0 && key) 
-    *key = rhnd->reply.line;
+  /* with Redis 2.0.0 randomkey-command returns a bulk instead of inline */
+  if (rhnd->version.major >= 2) {
+    rc = cr_sendfandreceive(rhnd, CR_BULK, "RANDOMKEY\r\n");
+
+    if (rc == 0 && key) 
+      *key = rhnd->reply.bulk;
+  }
+  else {
+    rc = cr_sendfandreceive(rhnd, CR_INLINE, "RANDOMKEY\r\n");
+
+    if (rc == 0 && key) 
+      *key = rhnd->reply.line;
+  }
 
   return rc;
 }
@@ -1077,8 +1144,20 @@ int credis_ttl(REDIS rhnd, const char *key)
 
 static int cr_push(REDIS rhnd, int left, const char *key, const char *val)
 {
-  return cr_sendfandreceive(rhnd, CR_INLINE, "%s %s %zu\r\n%s\r\n", 
+  int rc;
+
+  if (rhnd->version.major >= 2) {
+    rc = cr_sendfandreceive(rhnd, CR_INT, "%s %s %zu\r\n%s\r\n", 
                             left==1?"LPUSH":"RPUSH", key, strlen(val), val);
+    if (rc == 0)
+      rc = rhnd->reply.integer;
+  }
+  else {
+    rc = cr_sendfandreceive(rhnd, CR_INLINE, "%s %s %zu\r\n%s\r\n", 
+                            left==1?"LPUSH":"RPUSH", key, strlen(val), val);
+  }
+
+  return rc;
 }
 
 int credis_rpush(REDIS rhnd, const char *key, const char *val)
@@ -1138,8 +1217,13 @@ int credis_lset(REDIS rhnd, const char *key, int index, const char *val)
 
 int credis_lrem(REDIS rhnd, const char *key, int count, const char *val)
 {
-  return cr_sendfandreceive(rhnd, CR_INT, "LREM %s %d %zu\r\n%s\r\n", 
-                            key, count, strlen(val), val);
+  int rc = cr_sendfandreceive(rhnd, CR_INT, "LREM %s %d %zu\r\n%s\r\n", 
+                              key, count, strlen(val), val);
+
+  if (rc == 0) 
+    rc = rhnd->reply.integer;
+
+  return rc;
 }
 
 static int cr_pop(REDIS rhnd, int left, const char *key, char **val)
@@ -1327,8 +1411,8 @@ int credis_spop(REDIS rhnd, const char *key, char **member)
 int credis_smove(REDIS rhnd, const char *sourcekey, const char *destkey, 
                  const char *member)
 {
-  int rc = cr_sendfandreceive(rhnd, CR_INT, "SMOVE %s %s %s\r\n", 
-                              sourcekey, destkey, member);
+  int rc = cr_sendfandreceive(rhnd, CR_INT, "SMOVE %s %s %zu\r\n%s\r\n",  
+                              sourcekey, destkey, strlen(member), member);
 
   if (rc == 0 && rhnd->reply.integer == 0)
     rc = -1;
@@ -1420,14 +1504,17 @@ int credis_zincrby(REDIS rhnd, const char *key, double incr_score, const char *m
   return rc;
 }
 
-/* TODO what does Redis return if member is not member of set? */
 static int cr_zrank(REDIS rhnd, int reverse, const char *key, const char *member)
 {
-  int rc = cr_sendfandreceive(rhnd, CR_BULK, "%s %s %zu\r\n%s\r\n", 
+  int rc = cr_sendfandreceive(rhnd, CR_ANY, "%s %s %zu\r\n%s\r\n", 
                               reverse==1?"ZREVRANK":"ZRANK", key, strlen(member), member);
 
-  if (rc == 0)
-    rc = atoi(rhnd->reply.bulk);
+  if (rc == 0) {
+    if (rhnd->reply.type == CR_INT)
+      rc = rhnd->reply.integer;
+    else
+      rc = -1;
+  }
 
   return rc;
 }
