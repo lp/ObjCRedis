@@ -313,6 +313,25 @@
 							   [weights intArray],
 							   [self aggregate:aggr])];
 }
+- (NSNumber*)zunionstore:(NSArray *)keys to:(NSString *)key {
+	return [NSNumber numberWithInt:
+			credis_zunionstore(rh,
+							   [key UTF8String],
+							   (int)[keys count],
+							   [keys cVector],
+							   [[NSArray arrayWithNumber:[NSNumber numberWithInt:1] ofSize:[keys count]] intArray],
+							   SUM)];
+}
+- (NSNumber*)zunionstore:(NSArray*)keys to:(NSString*)key weights:(NSArray*)weights aggregate:(NSString*)aggr {
+	return [NSNumber numberWithInt:
+			credis_zunionstore(rh,
+							   [key UTF8String],
+							   (int)[keys count],
+							   [keys cVector],
+							   [weights intArray],
+							   [self aggregate:aggr])];
+}
+
 - (REDIS_AGGREGATE)aggregate:(NSString *)aggregate {
 	if ([aggregate isEqualToString:@"NONE"]) {
 		return NONE;

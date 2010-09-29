@@ -249,7 +249,10 @@
 - (NSNumber*)zremrangebyscore:(NSString*)key from:(NSNumber*)from to:(NSNumber*)to;
 - (NSNumber*)zremrangebyrank:(NSString*)key from:(NSNumber*)from to:(NSNumber*)to;
 - (NSNumber*)zinterstore:(NSArray*)keys to:(NSString*)key;
-- (NSNumber*)zinterstore:(NSArray*)keys to:(NSString*)key weights:(NSArray*)weights aggregate:(NSString*)aggregate;
+- (NSNumber*)zinterstore:(NSArray*)keys to:(NSString*)key weights:(NSArray*)weights aggregate:(NSString*)aggr;
+- (NSNumber*)zunionstore:(NSArray*)keys to:(NSString*)key;
+- (NSNumber*)zunionstore:(NSArray*)keys to:(NSString*)key weights:(NSArray*)weights aggregate:(NSString*)aggr;
+
 - (REDIS_AGGREGATE)aggregate:(NSString*)aggregate;
 
 @end

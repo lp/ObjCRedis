@@ -591,6 +591,17 @@
   (- (id) test_13_zunionstore is
     (@redis zadd:"testValue2" to:"testKey2" at:2)
     (@redis zadd:"testValue3" to:"testKey2" at:3)
+    
+    (assert_equal -97 (@redis zunionstore:(NSArray arrayWithList:(list @testKey "testKey2")) to:"storeUnionKey")) ; Fail!!!
+    ; (set rSet (@redis zrange:"storeUnionKey" from:0 to:2))
+    ; (assert_equal 3 (rSet count))
+    
+    (assert_equal -97 (@redis zunionstore:(NSArray arrayWithList:(list @testKey "testKey2")) ; Fail!!!
+                      to:"storeUnionKey2"
+                      weights:(NSArray arrayWithList:(list 1 1 1))
+                      aggregate:"SUM"))
+    ; (set rSet (@redis zrange:"storeUnionKey" from:0 to:2))
+    ; (assert_equal 3 (rSet count))
   )
   
   (- (id) teardown is
