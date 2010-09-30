@@ -447,15 +447,45 @@
 
 // Sort
 
+/*!
+  @method sort:
+  @abstract Sort a Set or a List.
+  @result An NSArray containing the sorted members
+*/
 - (NSArray*)sort:(NSString*)key;
 
 // Publish Subscribe
 
 // Persistence
+/*!
+  @method save
+  @abstract Synchronously save the DB on disk.
+  @result An NSNumber following Credis error conventions.
+*/
 - (NSNumber*)save;
+/*!
+  @method bgsave
+  @abstract Asynchronously save the DB on disk.
+  @result An NSNumber following Credis error conventions.
+*/
 - (NSNumber*)bgsave;
-- (NSNumber*)lastsave;
+/*!
+  @method lastsave
+  @abstract Return the UNIX time stamp of the last successfully saving of the dataset on disk.
+  @result An NSNumber representing the time.
+*/
+- (NSNumber*)lastsave; // could return NSDate???
+/*!
+  @method bgrewriteaof
+  @abstract Rewrite the append only file in background when it gets too big.
+  @result An NSNumber following Credis error conventions.
+*/
 - (NSNumber*)bgrewriteaof;
+/*!
+  @method shutdown
+  @abstract Synchronously save the DB on disk, then shutdown the server.
+  @result An NSNumber following Credis error conventions.
+*/
 - (NSNumber*)shutdown;
 
 // Helper Method
