@@ -352,14 +352,59 @@
 
 // Sorted Sets Methods
 
+/*!
+  @method zadd:to:at:
+  @abstract Add the specified member to the Sorted Set value at key or update the score if it already exist.
+  @result An NSNumber returning -1 if member was already a member of the sorted set and only score was updated, 0 is returned if the new element was added.
+*/
 - (NSNumber*)zadd:(NSString*)value to:(NSString*)key at:(NSNumber*)score;
+/*!
+  @method zrem:of:
+  @abstract Remove the specified member from the Sorted Set value at key.
+  @result An NSNumber returning -1 if the member was not a member of the sorted set.
+*/
 - (NSNumber*)zrem:(NSString*)value of:(NSString*)key;
+/*!
+  @method zincr:by:of
+  @abstract If the member already exists increment its score by increment, otherwise add the member setting increment as score.
+  @result An NSNumber returning the score of the member after the increment.
+*/
 - (NSNumber*)zincr:(NSString*)value by:(NSNumber*)incr of:(NSString*)key;
+/*!
+  @method zrank:of:
+  @abstract Return the rank (or index) or member in the sorted set at key, with scores being ordered from low to high.
+  @result An NSNumber returning the rank of the given member or -1 if the member was not a member of the sorted set.
+*/
 - (NSNumber*)zrank:(NSString*)value of:(NSString*)key;
+/*!
+  @method zrevrank:of:
+  @abstract Return the rank (or index) or member in the sorted set at key, with scores being ordered from high to low.
+  @result An NSNumber returning the reverse rank of the given member or -1 if the member was not a member of the sorted set.
+*/
 - (NSNumber*)zrevrank:(NSString*)value of:(NSString*)key;
+/*!
+  @method zrange:from:to:
+  @abstract Return a range of elements from the sorted set at key.
+  @result An NSArray of sorted members in range.
+*/
 - (NSArray*)zrange:(NSString*)key from:(NSNumber*)from to:(NSNumber*)to;
+/*!
+  @method zrevrange:from:to:
+  @abstract Return a range of elements from the sorted set at key, exactly like ZRANGE, but the sorted set is ordered in traversed in reverse order, from the greatest to the smallest score.
+  @result An NSArray of sorted members in range in reverse order.
+*/
 - (NSArray*)zrevrange:(NSString*)key from:(NSNumber*)from to:(NSNumber*)to;
+/*!
+  @method zcard:
+  @abstract Return the cardinality (number of elements) of the sorted set at key.
+  @result An NSNumber returning the cardinality or -1 if 'key' does not exist.
+*/
 - (NSNumber*)zcard:(NSString*)key;
+/*!
+  @method zscore:of:
+  @abstract Return the score associated with the specified element of the sorted set at key.
+  @result Returns nil if the 'key' does not exist or the 'member' is not in the sorted set, Otherwise returns an NSNumber with the members score.
+*/
 - (NSNumber*)zscore:(NSString*)value of:(NSString*)key;
 - (NSNumber*)zremrangebyscore:(NSString*)key from:(NSNumber*)from to:(NSNumber*)to;
 - (NSNumber*)zremrangebyrank:(NSString*)key from:(NSNumber*)from to:(NSNumber*)to;
