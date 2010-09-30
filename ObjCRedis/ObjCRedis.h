@@ -406,11 +406,41 @@
   @result Returns nil if the 'key' does not exist or the 'member' is not in the sorted set, Otherwise returns an NSNumber with the members score.
 */
 - (NSNumber*)zscore:(NSString*)value of:(NSString*)key;
+/*!
+  @method zremrangebyscore:from:to:
+  @abstract Remove all the elements with score >= min and score <= max from the sorted set.
+  @result An NSNumber returning the number of elements removed or -1 if key does not exist.
+*/
 - (NSNumber*)zremrangebyscore:(NSString*)key from:(NSNumber*)from to:(NSNumber*)to;
+/*!
+  @method zremrangebyrank:from:to:
+  @abstract Remove all the elements with rank >= min and rank <= max from the sorted set.
+  @result An NSNumber returning the number of elements removed or -1 if key does not exist.
+*/
 - (NSNumber*)zremrangebyrank:(NSString*)key from:(NSNumber*)from to:(NSNumber*)to;
+/*!
+  @method zinterstore:to:
+  @abstract Perform an intersection over a number of sorted sets with default weights and aggregate.
+  @result An NSNumber following Credis error conventions.
+*/
 - (NSNumber*)zinterstore:(NSArray*)keys to:(NSString*)key;
+/*!
+  @method zinterstore:to:weights:aggregate:
+  @abstract Perform an intersection over a number of sorted sets with weights and aggregate.
+  @result An NSNumber following Credis error conventions.
+*/
 - (NSNumber*)zinterstore:(NSArray*)keys to:(NSString*)key weights:(NSArray*)weights aggregate:(NSString*)aggr;
+/*!
+  @method zunionstore:to:
+  @abstract Perform a union over a number of sorted sets with default weights and aggregate
+  @result An NSNumber following Credis error conventions.
+*/
 - (NSNumber*)zunionstore:(NSArray*)keys to:(NSString*)key;
+/*!
+  @method zunionstore:to:weights:aggregate:
+  @abstract Perform a union over a number of sorted sets with weights and aggregate
+  @result An NSNumber following Credis error conventions.
+*/
 - (NSNumber*)zunionstore:(NSArray*)keys to:(NSString*)key weights:(NSArray*)weights aggregate:(NSString*)aggr;
 
 // Hashes
