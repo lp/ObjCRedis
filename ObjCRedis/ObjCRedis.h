@@ -201,15 +201,30 @@
 - (NSNumber*)append:(NSString*)value to:(NSString*)key;
 /*!
  @method substr:from:to:
- @abstract Return a substring of a larger string
- @result An NSString representing the substring or an empty string if the substring is not existent
+ @abstract An NSString representing the substring or an empty string if the substring is not existent.
+ @result Return a substring of a larger string.
 */
 - (NSString*)substr:(NSString*)key from:(NSNumber*)from to:(NSNumber*)to;
 
 // List Methods
 
+/*!
+  @method rpush:to:
+  @abstract Append an element to the tail of the List value at key
+  @result If Redis server version is 2.0 or later the number of elements inside the list after the push operation is returned on success.
+*/
 - (NSNumber*)rpush:(NSString*)value to:(NSString*)key;
+/*!
+  @method lpush:to:
+  @abstract Append an element to the head of the List value at key
+  @result If Redis server version is 2.0 or later the number of elements inside the list after the push operation is returned on success.
+*/
 - (NSNumber*)lpush:(NSString*)value to:(NSString*)key;
+/*!
+  @method llen:to
+  @abstract Return the length of the List value at key
+  @result returns length of list
+*/
 - (NSNumber*)llen:(NSString*)key;
 - (NSArray*)lrange:(NSString*)key from:(NSNumber*)from to:(NSNumber*)to;
 - (NSNumber*)ltrim:(NSString*)key from:(NSNumber*)from to:(NSNumber*)to;
