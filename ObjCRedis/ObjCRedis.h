@@ -271,18 +271,83 @@
 
 // Sets Methods
 
+/*!
+  @method sadd:to:
+  @abstract Add the specified member to the Set value at key.
+  @result An NSNumber returning -1 if the given member was already a member of the set.
+*/
 - (NSNumber*)sadd:(NSString*)value to:(NSString*)key;
+/*!
+  @method srem:of:
+  @abstract Remove the specified member from the Set value at key.
+  @result An NSNumber returning -1 if the given member is not a member of the set.
+*/
 - (NSNumber*)srem:(NSString*)value of:(NSString*)key;
+/*!
+  @method spop:
+  @abstract Remove and return (pop) a random element from the Set value at key.
+  @result Returns nil if the given key doesn't exists, else value is returned as NSString
+*/
 - (NSString*)spop:(NSString*)key;
+/*!
+  @method smove:from:to:
+  @abstract Move the specified member from one Set to another atomically.
+  @result An NSNumber returning -1 if the member doesn't exists in the source set.
+*/
 - (NSNumber*)smove:(NSString*)value from:(NSString*)from to:(NSString*)to;
+/*!
+  @method scard:
+  @abstract Return the number of elements (the cardinality) of the Set at key.
+  @result An NSNumber returning the cardinality (number of members) or 0 if the given key doesn't exists.
+*/
 - (NSNumber*)scard:(NSString*)value;
+/*!
+  @method sismember:of:
+  @abstract Test if the specified value is a member of the Set at key.
+  @result An NSNumber returning -1 if the key doesn't exists and 0 if it does.
+*/
 - (NSNumber*)sismember:(NSString*)member of:(NSString*)key;
+/*!
+  @method sinter:
+  @abstract Return the intersection between the Sets stored at key1, key2, ..., keyN.
+  @result An NSSet containing the intersecting members.
+*/
 - (NSSet*)sinter:(NSSet*)members;
+/*!
+  @method sinterstore:to:
+  @abstract Compute the intersection between the Sets stored at key1, key2, ..., keyN, and store the resulting Set at key.
+  @result An NSNumber returning the number of intersecting members stored in destination set.
+*/
 - (NSNumber*)sinterstore:(NSArray*)members to:(NSString*)key;
+/*!
+  @method sunion:
+  @abstract Return the union between the Sets stored at key1, key2, ..., keyN.
+  @result An NSSet containing the united sets members.
+*/
 - (NSSet*)sunion:(NSSet*)members;
+/*!
+  @method sunionstore:to:
+  @abstract Compute the union between the Sets stored at key1, key2, ..., keyN, and store the resulting Set at key
+  @result An NSNumber returning the number of united sets members stored in destination set.
+*/
 - (NSNumber*)sunionstore:(NSArray*)members to:(NSString*)key;
+/*!
+  @method sdiff:
+  @abstract Return the difference between the Set stored at key1 and all the Sets key2, ..., keyN.
+  @result An NSSet containing the differing members.
+*/
 - (NSSet*)sdiff:(NSArray*)members;
+/*!
+  @method sdiffstore:to:
+  @abstract Compute the difference between the Set key1 and all the Sets key2, ..., keyN, and store the resulting Set at key
+  @result An NSNumber returning the number of differing members stored in destination set.
+*/
 - (NSNumber*)sdiffstore:(NSArray*)members to:(NSString*)key;
+/*!
+  @method smembers:
+  @abstract Return all the members of the Set value at key.
+  @result An NSSet containing all the members of the set.
+*/
 - (NSSet*)smembers:(NSString*)key;
 
 // Sorted Sets Methods
