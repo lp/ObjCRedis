@@ -201,8 +201,8 @@
 - (NSNumber*)append:(NSString*)value to:(NSString*)key;
 /*!
  @method substr:from:to:
- @abstract An NSString representing the substring or an empty string if the substring is not existent.
- @result Return a substring of a larger string.
+ @abstract Return a substring of a larger string.
+ @result An NSString representing the substring or an empty string if the substring is not existent.
 */
 - (NSString*)substr:(NSString*)key from:(NSNumber*)from to:(NSNumber*)to;
 
@@ -221,17 +221,52 @@
 */
 - (NSNumber*)lpush:(NSString*)value to:(NSString*)key;
 /*!
-  @method llen:to
+  @method llen:
   @abstract Return the length of the List value at key
   @result returns length of list
 */
 - (NSNumber*)llen:(NSString*)key;
+/*!
+  @method lrange:from:to:
+  @abstract Return a range of elements from the List at key
+  @result NSArray containing ordered items from range
+*/
 - (NSArray*)lrange:(NSString*)key from:(NSNumber*)from to:(NSNumber*)to;
+/*!
+  @method ltrim:from:to:
+  @abstract Trim the list at key to the specified range of elements.
+  @result An NSNumber returning -1 if the members were not removed.
+*/
 - (NSNumber*)ltrim:(NSString*)key from:(NSNumber*)from to:(NSNumber*)to;
+/*!
+  @method lindex:of:
+  @abstract Return the element at index position from the List at key
+  @result An NSString of the member.
+*/
 - (NSString*)lindex:(NSNumber*)index of:(NSString*)key;
+/*!
+  @method lset:at:to:
+  @abstract Set a new value as the element at index position of the List at key.
+  @result An NSNumber returning -1 if the element was not set.
+*/
 - (NSNumber*)lset:(NSString*)key at:(NSNumber*)index to:(NSString*)value;
+/*!
+  @method lrem:of:count:
+  @abstract Remove the first-N, last-N, or all the elements matching value from the List at key.
+  @result An NSNumber returning the number of elements removed.
+*/
 - (NSNumber*)lrem:(NSString*)value of:(NSString*)key count:(NSNumber*)count;
+/*!
+  @method lpop:
+  @abstract Return and remove (atomically) the first element of the List at key.
+  @result An NSNumber returning -1 if the key doesn't exists.
+*/
 - (NSString*)lpop:(NSString*)key;
+/*!
+  @method rpop:
+  @abstract Return and remove (atomically) the last element of the List at key
+  @result An NSNumber returning -1 if the key doesn't exists.
+*/
 - (NSString*)rpop:(NSString*)key;
 
 // Sets Methods
