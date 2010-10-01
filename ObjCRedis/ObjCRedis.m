@@ -350,6 +350,12 @@
 		return [NSNumber numberWithInt:credis_unsubscribe(rh, [channel UTF8String])];
 	}
 }
+- (NSNumber*)psubscribe:(NSString *)pattern {
+	return [NSNumber numberWithInt:credis_psubscribe(rh, [pattern UTF8String])];
+}
+- (NSNumber*)punsubscribe:(NSString *)pattern {
+	return [NSNumber numberWithInt:credis_punsubscribe(rh, [pattern UTF8String])];
+}
 
 // Persistence
 - (NSNumber*)save { return [NSNumber numberWithInt:credis_save(rh)]; }

@@ -687,6 +687,14 @@
     (assert_equal 22 (@redis unsubscribe:"channelZ")) ; N'importe quoi!!!
     (assert_equal 13 (@redis unsubscribe:nil)) ; Fail, should be 0
   )
+  
+  (- (id) test_03_psubscribe is
+    (assert_equal 21 (@redis psubscribe:"channel*")) ; ???
+  )
+  
+  (- (id) test_04_punsubscribe is
+    (assert_equal 23 (@redis punsubscribe:"channel*")) ; ???
+  )
 )
 
 (class test_12_testPersistence is NuTestCase

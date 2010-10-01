@@ -458,6 +458,8 @@
 
 - (NSNumber*)subscribe:(NSString*)channel;
 - (NSNumber*)unsubscribe:(NSString*)channel;
+- (NSNumber*)psubscribe:(NSString*)pattern;
+- (NSNumber*)punsubscribe:(NSString*)pattern;
 
 // Persistence
 /*!
