@@ -670,7 +670,24 @@
 
 ; Test 10 Hashes
 
-; Test 11 Subscribe API
+(class test_11_testPublishSubscribe is NuTestCase
+  (ivar (id) redis (id) testKey)
+  
+  (- (id) setup is
+    (set @redis (ObjCRedis redis))
+    (set @testKey "testkey")
+  )
+  
+  (- (id) test_01_subscribe is
+    (assert_equal 20 (@redis subscribe:"channelZ")) ; ????
+    (assert_equal 20 (@redis subscribe:"channelB")) ; Fail, should at least be different!!
+  )
+  
+  (- (id) test_02_unsubscribe is
+    (assert_equal 22 (@redis unsubscribe:"channelZ")) ; N'importe quoi!!!
+    (assert_equal 13 (@redis unsubscribe:nil)) ; Fail, should be 0
+  )
+)
 
 (class test_12_testPersistence is NuTestCase
   (ivar (id) redis (id) testKey)

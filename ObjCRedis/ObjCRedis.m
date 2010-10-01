@@ -339,6 +339,18 @@
 	return [NSArray arrayWithCVector:vec ofSize:numret];
 }
 
+// Publish Subscribe
+- (NSNumber*)subscribe:(NSString *)channel {
+	return [NSNumber numberWithInt:credis_subscribe(rh, [channel UTF8String])];
+}
+- (NSNumber*)unsubscribe:(NSString *)channel {
+	if ([channel isEqual:nil]) {
+		return [NSNumber numberWithInt:credis_unsubscribe(rh, NULL)];
+	} else {
+		return [NSNumber numberWithInt:credis_unsubscribe(rh, [channel UTF8String])];
+	}
+}
+
 // Persistence
 - (NSNumber*)save { return [NSNumber numberWithInt:credis_save(rh)]; }
 - (NSNumber*)bgsave { return [NSNumber numberWithInt:credis_bgsave(rh)]; }

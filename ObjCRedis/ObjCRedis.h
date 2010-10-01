@@ -456,6 +456,9 @@
 
 // Publish Subscribe
 
+- (NSNumber*)subscribe:(NSString*)channel;
+- (NSNumber*)unsubscribe:(NSString*)channel;
+
 // Persistence
 /*!
   @method save
