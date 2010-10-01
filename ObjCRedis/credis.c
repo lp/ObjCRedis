@@ -1613,7 +1613,7 @@ static int cr_zstore(REDIS rhnd, int inter, const char *destkey, int keyc, const
 
   buf->len = 0;
   
-  if ((rc = cr_appendstrf(buf, "%s %s %d ", inter?"ZINTERSTORE":"ZUNIONSTORE", destkey, keyc)) != 0)
+  if ((rc = cr_appendstrf(buf, "%s %s %d", inter?"ZINTERSTORE":"ZUNIONSTORE", destkey, keyc)) != 0)
     return rc;
   if ((rc = cr_appendstrarray(buf, keyc, keyv, 0)) != 0)
     return rc;
@@ -1624,13 +1624,13 @@ static int cr_zstore(REDIS rhnd, int inter, const char *destkey, int keyc, const
 
   switch (aggregate) {
   case SUM: 
-    rc = cr_appendstr(buf, "AGGREGATE SUM", 0);
+    rc = cr_appendstr(buf, " AGGREGATE SUM", 0);
     break;
   case MIN:
-    rc = cr_appendstr(buf, "AGGREGATE MIN", 0);
+    rc = cr_appendstr(buf, " AGGREGATE MIN", 0);
     break;
   case MAX:
-    rc = cr_appendstr(buf, "AGGREGATE MAX", 0);
+    rc = cr_appendstr(buf, " AGGREGATE MAX", 0);
     break;
   case NONE:
     ; /* avoiding compiler warning */
@@ -1658,6 +1658,29 @@ int credis_zunionstore(REDIS rhnd, const char *destkey, int keyc, const char **k
 {
   return cr_zstore(rhnd, 0, destkey, keyc, keyv, weightv, aggregate);
 }
+
+int credis_hset(REDIS rhnd, const char *key, const char *field, const char *value)
+{
+  int rc = cr_sendfandreceive(rhnd, CR_INT, "HSET %s %s %zu\r\n%s\r\n", 
+                              key, field, strlen(value), value);
+
+  if (rc == 0 && rhnd->reply.integer == 0)
+    rc = -1;
+
+  return rc;
+}
+
+int credis_hget(REDIS rhnd, const char *key, const char *field, char **value)
+{
+  int rc = cr_sendfandreceive(rhnd, CR_BULK, "HGET %s %zu\r\n%s\r\n", 
+                              key, strlen(field), field);
+
+  if (rc == 0 && (*value = rhnd->reply.bulk) == NULL)
+    return -1;
+
+  return rc;
+}
+
 
 static void cr_freemessage(cr_message *msg)
 {

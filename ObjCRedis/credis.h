@@ -403,9 +403,14 @@ int credis_zunionstore(REDIS rhnd, const char *destkey, int keyc, const char **k
  * Commands operating on hashes
  */
 
+/* 1 is returned if the field already exists and its value is updated, 0 is 
+ * returned if the field is created */
+int credis_hset(REDIS rhnd, const char *key, const char *field, const char *value);
+
+/* returns -1 if key or field don't exist */
+int credis_hget(REDIS rhnd, const char *key, const char *field, char **value);
+
 /* TODO
- * HSET key field value Set the hash field to the specified value. Creates the hash if needed.
- * HGET key field Retrieve the value of the specified hash field.
  * HMSET key field1 value1 ... fieldN valueN Set the hash fields to their respective values.
  * HINCRBY key field integer Increment the integer value of the hash at _key_ on _field_ with _integer_.
  * HEXISTS key field Test for existence of a specified field in a hash
