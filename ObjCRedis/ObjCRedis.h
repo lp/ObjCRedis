@@ -444,6 +444,7 @@
 - (NSNumber*)zunionstore:(NSArray*)keys to:(NSString*)key weights:(NSArray*)weights aggregate:(NSString*)aggr;
 
 // Hashes
+- (NSNumber*)hset:(NSString*)key to:(NSString*)value at:(NSString*)field;
 
 // Sort
 

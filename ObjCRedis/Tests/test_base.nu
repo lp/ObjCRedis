@@ -668,7 +668,18 @@
   
 )
 
-; Test 10 Hashes
+(class test_10_testHashes is NuTestCase
+  (ivar (id) redis (id) testKey)
+  
+  (- (id) setup is
+    (set @redis (ObjCRedis redis))
+    (set @testKey "testkey")
+  )
+  
+  (- (id) test_01_hset is
+    (assert_equal 0 (@redis hset:@testKey to:"testValue" at:"testField"))
+  )
+)
 
 (class test_11_testPublishSubscribe is NuTestCase
   (ivar (id) redis (id) testKey)

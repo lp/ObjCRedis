@@ -332,6 +332,11 @@
 							   [self aggregate:aggr])];
 }
 
+// Hashes
+- (NSNumber*)hset:(NSString *)key to:(NSString *)value at:(NSString *)field {
+	return [NSNumber numberWithInt:credis_hset(rh, [key UTF8String], [field UTF8String], [value UTF8String])];
+}
+
 // Sort
 - (NSArray*)sort:(NSString *)key {
 	char ** vec;
