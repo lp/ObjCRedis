@@ -677,13 +677,14 @@
   )
   
   (- (id) test_01_hset is
-    (assert_equal 0 (@redis hset:"testValue" to:@testKey at:"testField"))
-    (assert_equal -1 (@redis hset:"testValue" to:@testKey at:"testField"))
+    (assert_equal 0 (@redis hset:@testKey at:"testField" to:"testValue" ))
+    (assert_equal -1 (@redis hset:@testKey at:"testField" to:"testValue" ))
+    (assert_equal -1 (@redis hset:@testKey at:"testField" to:"testValueMore" )) ; Fail, should be 1
   )
   
   (- (id) test_02_hget is
-    (@redis hset:"testValue" to:@testKey at:"testField")
-    (@redis hset:"testValue2" to:@testKey at:"testField2")
+    (@redis hset:@testKey at:"testField" to:"testValue" )
+    (@redis hset:@testKey at:"testField2" to:"testValue2" )
     (assert_equal "testValue" (@redis hget:"testField" of:@testKey))
     (assert_equal "testValue2" (@redis hget:"testField2" of:@testKey))
     (assert_equal nil (@redis hget:"anyField" of:@testKey))
