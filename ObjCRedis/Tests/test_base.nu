@@ -678,11 +678,19 @@
   
   (- (id) test_01_hset is
     (assert_equal 0 (@redis hset:"testValue" to:@testKey at:"testField"))
+    (assert_equal -1 (@redis hset:"testValue" to:@testKey at:"testField"))
   )
   
   (- (id) test_02_hget is
-    ; (assert_equal 0 (@redis hset:@testKey to:"testValue" at:"testField"))
-    ; (assert_equal "testValue" (@redis hget:"testField" of:@testKey))
+    (@redis hset:"testValue" to:@testKey at:"testField")
+    (@redis hset:"testValue2" to:@testKey at:"testField2")
+    (assert_equal "testValue" (@redis hget:"testField" of:@testKey))
+    (assert_equal "testValue2" (@redis hget:"testField2" of:@testKey))
+    (assert_equal nil (@redis hget:"anyField" of:@testKey))
+  )
+  
+  (- (id) teardown is
+    (@redis flushdb)
   )
 )
 

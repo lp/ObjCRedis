@@ -445,6 +445,7 @@
 
 // Hashes
 - (NSNumber*)hset:(NSString*)value to:(NSString*)key at:(NSString*)field;
+- (NSString*)hget:(NSString*)field of:(NSString*)key;
 
 // Sort
 

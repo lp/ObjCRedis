@@ -336,6 +336,15 @@
 - (NSNumber*)hset:(NSString*)value to:(NSString*)key at:(NSString*)field {
 	return [NSNumber numberWithInt:credis_hset(rh, [key UTF8String], [field UTF8String], [value UTF8String])];
 }
+- (NSString*)hget:(NSString *)field of:(NSString *)key {
+	char * value;
+	int numret = credis_hget(rh, [key UTF8String], [field UTF8String], &value);
+	if (numret != -1) {
+		return [NSString stringWithUTF8String:value];
+	} else {
+		return nil;
+	}
+}
 
 // Sort
 - (NSArray*)sort:(NSString *)key {
