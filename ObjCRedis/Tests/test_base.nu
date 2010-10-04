@@ -677,7 +677,12 @@
   )
   
   (- (id) test_01_hset is
-    (assert_equal 0 (@redis hset:@testKey to:"testValue" at:"testField"))
+    (assert_equal 0 (@redis hset:"testValue" to:@testKey at:"testField"))
+  )
+  
+  (- (id) test_02_hget is
+    ; (assert_equal 0 (@redis hset:@testKey to:"testValue" at:"testField"))
+    ; (assert_equal "testValue" (@redis hget:"testField" of:@testKey))
   )
 )
 

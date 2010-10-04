@@ -333,7 +333,7 @@
 }
 
 // Hashes
-- (NSNumber*)hset:(NSString *)key to:(NSString *)value at:(NSString *)field {
+- (NSNumber*)hset:(NSString*)value to:(NSString*)key at:(NSString*)field {
 	return [NSNumber numberWithInt:credis_hset(rh, [key UTF8String], [field UTF8String], [value UTF8String])];
 }
 
