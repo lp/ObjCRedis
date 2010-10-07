@@ -28,6 +28,13 @@
 #include "credis.h"
 
 /*!
+ @header ObjCRedis
+ An Objective-C client to the Redis 1.x and 2.x key-value store.
+ The full Redis API is not yet implemented, some updates will follow.
+ All storage is assumed to be of NSString type, no binary blob supported.
+*/
+
+/*!
  @class ObjCRedis
  @abstract Object oriented wrapper around Credis Redis client
 */
@@ -420,25 +427,25 @@
 - (NSNumber*)zremrangebyrank:(NSString*)key from:(NSNumber*)from to:(NSNumber*)to;
 /*!
   @method zinterstore:to:
-  @abstract Perform an intersection over a number of sorted sets with default weights and aggregate.
+  @abstract Perform an intersection over a number of sorted sets with default weights and aggregate. (BROKEN!)
   @result An NSNumber following Credis error conventions.
 */
 - (NSNumber*)zinterstore:(NSArray*)keys to:(NSString*)key;
 /*!
   @method zinterstore:to:weights:aggregate:
-  @abstract Perform an intersection over a number of sorted sets with weights and aggregate.
+  @abstract Perform an intersection over a number of sorted sets with weights and aggregate. (BROKEN!)
   @result An NSNumber following Credis error conventions.
 */
 - (NSNumber*)zinterstore:(NSArray*)keys to:(NSString*)key weights:(NSArray*)weights aggregate:(NSString*)aggr;
 /*!
   @method zunionstore:to:
-  @abstract Perform a union over a number of sorted sets with default weights and aggregate
+  @abstract Perform a union over a number of sorted sets with default weights and aggregate. (BROKEN!)
   @result An NSNumber following Credis error conventions.
 */
 - (NSNumber*)zunionstore:(NSArray*)keys to:(NSString*)key;
 /*!
   @method zunionstore:to:weights:aggregate:
-  @abstract Perform a union over a number of sorted sets with weights and aggregate
+  @abstract Perform a union over a number of sorted sets with weights and aggregate. (BROKEN!)
   @result An NSNumber following Credis error conventions.
 */
 - (NSNumber*)zunionstore:(NSArray*)keys to:(NSString*)key weights:(NSArray*)weights aggregate:(NSString*)aggr;
