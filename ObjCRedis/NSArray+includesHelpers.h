@@ -26,7 +26,15 @@
 
 
 #import <Foundation/Foundation.h>
+/*!
+ @header includesHelpers
+ NSArray helper methods.
+*/
 
+/*!
+ @class NSArray
+ @abstract NSArray method extensions
+*/
 @interface NSArray (includesHelpers)
 
 /*!
