@@ -29,6 +29,11 @@
 
 @interface NSArray (includesHelpers)
 
+/*!
+  @method containsOneOf:
+  @abstract Test the presence of any of the items in the Array. 
+  @result An NSNumber representing a BOOL.
+*/
 - (NSNumber*)containsOneOf:(NSArray*)items;
 
 @end
