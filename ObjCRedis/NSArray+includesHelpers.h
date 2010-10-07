@@ -29,6 +29,6 @@
 
 @interface NSArray (includesHelpers)
 
-- (NSNumber*)includes:(NSArray*)items;
+- (NSNumber*)containsOneOf:(NSArray*)items;
 
 @end

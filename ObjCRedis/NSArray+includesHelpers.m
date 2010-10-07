@@ -29,7 +29,7 @@
 
 @implementation NSArray (includesHelpers)
 
-- (NSNumber*)includes:(NSArray*)items {
+- (NSNumber*)containsOneOf:(NSArray*)items {
 	BOOL (^mustSatisfy)(id obj, NSUInteger idx, BOOL *stop);
 	mustSatisfy = ^ (id obj, NSUInteger idx, BOOL *stop) {
 		return [items containsObject:obj];

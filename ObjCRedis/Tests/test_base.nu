@@ -110,7 +110,7 @@
     (assert_equal @testKey ((@redis keys:@testKey) 0))
     
     (assert_equal 2 ((@redis keys:"testK*") count))
-    (assert_true (((@redis keys:"testK*") includes:(NSArray arrayWithList:(list @testKey "testKey2"))) boolValue))
+    (assert_true (((@redis keys:"testK*") containsOneOf:(NSArray arrayWithList:(list @testKey "testKey2"))) boolValue))
   )
   
   (- (id) testRandomKey is
