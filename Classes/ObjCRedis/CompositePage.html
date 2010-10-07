@@ -1,0 +1,943 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+    "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html><head>
+    <title>ObjCRedis</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=ascii" />
+ <meta name="generator" content="HeaderDoc" />
+<meta name="xcode-display" content="render" />
+<style type="text/css"><!--.keyword {background:#ffffff; color:#761550;}.template {background:#ffffff; color:#761550;}.number {background: #ffffff; color:#0000ff;}.function {background:#ffffff; color:#000000;}.string {background: #ffffff; color:#891315;}.preprocessor {background:#ffffff; color:#236e25}.comment {background:#ffffff; color:#236e25}.char {background: #ffffff; color:#0000ff;}.var {background:#ffffff; color:#000000;}.type {background:#ffffff; color:#761550;}.param {background:#ffffff; color:#000000;}a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #0000ff;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: small; color: #ff6600;}h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10pt;}.list_indent { margin-left: 40px; }.declaration_indent { margin-left: 40px; }.param_indent { margin-left: 40px; }.group_indent { margin-left: 40px; }.group_desc_indent { margin-left: 20px; }.warning_indent { margin-left: 40px; }.important_indent { margin-left: 40px; }.hd_tocAccess { font-style: italic; font-size: 10px; font-weight: normal; color: #303030; }--></style></head><body bgcolor="#ffffff" >
+<a name="top"></a>
+<a name="//apple_ref/doc/class/ObjCRedis" title="ObjCRedis"></a>
+<hr><table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h1><a name="ObjCRedis">ObjCRedis</a></h1>
+</td></tr></table><hr><p><!-- begin abstract --><p>Object oriented wrapper around Credis Redis client
+<!-- end abstract --></p>
+<p><b>Superclass:</b> <!-- a logicalPath="//apple_ref/occ/cl/NSObject" -->NSObject<!-- /a --><br>
+<b>Declared In:</b> <a href="../../index.html" target="_top">ObjCRedis</a><br>
+</p><div class='declaration_indent'>
+</div>
+<p></p><hr><br><a name="HeaderDoc_methods"></a>
+<h2>Methods</h2>
+<dl>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/append:to:" target="_top">-append:to:</a></tt></dt>
+<dd><p>Append the specified string to the string stored at key
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/bgrewriteaof" target="_top">-bgrewriteaof</a></tt></dt>
+<dd><p>Rewrite the append only file in background when it gets too big.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/bgsave" target="_top">-bgsave</a></tt></dt>
+<dd><p>Asynchronously save the DB on disk.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/connect:on:" target="_top">-connect:on:</a></tt></dt>
+<dd><p>Connect to the Redis server
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/dbsize" target="_top">-dbsize</a></tt></dt>
+<dd><p>Return the number of keys in the current db
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/decr:" target="_top">-decr:</a></tt></dt>
+<dd><p>Decrement the integer value of key
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/decr:by:" target="_top">-decr:by:</a></tt></dt>
+<dd><p>Decrement the integer value of key by integer
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/del:" target="_top">-del:</a></tt></dt>
+<dd><p>Delete a key
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/exists:" target="_top">-exists:</a></tt></dt>
+<dd><p>Test if a key exists
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/expire:in:" target="_top">-expire:in:</a></tt></dt>
+<dd><p>Set a time to live in seconds on a key
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/flushall" target="_top">-flushall</a></tt></dt>
+<dd><p>Remove all the keys from all the databases
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/flushdb" target="_top">-flushdb</a></tt></dt>
+<dd><p>Remove all the keys from the currently selected DB
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/get:" target="_top">-get:</a></tt></dt>
+<dd><p>Return the string value of the key
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/getset:to:" target="_top">-getset:to:</a></tt></dt>
+<dd><p>Set a key to a string returning the old value of the key
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/incr:" target="_top">-incr:</a></tt></dt>
+<dd><p>Increment the integer value of key
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/incr:by:" target="_top">-incr:by:</a></tt></dt>
+<dd><p>Increment the integer value of key by integer
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/lastsave" target="_top">-lastsave</a></tt></dt>
+<dd><p>Return the UNIX time stamp of the last successfully saving of the dataset on disk.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/lindex:of:" target="_top">-lindex:of:</a></tt></dt>
+<dd><p>Return the element at index position from the List at key
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/llen:" target="_top">-llen:</a></tt></dt>
+<dd><p>Return the length of the List value at key
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/lpop:" target="_top">-lpop:</a></tt></dt>
+<dd><p>Return and remove (atomically) the first element of the List at key.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/lpush:to:" target="_top">-lpush:to:</a></tt></dt>
+<dd><p>Append an element to the head of the List value at key
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/lrange:from:to:" target="_top">-lrange:from:to:</a></tt></dt>
+<dd><p>Return a range of elements from the List at key
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/lrem:of:count:" target="_top">-lrem:of:count:</a></tt></dt>
+<dd><p>Remove the first-N, last-N, or all the elements matching value from the List at key.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/lset:at:to:" target="_top">-lset:at:to:</a></tt></dt>
+<dd><p>Set a new value as the element at index position of the List at key.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/ltrim:from:to:" target="_top">-ltrim:from:to:</a></tt></dt>
+<dd><p>Trim the list at key to the specified range of elements.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/move:to:" target="_top">-move:to:</a></tt></dt>
+<dd><p>Move the key from the currently selected DB to the dbindex DB
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/clm/ObjCRedis/redis" target="_top">+redis</a></tt></dt>
+<dd><p>Instantiate an autoreleased redis object
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/clm/ObjCRedis/redis:on:" target="_top">+redis:on:</a></tt></dt>
+<dd><p>Instantiate an autoreleased redis object
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/rename:to:" target="_top">-rename:to:</a></tt></dt>
+<dd><p>Rename the old key in the new one, destroying the newname key if it already exists
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/renamenx:to:" target="_top">-renamenx:to:</a></tt></dt>
+<dd><p>Rename the oldname key to newname, if the newname key does not already exist
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/rpop:" target="_top">-rpop:</a></tt></dt>
+<dd><p>Return and remove (atomically) the last element of the List at key
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/rpush:to:" target="_top">-rpush:to:</a></tt></dt>
+<dd><p>Append an element to the tail of the List value at key
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/sadd:to:" target="_top">-sadd:to:</a></tt></dt>
+<dd><p>Add the specified member to the Set value at key.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/save" target="_top">-save</a></tt></dt>
+<dd><p>Synchronously save the DB on disk.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/scard:" target="_top">-scard:</a></tt></dt>
+<dd><p>Return the number of elements (the cardinality) of the Set at key.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/sdiff:" target="_top">-sdiff:</a></tt></dt>
+<dd><p>Return the difference between the Set stored at key1 and all the Sets key2, ..., keyN.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/sdiffstore:to:" target="_top">-sdiffstore:to:</a></tt></dt>
+<dd><p>Compute the difference between the Set key1 and all the Sets key2, ..., keyN, and store the resulting Set at key
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/select:" target="_top">-select:</a></tt></dt>
+<dd><p>Select the DB with the specified index
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/set:to:" target="_top">-set:to:</a></tt></dt>
+<dd><p>Set a key to a string value
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/setnx:to:" target="_top">-setnx:to:</a></tt></dt>
+<dd><p>Set a key to a string value if the key does not exist
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/shutdown" target="_top">-shutdown</a></tt></dt>
+<dd><p>Synchronously save the DB on disk, then shutdown the server.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/sinter:" target="_top">-sinter:</a></tt></dt>
+<dd><p>Return the intersection between the Sets stored at key1, key2, ..., keyN.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/sinterstore:to:" target="_top">-sinterstore:to:</a></tt></dt>
+<dd><p>Compute the intersection between the Sets stored at key1, key2, ..., keyN, and store the resulting Set at key.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/sismember:of:" target="_top">-sismember:of:</a></tt></dt>
+<dd><p>Test if the specified value is a member of the Set at key.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/smembers:" target="_top">-smembers:</a></tt></dt>
+<dd><p>Return all the members of the Set value at key.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/smove:from:to:" target="_top">-smove:from:to:</a></tt></dt>
+<dd><p>Move the specified member from one Set to another atomically.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/sort:" target="_top">-sort:</a></tt></dt>
+<dd><p>Sort a Set or a List.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/spop:" target="_top">-spop:</a></tt></dt>
+<dd><p>Remove and return (pop) a random element from the Set value at key.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/srem:of:" target="_top">-srem:of:</a></tt></dt>
+<dd><p>Remove the specified member from the Set value at key.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/substr:from:to:" target="_top">-substr:from:to:</a></tt></dt>
+<dd><p>Return a substring of a larger string.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/sunion:" target="_top">-sunion:</a></tt></dt>
+<dd><p>Return the union between the Sets stored at key1, key2, ..., keyN.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/sunionstore:to:" target="_top">-sunionstore:to:</a></tt></dt>
+<dd><p>Compute the union between the Sets stored at key1, key2, ..., keyN, and store the resulting Set at key
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/ttl:" target="_top">-ttl:</a></tt></dt>
+<dd><p>Get the time to live in seconds of a key
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/type:" target="_top">-type:</a></tt></dt>
+<dd><p>Return the type of the value stored at key
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zadd:to:at:" target="_top">-zadd:to:at:</a></tt></dt>
+<dd><p>Add the specified member to the Sorted Set value at key or update the score if it already exist.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zcard:" target="_top">-zcard:</a></tt></dt>
+<dd><p>Return the cardinality (number of elements) of the sorted set at key.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zincr:by:of:" target="_top">-zincr:by:of:</a></tt></dt>
+<dd><p>If the member already exists increment its score by increment, otherwise add the member setting increment as score.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zinterstore:to:" target="_top">-zinterstore:to:</a></tt></dt>
+<dd><p>Perform an intersection over a number of sorted sets with default weights and aggregate. (BROKEN!)
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zinterstore:to:weights:aggregate:" target="_top">-zinterstore:to:weights:aggregate:</a></tt></dt>
+<dd><p>Perform an intersection over a number of sorted sets with weights and aggregate. (BROKEN!)
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zrange:from:to:" target="_top">-zrange:from:to:</a></tt></dt>
+<dd><p>Return a range of elements from the sorted set at key.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zrank:of:" target="_top">-zrank:of:</a></tt></dt>
+<dd><p>Return the rank (or index) or member in the sorted set at key, with scores being ordered from low to high.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zrem:of:" target="_top">-zrem:of:</a></tt></dt>
+<dd><p>Remove the specified member from the Sorted Set value at key.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zremrangebyrank:from:to:" target="_top">-zremrangebyrank:from:to:</a></tt></dt>
+<dd><p>Remove all the elements with rank >= min and rank <= max from the sorted set.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zremrangebyscore:from:to:" target="_top">-zremrangebyscore:from:to:</a></tt></dt>
+<dd><p>Remove all the elements with score >= min and score <= max from the sorted set.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zrevrange:from:to:" target="_top">-zrevrange:from:to:</a></tt></dt>
+<dd><p>Return a range of elements from the sorted set at key, exactly like ZRANGE, but the sorted set is ordered in traversed in reverse order, from the greatest to the smallest score.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zrevrank:of:" target="_top">-zrevrank:of:</a></tt></dt>
+<dd><p>Return the rank (or index) or member in the sorted set at key, with scores being ordered from high to low.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zscore:of:" target="_top">-zscore:of:</a></tt></dt>
+<dd><p>Return the score associated with the specified element of the sorted set at key.
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zunionstore:to:" target="_top">-zunionstore:to:</a></tt></dt>
+<dd><p>Perform a union over a number of sorted sets with default weights and aggregate. (BROKEN!)
+</dd>
+<dt><tt><a href="CompositePage.html#//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zunionstore:to:weights:aggregate:" target="_top">-zunionstore:to:weights:aggregate:</a></tt></dt>
+<dd><p>Perform a union over a number of sorted sets with weights and aggregate. (BROKEN!)
+</dd>
+</dl>
+<hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/append:to:;   name=ObjCRedis::append:to: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/append:to:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="append:to:">append:to:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Append the specified string to the string stored at key
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/append //apple_ref/occ/clm/append //apple_ref/occ/intfcm/append //apple_ref/occ/intfm/append //apple_ref/occ/func/append //apple_ref/occ/ftmplt/append //apple_ref/occ/defn/append //apple_ref/occ/macro/append" --><span class="function">append</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">value</span> <!-- a logicalPath="//apple_ref/occ/instm/to //apple_ref/occ/clm/to //apple_ref/occ/intfcm/to //apple_ref/occ/intfm/to //apple_ref/occ/func/to //apple_ref/occ/ftmplt/to //apple_ref/occ/defn/to //apple_ref/occ/macro/to" --><span class="function">to</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/key //apple_ref/occ/data/key" --><span class="var">key</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->Returns new length of string after append
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/bgrewriteaof;   name=ObjCRedis::bgrewriteaof -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/bgrewriteaof"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="bgrewriteaof">bgrewriteaof</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Rewrite the append only file in background when it gets too big.
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/bgrewriteaof //apple_ref/occ/data/bgrewriteaof" --><span class="var">bgrewriteaof</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSNumber following Credis error conventions.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/bgsave;   name=ObjCRedis::bgsave -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/bgsave"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="bgsave">bgsave</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Asynchronously save the DB on disk.
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/bgsave //apple_ref/occ/data/bgsave" --><span class="var">bgsave</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSNumber following Credis error conventions.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/connect:on:;   name=ObjCRedis::connect:on: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/connect:on:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="connect:on:">connect:on:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Connect to the Redis server
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/connect //apple_ref/occ/clm/connect //apple_ref/occ/intfcm/connect //apple_ref/occ/intfm/connect //apple_ref/occ/func/connect //apple_ref/occ/ftmplt/connect //apple_ref/occ/defn/connect //apple_ref/occ/macro/connect" --><span class="function">connect</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">ipaddress</span> <!-- a logicalPath="//apple_ref/occ/instm/on //apple_ref/occ/clm/on //apple_ref/occ/intfcm/on //apple_ref/occ/intfm/on //apple_ref/occ/func/on //apple_ref/occ/ftmplt/on //apple_ref/occ/defn/on //apple_ref/occ/macro/on" --><span class="function">on</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/portnumber //apple_ref/occ/data/portnumber" --><span class="var">portnumber</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class='param_indent'>
+<dl>
+<dt><code>ipaddress</code></dt><dd><p>The server IPAddress as an NSString</dd>
+<dt><code>portnumber</code></dt><dd><p>The server connection port as an NSNumber</dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSNumber stating connection success
+
+<!-- end return value --></p><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>Connect the Redis client to a specified server and port
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/dbsize;   name=ObjCRedis::dbsize -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/dbsize"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="dbsize">dbsize</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Return the number of keys in the current db
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/dbsize //apple_ref/occ/data/dbsize" --><span class="var">dbsize</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSNumber representing the number of keys.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/decr:;   name=ObjCRedis::decr: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/decr:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="decr:">decr:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Decrement the integer value of key
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/decr //apple_ref/occ/clm/decr //apple_ref/occ/intfcm/decr //apple_ref/occ/intfm/decr //apple_ref/occ/func/decr //apple_ref/occ/ftmplt/decr //apple_ref/occ/defn/decr //apple_ref/occ/macro/decr" --><span class="function">decr</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/key //apple_ref/occ/data/key" --><span class="var">key</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->Return the value after the decrement was performed, 0 if the value was NULL
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/decr:by:;   name=ObjCRedis::decr:by: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/decr:by:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="decr:by:">decr:by:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Decrement the integer value of key by integer
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/decr //apple_ref/occ/clm/decr //apple_ref/occ/intfcm/decr //apple_ref/occ/intfm/decr //apple_ref/occ/func/decr //apple_ref/occ/ftmplt/decr //apple_ref/occ/defn/decr //apple_ref/occ/macro/decr" --><span class="function">decr</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">key</span> <!-- a logicalPath="//apple_ref/occ/instm/by //apple_ref/occ/clm/by //apple_ref/occ/intfcm/by //apple_ref/occ/intfm/by //apple_ref/occ/func/by //apple_ref/occ/ftmplt/by //apple_ref/occ/defn/by //apple_ref/occ/macro/by" --><span class="function">by</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/decrValue //apple_ref/occ/data/decrValue" --><span class="var">decrValue</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->Return the value after the decrement was performed, 1 if the value was NULL
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/del:;   name=ObjCRedis::del: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/del:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="del:">del:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Delete a key
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/del //apple_ref/occ/clm/del //apple_ref/occ/intfcm/del //apple_ref/occ/intfm/del //apple_ref/occ/func/del //apple_ref/occ/ftmplt/del //apple_ref/occ/defn/del //apple_ref/occ/macro/del" --><span class="function">del</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/key //apple_ref/occ/data/key" --><span class="var">key</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->Follows Credis error conventions
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/exists:;   name=ObjCRedis::exists: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/exists:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="exists:">exists:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Test if a key exists
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/exists //apple_ref/occ/clm/exists //apple_ref/occ/intfcm/exists //apple_ref/occ/intfm/exists //apple_ref/occ/func/exists //apple_ref/occ/ftmplt/exists //apple_ref/occ/defn/exists //apple_ref/occ/macro/exists" --><span class="function">exists</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/key //apple_ref/occ/data/key" --><span class="var">key</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSNumber returning -1 if the key doesn't exists and 0 if it does
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/expire:in:;   name=ObjCRedis::expire:in: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/expire:in:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="expire:in:">expire:in:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Set a time to live in seconds on a key
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/expire //apple_ref/occ/clm/expire //apple_ref/occ/intfcm/expire //apple_ref/occ/intfm/expire //apple_ref/occ/func/expire //apple_ref/occ/ftmplt/expire //apple_ref/occ/defn/expire //apple_ref/occ/macro/expire" --><span class="function">expire</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">key</span> <!-- a logicalPath="//apple_ref/occ/instm/in //apple_ref/occ/clm/in //apple_ref/occ/intfcm/in //apple_ref/occ/intfm/in //apple_ref/occ/func/in //apple_ref/occ/ftmplt/in //apple_ref/occ/defn/in //apple_ref/occ/macro/in" --><span class="function">in</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/time //apple_ref/occ/data/time" --><span class="var">time</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSNumber returning -1 if the timeout was not set, either due to key already has an associated timeout or key does not exist
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/flushall;   name=ObjCRedis::flushall -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/flushall"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="flushall">flushall</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Remove all the keys from all the databases
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/flushall //apple_ref/occ/data/flushall" --><span class="var">flushall</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->Follows Credis error conventions
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/flushdb;   name=ObjCRedis::flushdb -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/flushdb"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="flushdb">flushdb</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Remove all the keys from the currently selected DB
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/flushdb //apple_ref/occ/data/flushdb" --><span class="var">flushdb</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->Follows Credis error conventions
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/get:;   name=ObjCRedis::get: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/get:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="get:">get:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Return the string value of the key
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/get //apple_ref/occ/clm/get //apple_ref/occ/intfcm/get //apple_ref/occ/intfm/get //apple_ref/occ/func/get //apple_ref/occ/ftmplt/get //apple_ref/occ/defn/get //apple_ref/occ/macro/get" --><span class="function">get</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/key //apple_ref/occ/data/key" --><span class="var">key</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSString representing the string value of the key 
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/getset:to:;   name=ObjCRedis::getset:to: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/getset:to:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="getset:to:">getset:to:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Set a key to a string returning the old value of the key
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/getset //apple_ref/occ/clm/getset //apple_ref/occ/intfcm/getset //apple_ref/occ/intfm/getset //apple_ref/occ/func/getset //apple_ref/occ/ftmplt/getset //apple_ref/occ/defn/getset //apple_ref/occ/macro/getset" --><span class="function">getset</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">key</span> <!-- a logicalPath="//apple_ref/occ/instm/to //apple_ref/occ/clm/to //apple_ref/occ/intfcm/to //apple_ref/occ/intfm/to //apple_ref/occ/func/to //apple_ref/occ/ftmplt/to //apple_ref/occ/defn/to //apple_ref/occ/macro/to" --><span class="function">to</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/value //apple_ref/occ/data/value" --><span class="var">value</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSString representing the old string value of the key
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/incr:;   name=ObjCRedis::incr: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/incr:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="incr:">incr:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Increment the integer value of key
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/incr //apple_ref/occ/clm/incr //apple_ref/occ/intfcm/incr //apple_ref/occ/intfm/incr //apple_ref/occ/func/incr //apple_ref/occ/ftmplt/incr //apple_ref/occ/defn/incr //apple_ref/occ/macro/incr" --><span class="function">incr</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/key //apple_ref/occ/data/key" --><span class="var">key</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->Return the value after the increment was performed, 0 if the value was NULL
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/incr:by:;   name=ObjCRedis::incr:by: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/incr:by:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="incr:by:">incr:by:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Increment the integer value of key by integer
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/incr //apple_ref/occ/clm/incr //apple_ref/occ/intfcm/incr //apple_ref/occ/intfm/incr //apple_ref/occ/func/incr //apple_ref/occ/ftmplt/incr //apple_ref/occ/defn/incr //apple_ref/occ/macro/incr" --><span class="function">incr</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">key</span> <!-- a logicalPath="//apple_ref/occ/instm/by //apple_ref/occ/clm/by //apple_ref/occ/intfcm/by //apple_ref/occ/intfm/by //apple_ref/occ/func/by //apple_ref/occ/ftmplt/by //apple_ref/occ/defn/by //apple_ref/occ/macro/by" --><span class="function">by</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/incrValue //apple_ref/occ/data/incrValue" --><span class="var">incrValue</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->Return the value after the increment was performed, 1 if the value was NULL
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/lastsave;   name=ObjCRedis::lastsave -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/lastsave"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="lastsave">lastsave</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Return the UNIX time stamp of the last successfully saving of the dataset on disk.
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/lastsave //apple_ref/occ/data/lastsave" --><span class="var">lastsave</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSNumber representing the time.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/lindex:of:;   name=ObjCRedis::lindex:of: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/lindex:of:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="lindex:of:">lindex:of:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Return the element at index position from the List at key
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/lindex //apple_ref/occ/clm/lindex //apple_ref/occ/intfcm/lindex //apple_ref/occ/intfm/lindex //apple_ref/occ/func/lindex //apple_ref/occ/ftmplt/lindex //apple_ref/occ/defn/lindex //apple_ref/occ/macro/lindex" --><span class="function">lindex</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<span class="param">index</span> <!-- a logicalPath="//apple_ref/occ/instm/of //apple_ref/occ/clm/of //apple_ref/occ/intfcm/of //apple_ref/occ/intfm/of //apple_ref/occ/func/of //apple_ref/occ/ftmplt/of //apple_ref/occ/defn/of //apple_ref/occ/macro/of" --><span class="function">of</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/key //apple_ref/occ/data/key" --><span class="var">key</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSString of the member.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/llen:;   name=ObjCRedis::llen: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/llen:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="llen:">llen:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Return the length of the List value at key
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/llen //apple_ref/occ/clm/llen //apple_ref/occ/intfcm/llen //apple_ref/occ/intfm/llen //apple_ref/occ/func/llen //apple_ref/occ/ftmplt/llen //apple_ref/occ/defn/llen //apple_ref/occ/macro/llen" --><span class="function">llen</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/key //apple_ref/occ/data/key" --><span class="var">key</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->returns length of list
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/lpop:;   name=ObjCRedis::lpop: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/lpop:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="lpop:">lpop:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Return and remove (atomically) the first element of the List at key.
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/lpop //apple_ref/occ/clm/lpop //apple_ref/occ/intfcm/lpop //apple_ref/occ/intfm/lpop //apple_ref/occ/func/lpop //apple_ref/occ/ftmplt/lpop //apple_ref/occ/defn/lpop //apple_ref/occ/macro/lpop" --><span class="function">lpop</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/key //apple_ref/occ/data/key" --><span class="var">key</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSNumber returning -1 if the key doesn't exists.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/lpush:to:;   name=ObjCRedis::lpush:to: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/lpush:to:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="lpush:to:">lpush:to:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Append an element to the head of the List value at key
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/lpush //apple_ref/occ/clm/lpush //apple_ref/occ/intfcm/lpush //apple_ref/occ/intfm/lpush //apple_ref/occ/func/lpush //apple_ref/occ/ftmplt/lpush //apple_ref/occ/defn/lpush //apple_ref/occ/macro/lpush" --><span class="function">lpush</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">value</span> <!-- a logicalPath="//apple_ref/occ/instm/to //apple_ref/occ/clm/to //apple_ref/occ/intfcm/to //apple_ref/occ/intfm/to //apple_ref/occ/func/to //apple_ref/occ/ftmplt/to //apple_ref/occ/defn/to //apple_ref/occ/macro/to" --><span class="function">to</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/key //apple_ref/occ/data/key" --><span class="var">key</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->If Redis server version is 2.0 or later the number of elements inside the list after the push operation is returned on success.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/lrange:from:to:;   name=ObjCRedis::lrange:from:to: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/lrange:from:to:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="lrange:from:to:">lrange:from:to:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Return a range of elements from the List at key
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSArray //apple_ref/occ/tdef/NSArray //apple_ref/occ/tag/NSArray //apple_ref/occ/econst/NSArray //apple_ref/occ/struct/NSArray //apple_ref/occ/clconst/NSArray //apple_ref/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/lrange //apple_ref/occ/clm/lrange //apple_ref/occ/intfcm/lrange //apple_ref/occ/intfm/lrange //apple_ref/occ/func/lrange //apple_ref/occ/ftmplt/lrange //apple_ref/occ/defn/lrange //apple_ref/occ/macro/lrange" --><span class="function">lrange</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">key</span> <!-- a logicalPath="//apple_ref/occ/instm/from //apple_ref/occ/clm/from //apple_ref/occ/intfcm/from //apple_ref/occ/intfm/from //apple_ref/occ/func/from //apple_ref/occ/ftmplt/from //apple_ref/occ/defn/from //apple_ref/occ/macro/from" --><span class="function">from</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<span class="param">from</span> <!-- a logicalPath="//apple_ref/occ/instm/to //apple_ref/occ/clm/to //apple_ref/occ/intfcm/to //apple_ref/occ/intfm/to //apple_ref/occ/func/to //apple_ref/occ/ftmplt/to //apple_ref/occ/defn/to //apple_ref/occ/macro/to" --><span class="function">to</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/to //apple_ref/occ/data/to" --><span class="var">to</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->NSArray containing ordered items from range
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/lrem:of:count:;   name=ObjCRedis::lrem:of:count: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/lrem:of:count:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="lrem:of:count:">lrem:of:count:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Remove the first-N, last-N, or all the elements matching value from the List at key.
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/lrem //apple_ref/occ/clm/lrem //apple_ref/occ/intfcm/lrem //apple_ref/occ/intfm/lrem //apple_ref/occ/func/lrem //apple_ref/occ/ftmplt/lrem //apple_ref/occ/defn/lrem //apple_ref/occ/macro/lrem" --><span class="function">lrem</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">value</span> <!-- a logicalPath="//apple_ref/occ/instm/of //apple_ref/occ/clm/of //apple_ref/occ/intfcm/of //apple_ref/occ/intfm/of //apple_ref/occ/func/of //apple_ref/occ/ftmplt/of //apple_ref/occ/defn/of //apple_ref/occ/macro/of" --><span class="function">of</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">key</span> <!-- a logicalPath="//apple_ref/occ/instm/count //apple_ref/occ/clm/count //apple_ref/occ/intfcm/count //apple_ref/occ/intfm/count //apple_ref/occ/func/count //apple_ref/occ/ftmplt/count //apple_ref/occ/defn/count //apple_ref/occ/macro/count" --><span class="function">count</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/count //apple_ref/occ/data/count" --><span class="var">count</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSNumber returning the number of elements removed.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/lset:at:to:;   name=ObjCRedis::lset:at:to: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/lset:at:to:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="lset:at:to:">lset:at:to:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Set a new value as the element at index position of the List at key.
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/lset //apple_ref/occ/clm/lset //apple_ref/occ/intfcm/lset //apple_ref/occ/intfm/lset //apple_ref/occ/func/lset //apple_ref/occ/ftmplt/lset //apple_ref/occ/defn/lset //apple_ref/occ/macro/lset" --><span class="function">lset</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">key</span> <!-- a logicalPath="//apple_ref/occ/instm/at //apple_ref/occ/clm/at //apple_ref/occ/intfcm/at //apple_ref/occ/intfm/at //apple_ref/occ/func/at //apple_ref/occ/ftmplt/at //apple_ref/occ/defn/at //apple_ref/occ/macro/at" --><span class="function">at</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<span class="param">index</span> <!-- a logicalPath="//apple_ref/occ/instm/to //apple_ref/occ/clm/to //apple_ref/occ/intfcm/to //apple_ref/occ/intfm/to //apple_ref/occ/func/to //apple_ref/occ/ftmplt/to //apple_ref/occ/defn/to //apple_ref/occ/macro/to" --><span class="function">to</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/value //apple_ref/occ/data/value" --><span class="var">value</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSNumber returning -1 if the element was not set.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/ltrim:from:to:;   name=ObjCRedis::ltrim:from:to: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/ltrim:from:to:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="ltrim:from:to:">ltrim:from:to:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Trim the list at key to the specified range of elements.
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/ltrim //apple_ref/occ/clm/ltrim //apple_ref/occ/intfcm/ltrim //apple_ref/occ/intfm/ltrim //apple_ref/occ/func/ltrim //apple_ref/occ/ftmplt/ltrim //apple_ref/occ/defn/ltrim //apple_ref/occ/macro/ltrim" --><span class="function">ltrim</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">key</span> <!-- a logicalPath="//apple_ref/occ/instm/from //apple_ref/occ/clm/from //apple_ref/occ/intfcm/from //apple_ref/occ/intfm/from //apple_ref/occ/func/from //apple_ref/occ/ftmplt/from //apple_ref/occ/defn/from //apple_ref/occ/macro/from" --><span class="function">from</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<span class="param">from</span> <!-- a logicalPath="//apple_ref/occ/instm/to //apple_ref/occ/clm/to //apple_ref/occ/intfcm/to //apple_ref/occ/intfm/to //apple_ref/occ/func/to //apple_ref/occ/ftmplt/to //apple_ref/occ/defn/to //apple_ref/occ/macro/to" --><span class="function">to</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/to //apple_ref/occ/data/to" --><span class="var">to</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSNumber returning -1 if the members were not removed.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/move:to:;   name=ObjCRedis::move:to: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/move:to:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="move:to:">move:to:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Move the key from the currently selected DB to the dbindex DB
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/move //apple_ref/occ/clm/move //apple_ref/occ/intfcm/move //apple_ref/occ/intfm/move //apple_ref/occ/func/move //apple_ref/occ/ftmplt/move //apple_ref/occ/defn/move //apple_ref/occ/macro/move" --><span class="function">move</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">key</span> <!-- a logicalPath="//apple_ref/occ/instm/to //apple_ref/occ/clm/to //apple_ref/occ/intfcm/to //apple_ref/occ/intfm/to //apple_ref/occ/func/to //apple_ref/occ/ftmplt/to //apple_ref/occ/defn/to //apple_ref/occ/macro/to" --><span class="function">to</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/index //apple_ref/occ/data/index" --><span class="var">index</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSNumber returning -1 if the key was not moved, already present at target or not found on current db
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=clm;  uid=//apple_ref/doc/compositePage/occ/clm/ObjCRedis/redis;   name=ObjCRedis::redis -->
+<a name="//apple_ref/doc/compositePage/occ/clm/ObjCRedis/redis"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="redis">redis</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Instantiate an autoreleased redis object
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>+ (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/econst/redis //apple_ref/occ/data/redis" --><span class="var">redis</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>This method assumes default Redis server on localhost and port 6379
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=clm;  uid=//apple_ref/doc/compositePage/occ/clm/ObjCRedis/redis:on:;   name=ObjCRedis::redis:on: -->
+<a name="//apple_ref/doc/compositePage/occ/clm/ObjCRedis/redis:on:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="redis:on:">redis:on:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Instantiate an autoreleased redis object
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>+ (<!-- a logicalPath="//apple_ref/occ/cl/id //apple_ref/occ/tdef/id //apple_ref/occ/tag/id //apple_ref/occ/econst/id //apple_ref/occ/struct/id //apple_ref/occ/clconst/id //apple_ref/occ/intf/id" --><span class="type">id</span><!-- /a -->)<!-- a logicalPath="//apple_ref/occ/instm/redis //apple_ref/occ/clm/redis //apple_ref/occ/intfcm/redis //apple_ref/occ/intfm/redis //apple_ref/occ/func/redis //apple_ref/occ/ftmplt/redis //apple_ref/occ/defn/redis //apple_ref/occ/macro/redis" --><span class="function">redis</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">ipaddress</span> <!-- a logicalPath="//apple_ref/occ/instm/on //apple_ref/occ/clm/on //apple_ref/occ/intfcm/on //apple_ref/occ/intfm/on //apple_ref/occ/func/on //apple_ref/occ/ftmplt/on //apple_ref/occ/defn/on //apple_ref/occ/macro/on" --><span class="function">on</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/portnumber //apple_ref/occ/data/portnumber" --><span class="var">portnumber</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class='param_indent'>
+<dl>
+<dt><code>ipaddress</code></dt><dd><p>The server IPAddress as an NSString</dd>
+<dt><code>portnumber</code></dt><dd><p>The server connection port as an NSNumber</dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font>
+</h5><!-- begin discussion --><p>This method connect to a specified server and port
+<!-- end discussion -->
+<p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/rename:to:;   name=ObjCRedis::rename:to: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/rename:to:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="rename:to:">rename:to:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Rename the old key in the new one, destroying the newname key if it already exists
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/rename //apple_ref/occ/clm/rename //apple_ref/occ/intfcm/rename //apple_ref/occ/intfm/rename //apple_ref/occ/func/rename //apple_ref/occ/ftmplt/rename //apple_ref/occ/defn/rename //apple_ref/occ/macro/rename" --><span class="function">rename</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">key</span> <!-- a logicalPath="//apple_ref/occ/instm/to //apple_ref/occ/clm/to //apple_ref/occ/intfcm/to //apple_ref/occ/intfm/to //apple_ref/occ/func/to //apple_ref/occ/ftmplt/to //apple_ref/occ/defn/to //apple_ref/occ/macro/to" --><span class="function">to</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/newKey //apple_ref/occ/data/newKey" --><span class="var">newKey</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->Follows Credis error conventions
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/renamenx:to:;   name=ObjCRedis::renamenx:to: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/renamenx:to:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="renamenx:to:">renamenx:to:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Rename the oldname key to newname, if the newname key does not already exist
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/renamenx //apple_ref/occ/clm/renamenx //apple_ref/occ/intfcm/renamenx //apple_ref/occ/intfm/renamenx //apple_ref/occ/func/renamenx //apple_ref/occ/ftmplt/renamenx //apple_ref/occ/defn/renamenx //apple_ref/occ/macro/renamenx" --><span class="function">renamenx</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">key</span> <!-- a logicalPath="//apple_ref/occ/instm/to //apple_ref/occ/clm/to //apple_ref/occ/intfcm/to //apple_ref/occ/intfm/to //apple_ref/occ/func/to //apple_ref/occ/ftmplt/to //apple_ref/occ/defn/to //apple_ref/occ/macro/to" --><span class="function">to</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/newKey //apple_ref/occ/data/newKey" --><span class="var">newKey</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->Follows Credis error conventions
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/rpop:;   name=ObjCRedis::rpop: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/rpop:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="rpop:">rpop:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Return and remove (atomically) the last element of the List at key
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/rpop //apple_ref/occ/clm/rpop //apple_ref/occ/intfcm/rpop //apple_ref/occ/intfm/rpop //apple_ref/occ/func/rpop //apple_ref/occ/ftmplt/rpop //apple_ref/occ/defn/rpop //apple_ref/occ/macro/rpop" --><span class="function">rpop</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/key //apple_ref/occ/data/key" --><span class="var">key</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSNumber returning -1 if the key doesn't exists.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/rpush:to:;   name=ObjCRedis::rpush:to: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/rpush:to:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="rpush:to:">rpush:to:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Append an element to the tail of the List value at key
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/rpush //apple_ref/occ/clm/rpush //apple_ref/occ/intfcm/rpush //apple_ref/occ/intfm/rpush //apple_ref/occ/func/rpush //apple_ref/occ/ftmplt/rpush //apple_ref/occ/defn/rpush //apple_ref/occ/macro/rpush" --><span class="function">rpush</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">value</span> <!-- a logicalPath="//apple_ref/occ/instm/to //apple_ref/occ/clm/to //apple_ref/occ/intfcm/to //apple_ref/occ/intfm/to //apple_ref/occ/func/to //apple_ref/occ/ftmplt/to //apple_ref/occ/defn/to //apple_ref/occ/macro/to" --><span class="function">to</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/key //apple_ref/occ/data/key" --><span class="var">key</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->If Redis server version is 2.0 or later the number of elements inside the list after the push operation is returned on success.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/sadd:to:;   name=ObjCRedis::sadd:to: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/sadd:to:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="sadd:to:">sadd:to:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Add the specified member to the Set value at key.
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/sadd //apple_ref/occ/clm/sadd //apple_ref/occ/intfcm/sadd //apple_ref/occ/intfm/sadd //apple_ref/occ/func/sadd //apple_ref/occ/ftmplt/sadd //apple_ref/occ/defn/sadd //apple_ref/occ/macro/sadd" --><span class="function">sadd</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">value</span> <!-- a logicalPath="//apple_ref/occ/instm/to //apple_ref/occ/clm/to //apple_ref/occ/intfcm/to //apple_ref/occ/intfm/to //apple_ref/occ/func/to //apple_ref/occ/ftmplt/to //apple_ref/occ/defn/to //apple_ref/occ/macro/to" --><span class="function">to</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/key //apple_ref/occ/data/key" --><span class="var">key</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSNumber returning -1 if the given member was already a member of the set.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/save;   name=ObjCRedis::save -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/save"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="save">save</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Synchronously save the DB on disk.
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/save //apple_ref/occ/data/save" --><span class="var">save</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSNumber following Credis error conventions.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/scard:;   name=ObjCRedis::scard: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/scard:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="scard:">scard:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Return the number of elements (the cardinality) of the Set at key.
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/scard //apple_ref/occ/clm/scard //apple_ref/occ/intfcm/scard //apple_ref/occ/intfm/scard //apple_ref/occ/func/scard //apple_ref/occ/ftmplt/scard //apple_ref/occ/defn/scard //apple_ref/occ/macro/scard" --><span class="function">scard</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/value //apple_ref/occ/data/value" --><span class="var">value</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSNumber returning the cardinality (number of members) or 0 if the given key doesn't exists.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/sdiff:;   name=ObjCRedis::sdiff: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/sdiff:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="sdiff:">sdiff:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Return the difference between the Set stored at key1 and all the Sets key2, ..., keyN.
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSSet //apple_ref/occ/tdef/NSSet //apple_ref/occ/tag/NSSet //apple_ref/occ/econst/NSSet //apple_ref/occ/struct/NSSet //apple_ref/occ/clconst/NSSet //apple_ref/occ/intf/NSSet" --><span class="type">NSSet</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/sdiff //apple_ref/occ/clm/sdiff //apple_ref/occ/intfcm/sdiff //apple_ref/occ/intfm/sdiff //apple_ref/occ/func/sdiff //apple_ref/occ/ftmplt/sdiff //apple_ref/occ/defn/sdiff //apple_ref/occ/macro/sdiff" --><span class="function">sdiff</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSArray //apple_ref/occ/tdef/NSArray //apple_ref/occ/tag/NSArray //apple_ref/occ/econst/NSArray //apple_ref/occ/struct/NSArray //apple_ref/occ/clconst/NSArray //apple_ref/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/members //apple_ref/occ/data/members" --><span class="var">members</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSSet containing the differing members.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/sdiffstore:to:;   name=ObjCRedis::sdiffstore:to: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/sdiffstore:to:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="sdiffstore:to:">sdiffstore:to:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Compute the difference between the Set key1 and all the Sets key2, ..., keyN, and store the resulting Set at key
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/sdiffstore //apple_ref/occ/clm/sdiffstore //apple_ref/occ/intfcm/sdiffstore //apple_ref/occ/intfm/sdiffstore //apple_ref/occ/func/sdiffstore //apple_ref/occ/ftmplt/sdiffstore //apple_ref/occ/defn/sdiffstore //apple_ref/occ/macro/sdiffstore" --><span class="function">sdiffstore</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSArray //apple_ref/occ/tdef/NSArray //apple_ref/occ/tag/NSArray //apple_ref/occ/econst/NSArray //apple_ref/occ/struct/NSArray //apple_ref/occ/clconst/NSArray //apple_ref/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --><span class="type">*</span>)<span class="param">members</span> <!-- a logicalPath="//apple_ref/occ/instm/to //apple_ref/occ/clm/to //apple_ref/occ/intfcm/to //apple_ref/occ/intfm/to //apple_ref/occ/func/to //apple_ref/occ/ftmplt/to //apple_ref/occ/defn/to //apple_ref/occ/macro/to" --><span class="function">to</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/key //apple_ref/occ/data/key" --><span class="var">key</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSNumber returning the number of differing members stored in destination set.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/select:;   name=ObjCRedis::select: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/select:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="select:">select:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Select the DB with the specified index
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/select //apple_ref/occ/clm/select //apple_ref/occ/intfcm/select //apple_ref/occ/intfm/select //apple_ref/occ/func/select //apple_ref/occ/ftmplt/select //apple_ref/occ/defn/select //apple_ref/occ/macro/select" --><span class="function">select</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/index //apple_ref/occ/data/index" --><span class="var">index</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->Follows Credis error conventions
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/set:to:;   name=ObjCRedis::set:to: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/set:to:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="set:to:">set:to:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Set a key to a string value
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/set //apple_ref/occ/clm/set //apple_ref/occ/intfcm/set //apple_ref/occ/intfm/set //apple_ref/occ/func/set //apple_ref/occ/ftmplt/set //apple_ref/occ/defn/set //apple_ref/occ/macro/set" --><span class="function">set</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">key</span> <!-- a logicalPath="//apple_ref/occ/instm/to //apple_ref/occ/clm/to //apple_ref/occ/intfcm/to //apple_ref/occ/intfm/to //apple_ref/occ/func/to //apple_ref/occ/ftmplt/to //apple_ref/occ/defn/to //apple_ref/occ/macro/to" --><span class="function">to</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/value //apple_ref/occ/data/value" --><span class="var">value</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->Follows Credis error conventions
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/setnx:to:;   name=ObjCRedis::setnx:to: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/setnx:to:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="setnx:to:">setnx:to:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Set a key to a string value if the key does not exist
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/setnx //apple_ref/occ/clm/setnx //apple_ref/occ/intfcm/setnx //apple_ref/occ/intfm/setnx //apple_ref/occ/func/setnx //apple_ref/occ/ftmplt/setnx //apple_ref/occ/defn/setnx //apple_ref/occ/macro/setnx" --><span class="function">setnx</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">key</span> <!-- a logicalPath="//apple_ref/occ/instm/to //apple_ref/occ/clm/to //apple_ref/occ/intfcm/to //apple_ref/occ/intfm/to //apple_ref/occ/func/to //apple_ref/occ/ftmplt/to //apple_ref/occ/defn/to //apple_ref/occ/macro/to" --><span class="function">to</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/value //apple_ref/occ/data/value" --><span class="var">value</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->Follows Credis error conventions
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/shutdown;   name=ObjCRedis::shutdown -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/shutdown"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="shutdown">shutdown</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Synchronously save the DB on disk, then shutdown the server.
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/shutdown //apple_ref/occ/data/shutdown" --><span class="var">shutdown</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSNumber following Credis error conventions.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/sinter:;   name=ObjCRedis::sinter: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/sinter:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="sinter:">sinter:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Return the intersection between the Sets stored at key1, key2, ..., keyN.
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSSet //apple_ref/occ/tdef/NSSet //apple_ref/occ/tag/NSSet //apple_ref/occ/econst/NSSet //apple_ref/occ/struct/NSSet //apple_ref/occ/clconst/NSSet //apple_ref/occ/intf/NSSet" --><span class="type">NSSet</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/sinter //apple_ref/occ/clm/sinter //apple_ref/occ/intfcm/sinter //apple_ref/occ/intfm/sinter //apple_ref/occ/func/sinter //apple_ref/occ/ftmplt/sinter //apple_ref/occ/defn/sinter //apple_ref/occ/macro/sinter" --><span class="function">sinter</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSSet //apple_ref/occ/tdef/NSSet //apple_ref/occ/tag/NSSet //apple_ref/occ/econst/NSSet //apple_ref/occ/struct/NSSet //apple_ref/occ/clconst/NSSet //apple_ref/occ/intf/NSSet" --><span class="type">NSSet</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/members //apple_ref/occ/data/members" --><span class="var">members</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSSet containing the intersecting members.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/sinterstore:to:;   name=ObjCRedis::sinterstore:to: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/sinterstore:to:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="sinterstore:to:">sinterstore:to:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Compute the intersection between the Sets stored at key1, key2, ..., keyN, and store the resulting Set at key.
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/sinterstore //apple_ref/occ/clm/sinterstore //apple_ref/occ/intfcm/sinterstore //apple_ref/occ/intfm/sinterstore //apple_ref/occ/func/sinterstore //apple_ref/occ/ftmplt/sinterstore //apple_ref/occ/defn/sinterstore //apple_ref/occ/macro/sinterstore" --><span class="function">sinterstore</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSArray //apple_ref/occ/tdef/NSArray //apple_ref/occ/tag/NSArray //apple_ref/occ/econst/NSArray //apple_ref/occ/struct/NSArray //apple_ref/occ/clconst/NSArray //apple_ref/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --><span class="type">*</span>)<span class="param">members</span> <!-- a logicalPath="//apple_ref/occ/instm/to //apple_ref/occ/clm/to //apple_ref/occ/intfcm/to //apple_ref/occ/intfm/to //apple_ref/occ/func/to //apple_ref/occ/ftmplt/to //apple_ref/occ/defn/to //apple_ref/occ/macro/to" --><span class="function">to</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/key //apple_ref/occ/data/key" --><span class="var">key</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSNumber returning the number of intersecting members stored in destination set.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/sismember:of:;   name=ObjCRedis::sismember:of: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/sismember:of:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="sismember:of:">sismember:of:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Test if the specified value is a member of the Set at key.
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/sismember //apple_ref/occ/clm/sismember //apple_ref/occ/intfcm/sismember //apple_ref/occ/intfm/sismember //apple_ref/occ/func/sismember //apple_ref/occ/ftmplt/sismember //apple_ref/occ/defn/sismember //apple_ref/occ/macro/sismember" --><span class="function">sismember</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">member</span> <!-- a logicalPath="//apple_ref/occ/instm/of //apple_ref/occ/clm/of //apple_ref/occ/intfcm/of //apple_ref/occ/intfm/of //apple_ref/occ/func/of //apple_ref/occ/ftmplt/of //apple_ref/occ/defn/of //apple_ref/occ/macro/of" --><span class="function">of</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/key //apple_ref/occ/data/key" --><span class="var">key</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSNumber returning -1 if the key doesn't exists and 0 if it does.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/smembers:;   name=ObjCRedis::smembers: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/smembers:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="smembers:">smembers:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Return all the members of the Set value at key.
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSSet //apple_ref/occ/tdef/NSSet //apple_ref/occ/tag/NSSet //apple_ref/occ/econst/NSSet //apple_ref/occ/struct/NSSet //apple_ref/occ/clconst/NSSet //apple_ref/occ/intf/NSSet" --><span class="type">NSSet</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/smembers //apple_ref/occ/clm/smembers //apple_ref/occ/intfcm/smembers //apple_ref/occ/intfm/smembers //apple_ref/occ/func/smembers //apple_ref/occ/ftmplt/smembers //apple_ref/occ/defn/smembers //apple_ref/occ/macro/smembers" --><span class="function">smembers</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/key //apple_ref/occ/data/key" --><span class="var">key</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSSet containing all the members of the set.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/smove:from:to:;   name=ObjCRedis::smove:from:to: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/smove:from:to:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="smove:from:to:">smove:from:to:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Move the specified member from one Set to another atomically.
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/smove //apple_ref/occ/clm/smove //apple_ref/occ/intfcm/smove //apple_ref/occ/intfm/smove //apple_ref/occ/func/smove //apple_ref/occ/ftmplt/smove //apple_ref/occ/defn/smove //apple_ref/occ/macro/smove" --><span class="function">smove</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">value</span> <!-- a logicalPath="//apple_ref/occ/instm/from //apple_ref/occ/clm/from //apple_ref/occ/intfcm/from //apple_ref/occ/intfm/from //apple_ref/occ/func/from //apple_ref/occ/ftmplt/from //apple_ref/occ/defn/from //apple_ref/occ/macro/from" --><span class="function">from</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">from</span> <!-- a logicalPath="//apple_ref/occ/instm/to //apple_ref/occ/clm/to //apple_ref/occ/intfcm/to //apple_ref/occ/intfm/to //apple_ref/occ/func/to //apple_ref/occ/ftmplt/to //apple_ref/occ/defn/to //apple_ref/occ/macro/to" --><span class="function">to</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/to //apple_ref/occ/data/to" --><span class="var">to</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSNumber returning -1 if the member doesn't exists in the source set.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/sort:;   name=ObjCRedis::sort: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/sort:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="sort:">sort:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Sort a Set or a List.
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSArray //apple_ref/occ/tdef/NSArray //apple_ref/occ/tag/NSArray //apple_ref/occ/econst/NSArray //apple_ref/occ/struct/NSArray //apple_ref/occ/clconst/NSArray //apple_ref/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/sort //apple_ref/occ/clm/sort //apple_ref/occ/intfcm/sort //apple_ref/occ/intfm/sort //apple_ref/occ/func/sort //apple_ref/occ/ftmplt/sort //apple_ref/occ/defn/sort //apple_ref/occ/macro/sort" --><span class="function">sort</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/key //apple_ref/occ/data/key" --><span class="var">key</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSArray containing the sorted members
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/spop:;   name=ObjCRedis::spop: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/spop:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="spop:">spop:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Remove and return (pop) a random element from the Set value at key.
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/spop //apple_ref/occ/clm/spop //apple_ref/occ/intfcm/spop //apple_ref/occ/intfm/spop //apple_ref/occ/func/spop //apple_ref/occ/ftmplt/spop //apple_ref/occ/defn/spop //apple_ref/occ/macro/spop" --><span class="function">spop</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/key //apple_ref/occ/data/key" --><span class="var">key</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->Returns nil if the given key doesn't exists, else value is returned as NSString
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/srem:of:;   name=ObjCRedis::srem:of: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/srem:of:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="srem:of:">srem:of:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Remove the specified member from the Set value at key.
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/srem //apple_ref/occ/clm/srem //apple_ref/occ/intfcm/srem //apple_ref/occ/intfm/srem //apple_ref/occ/func/srem //apple_ref/occ/ftmplt/srem //apple_ref/occ/defn/srem //apple_ref/occ/macro/srem" --><span class="function">srem</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">value</span> <!-- a logicalPath="//apple_ref/occ/instm/of //apple_ref/occ/clm/of //apple_ref/occ/intfcm/of //apple_ref/occ/intfm/of //apple_ref/occ/func/of //apple_ref/occ/ftmplt/of //apple_ref/occ/defn/of //apple_ref/occ/macro/of" --><span class="function">of</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/key //apple_ref/occ/data/key" --><span class="var">key</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSNumber returning -1 if the given member is not a member of the set.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/substr:from:to:;   name=ObjCRedis::substr:from:to: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/substr:from:to:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="substr:from:to:">substr:from:to:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Return a substring of a larger string.
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/substr //apple_ref/occ/clm/substr //apple_ref/occ/intfcm/substr //apple_ref/occ/intfm/substr //apple_ref/occ/func/substr //apple_ref/occ/ftmplt/substr //apple_ref/occ/defn/substr //apple_ref/occ/macro/substr" --><span class="function">substr</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">key</span> <!-- a logicalPath="//apple_ref/occ/instm/from //apple_ref/occ/clm/from //apple_ref/occ/intfcm/from //apple_ref/occ/intfm/from //apple_ref/occ/func/from //apple_ref/occ/ftmplt/from //apple_ref/occ/defn/from //apple_ref/occ/macro/from" --><span class="function">from</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<span class="param">from</span> <!-- a logicalPath="//apple_ref/occ/instm/to //apple_ref/occ/clm/to //apple_ref/occ/intfcm/to //apple_ref/occ/intfm/to //apple_ref/occ/func/to //apple_ref/occ/ftmplt/to //apple_ref/occ/defn/to //apple_ref/occ/macro/to" --><span class="function">to</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/to //apple_ref/occ/data/to" --><span class="var">to</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSString representing the substring or an empty string if the substring is not existent.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/sunion:;   name=ObjCRedis::sunion: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/sunion:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="sunion:">sunion:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Return the union between the Sets stored at key1, key2, ..., keyN.
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSSet //apple_ref/occ/tdef/NSSet //apple_ref/occ/tag/NSSet //apple_ref/occ/econst/NSSet //apple_ref/occ/struct/NSSet //apple_ref/occ/clconst/NSSet //apple_ref/occ/intf/NSSet" --><span class="type">NSSet</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/sunion //apple_ref/occ/clm/sunion //apple_ref/occ/intfcm/sunion //apple_ref/occ/intfm/sunion //apple_ref/occ/func/sunion //apple_ref/occ/ftmplt/sunion //apple_ref/occ/defn/sunion //apple_ref/occ/macro/sunion" --><span class="function">sunion</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSSet //apple_ref/occ/tdef/NSSet //apple_ref/occ/tag/NSSet //apple_ref/occ/econst/NSSet //apple_ref/occ/struct/NSSet //apple_ref/occ/clconst/NSSet //apple_ref/occ/intf/NSSet" --><span class="type">NSSet</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/members //apple_ref/occ/data/members" --><span class="var">members</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSSet containing the united sets members.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/sunionstore:to:;   name=ObjCRedis::sunionstore:to: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/sunionstore:to:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="sunionstore:to:">sunionstore:to:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Compute the union between the Sets stored at key1, key2, ..., keyN, and store the resulting Set at key
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/sunionstore //apple_ref/occ/clm/sunionstore //apple_ref/occ/intfcm/sunionstore //apple_ref/occ/intfm/sunionstore //apple_ref/occ/func/sunionstore //apple_ref/occ/ftmplt/sunionstore //apple_ref/occ/defn/sunionstore //apple_ref/occ/macro/sunionstore" --><span class="function">sunionstore</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSArray //apple_ref/occ/tdef/NSArray //apple_ref/occ/tag/NSArray //apple_ref/occ/econst/NSArray //apple_ref/occ/struct/NSArray //apple_ref/occ/clconst/NSArray //apple_ref/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --><span class="type">*</span>)<span class="param">members</span> <!-- a logicalPath="//apple_ref/occ/instm/to //apple_ref/occ/clm/to //apple_ref/occ/intfcm/to //apple_ref/occ/intfm/to //apple_ref/occ/func/to //apple_ref/occ/ftmplt/to //apple_ref/occ/defn/to //apple_ref/occ/macro/to" --><span class="function">to</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/key //apple_ref/occ/data/key" --><span class="var">key</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSNumber returning the number of united sets members stored in destination set.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/ttl:;   name=ObjCRedis::ttl: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/ttl:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="ttl:">ttl:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Get the time to live in seconds of a key
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/ttl //apple_ref/occ/clm/ttl //apple_ref/occ/intfcm/ttl //apple_ref/occ/intfm/ttl //apple_ref/occ/func/ttl //apple_ref/occ/ftmplt/ttl //apple_ref/occ/defn/ttl //apple_ref/occ/macro/ttl" --><span class="function">ttl</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/key //apple_ref/occ/data/key" --><span class="var">key</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSNumber representing the time to live in seconds or -1 if key does not exists or does not have expire set
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/type:;   name=ObjCRedis::type: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/type:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="type:">type:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Return the type of the value stored at key
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/type //apple_ref/occ/clm/type //apple_ref/occ/intfcm/type //apple_ref/occ/intfm/type //apple_ref/occ/func/type //apple_ref/occ/ftmplt/type //apple_ref/occ/defn/type //apple_ref/occ/macro/type" --><span class="function">type</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/key //apple_ref/occ/data/key" --><span class="var">key</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSNumber representing a type with these correspondence: 1 = None, 2 = String, 3 = List, 4 = Set
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zadd:to:at:;   name=ObjCRedis::zadd:to:at: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zadd:to:at:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="zadd:to:at:">zadd:to:at:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Add the specified member to the Sorted Set value at key or update the score if it already exist.
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/zadd //apple_ref/occ/clm/zadd //apple_ref/occ/intfcm/zadd //apple_ref/occ/intfm/zadd //apple_ref/occ/func/zadd //apple_ref/occ/ftmplt/zadd //apple_ref/occ/defn/zadd //apple_ref/occ/macro/zadd" --><span class="function">zadd</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">value</span> <!-- a logicalPath="//apple_ref/occ/instm/to //apple_ref/occ/clm/to //apple_ref/occ/intfcm/to //apple_ref/occ/intfm/to //apple_ref/occ/func/to //apple_ref/occ/ftmplt/to //apple_ref/occ/defn/to //apple_ref/occ/macro/to" --><span class="function">to</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">key</span> <!-- a logicalPath="//apple_ref/occ/instm/at //apple_ref/occ/clm/at //apple_ref/occ/intfcm/at //apple_ref/occ/intfm/at //apple_ref/occ/func/at //apple_ref/occ/ftmplt/at //apple_ref/occ/defn/at //apple_ref/occ/macro/at" --><span class="function">at</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/score //apple_ref/occ/data/score" --><span class="var">score</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSNumber returning -1 if member was already a member of the sorted set and only score was updated, 0 is returned if the new element was added.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zcard:;   name=ObjCRedis::zcard: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zcard:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="zcard:">zcard:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Return the cardinality (number of elements) of the sorted set at key.
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/zcard //apple_ref/occ/clm/zcard //apple_ref/occ/intfcm/zcard //apple_ref/occ/intfm/zcard //apple_ref/occ/func/zcard //apple_ref/occ/ftmplt/zcard //apple_ref/occ/defn/zcard //apple_ref/occ/macro/zcard" --><span class="function">zcard</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/key //apple_ref/occ/data/key" --><span class="var">key</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSNumber returning the cardinality or -1 if 'key' does not exist.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zincr:by:of:;   name=ObjCRedis::zincr:by:of: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zincr:by:of:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="zincr:by:of:">zincr:by:of:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>If the member already exists increment its score by increment, otherwise add the member setting increment as score.
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/zincr //apple_ref/occ/clm/zincr //apple_ref/occ/intfcm/zincr //apple_ref/occ/intfm/zincr //apple_ref/occ/func/zincr //apple_ref/occ/ftmplt/zincr //apple_ref/occ/defn/zincr //apple_ref/occ/macro/zincr" --><span class="function">zincr</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">value</span> <!-- a logicalPath="//apple_ref/occ/instm/by //apple_ref/occ/clm/by //apple_ref/occ/intfcm/by //apple_ref/occ/intfm/by //apple_ref/occ/func/by //apple_ref/occ/ftmplt/by //apple_ref/occ/defn/by //apple_ref/occ/macro/by" --><span class="function">by</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<span class="param">incr</span> <!-- a logicalPath="//apple_ref/occ/instm/of //apple_ref/occ/clm/of //apple_ref/occ/intfcm/of //apple_ref/occ/intfm/of //apple_ref/occ/func/of //apple_ref/occ/ftmplt/of //apple_ref/occ/defn/of //apple_ref/occ/macro/of" --><span class="function">of</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/key //apple_ref/occ/data/key" --><span class="var">key</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSNumber returning the score of the member after the increment.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zinterstore:to:;   name=ObjCRedis::zinterstore:to: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zinterstore:to:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="zinterstore:to:">zinterstore:to:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Perform an intersection over a number of sorted sets with default weights and aggregate. (BROKEN!)
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/zinterstore //apple_ref/occ/clm/zinterstore //apple_ref/occ/intfcm/zinterstore //apple_ref/occ/intfm/zinterstore //apple_ref/occ/func/zinterstore //apple_ref/occ/ftmplt/zinterstore //apple_ref/occ/defn/zinterstore //apple_ref/occ/macro/zinterstore" --><span class="function">zinterstore</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSArray //apple_ref/occ/tdef/NSArray //apple_ref/occ/tag/NSArray //apple_ref/occ/econst/NSArray //apple_ref/occ/struct/NSArray //apple_ref/occ/clconst/NSArray //apple_ref/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --><span class="type">*</span>)<span class="param">keys</span> <!-- a logicalPath="//apple_ref/occ/instm/to //apple_ref/occ/clm/to //apple_ref/occ/intfcm/to //apple_ref/occ/intfm/to //apple_ref/occ/func/to //apple_ref/occ/ftmplt/to //apple_ref/occ/defn/to //apple_ref/occ/macro/to" --><span class="function">to</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/key //apple_ref/occ/data/key" --><span class="var">key</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSNumber following Credis error conventions.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zinterstore:to:weights:aggregate:;   name=ObjCRedis::zinterstore:to:weights:aggregate: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zinterstore:to:weights:aggregate:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="zinterstore:to:weights:aggregate:">zinterstore:to:weights:aggregate:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Perform an intersection over a number of sorted sets with weights and aggregate. (BROKEN!)
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/zinterstore //apple_ref/occ/clm/zinterstore //apple_ref/occ/intfcm/zinterstore //apple_ref/occ/intfm/zinterstore //apple_ref/occ/func/zinterstore //apple_ref/occ/ftmplt/zinterstore //apple_ref/occ/defn/zinterstore //apple_ref/occ/macro/zinterstore" --><span class="function">zinterstore</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSArray //apple_ref/occ/tdef/NSArray //apple_ref/occ/tag/NSArray //apple_ref/occ/econst/NSArray //apple_ref/occ/struct/NSArray //apple_ref/occ/clconst/NSArray //apple_ref/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --><span class="type">*</span>)<span class="param">keys</span> <!-- a logicalPath="//apple_ref/occ/instm/to //apple_ref/occ/clm/to //apple_ref/occ/intfcm/to //apple_ref/occ/intfm/to //apple_ref/occ/func/to //apple_ref/occ/ftmplt/to //apple_ref/occ/defn/to //apple_ref/occ/macro/to" --><span class="function">to</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">key</span> 
+        <!-- a logicalPath="//apple_ref/occ/instm/weights //apple_ref/occ/clm/weights //apple_ref/occ/intfcm/weights //apple_ref/occ/intfm/weights //apple_ref/occ/func/weights //apple_ref/occ/ftmplt/weights //apple_ref/occ/defn/weights //apple_ref/occ/macro/weights" --><span class="function">weights</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSArray //apple_ref/occ/tdef/NSArray //apple_ref/occ/tag/NSArray //apple_ref/occ/econst/NSArray //apple_ref/occ/struct/NSArray //apple_ref/occ/clconst/NSArray //apple_ref/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --><span class="type">*</span>)<span class="param">weights</span> <!-- a logicalPath="//apple_ref/occ/instm/aggregate //apple_ref/occ/clm/aggregate //apple_ref/occ/intfcm/aggregate //apple_ref/occ/intfm/aggregate //apple_ref/occ/func/aggregate //apple_ref/occ/ftmplt/aggregate //apple_ref/occ/defn/aggregate //apple_ref/occ/macro/aggregate" --><span class="function">aggregate</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/aggr //apple_ref/occ/data/aggr" --><span class="var">aggr</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSNumber following Credis error conventions.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zrange:from:to:;   name=ObjCRedis::zrange:from:to: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zrange:from:to:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="zrange:from:to:">zrange:from:to:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Return a range of elements from the sorted set at key.
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSArray //apple_ref/occ/tdef/NSArray //apple_ref/occ/tag/NSArray //apple_ref/occ/econst/NSArray //apple_ref/occ/struct/NSArray //apple_ref/occ/clconst/NSArray //apple_ref/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/zrange //apple_ref/occ/clm/zrange //apple_ref/occ/intfcm/zrange //apple_ref/occ/intfm/zrange //apple_ref/occ/func/zrange //apple_ref/occ/ftmplt/zrange //apple_ref/occ/defn/zrange //apple_ref/occ/macro/zrange" --><span class="function">zrange</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">key</span> <!-- a logicalPath="//apple_ref/occ/instm/from //apple_ref/occ/clm/from //apple_ref/occ/intfcm/from //apple_ref/occ/intfm/from //apple_ref/occ/func/from //apple_ref/occ/ftmplt/from //apple_ref/occ/defn/from //apple_ref/occ/macro/from" --><span class="function">from</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<span class="param">from</span> <!-- a logicalPath="//apple_ref/occ/instm/to //apple_ref/occ/clm/to //apple_ref/occ/intfcm/to //apple_ref/occ/intfm/to //apple_ref/occ/func/to //apple_ref/occ/ftmplt/to //apple_ref/occ/defn/to //apple_ref/occ/macro/to" --><span class="function">to</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/to //apple_ref/occ/data/to" --><span class="var">to</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSArray of sorted members in range.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zrank:of:;   name=ObjCRedis::zrank:of: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zrank:of:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="zrank:of:">zrank:of:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Return the rank (or index) or member in the sorted set at key, with scores being ordered from low to high.
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/zrank //apple_ref/occ/clm/zrank //apple_ref/occ/intfcm/zrank //apple_ref/occ/intfm/zrank //apple_ref/occ/func/zrank //apple_ref/occ/ftmplt/zrank //apple_ref/occ/defn/zrank //apple_ref/occ/macro/zrank" --><span class="function">zrank</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">value</span> <!-- a logicalPath="//apple_ref/occ/instm/of //apple_ref/occ/clm/of //apple_ref/occ/intfcm/of //apple_ref/occ/intfm/of //apple_ref/occ/func/of //apple_ref/occ/ftmplt/of //apple_ref/occ/defn/of //apple_ref/occ/macro/of" --><span class="function">of</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/key //apple_ref/occ/data/key" --><span class="var">key</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSNumber returning the rank of the given member or -1 if the member was not a member of the sorted set.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zrem:of:;   name=ObjCRedis::zrem:of: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zrem:of:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="zrem:of:">zrem:of:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Remove the specified member from the Sorted Set value at key.
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/zrem //apple_ref/occ/clm/zrem //apple_ref/occ/intfcm/zrem //apple_ref/occ/intfm/zrem //apple_ref/occ/func/zrem //apple_ref/occ/ftmplt/zrem //apple_ref/occ/defn/zrem //apple_ref/occ/macro/zrem" --><span class="function">zrem</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">value</span> <!-- a logicalPath="//apple_ref/occ/instm/of //apple_ref/occ/clm/of //apple_ref/occ/intfcm/of //apple_ref/occ/intfm/of //apple_ref/occ/func/of //apple_ref/occ/ftmplt/of //apple_ref/occ/defn/of //apple_ref/occ/macro/of" --><span class="function">of</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/key //apple_ref/occ/data/key" --><span class="var">key</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSNumber returning -1 if the member was not a member of the sorted set.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zremrangebyrank:from:to:;   name=ObjCRedis::zremrangebyrank:from:to: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zremrangebyrank:from:to:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="zremrangebyrank:from:to:">zremrangebyrank:from:to:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Remove all the elements with rank >= min and rank <= max from the sorted set.
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/zremrangebyrank //apple_ref/occ/clm/zremrangebyrank //apple_ref/occ/intfcm/zremrangebyrank //apple_ref/occ/intfm/zremrangebyrank //apple_ref/occ/func/zremrangebyrank //apple_ref/occ/ftmplt/zremrangebyrank //apple_ref/occ/defn/zremrangebyrank //apple_ref/occ/macro/zremrangebyrank" --><span class="function">zremrangebyrank</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">key</span> <!-- a logicalPath="//apple_ref/occ/instm/from //apple_ref/occ/clm/from //apple_ref/occ/intfcm/from //apple_ref/occ/intfm/from //apple_ref/occ/func/from //apple_ref/occ/ftmplt/from //apple_ref/occ/defn/from //apple_ref/occ/macro/from" --><span class="function">from</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<span class="param">from</span> 
+        <!-- a logicalPath="//apple_ref/occ/instm/to //apple_ref/occ/clm/to //apple_ref/occ/intfcm/to //apple_ref/occ/intfm/to //apple_ref/occ/func/to //apple_ref/occ/ftmplt/to //apple_ref/occ/defn/to //apple_ref/occ/macro/to" --><span class="function">to</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/to //apple_ref/occ/data/to" --><span class="var">to</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSNumber returning the number of elements removed or -1 if key does not exist.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zremrangebyscore:from:to:;   name=ObjCRedis::zremrangebyscore:from:to: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zremrangebyscore:from:to:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="zremrangebyscore:from:to:">zremrangebyscore:from:to:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Remove all the elements with score >= min and score <= max from the sorted set.
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/zremrangebyscore //apple_ref/occ/clm/zremrangebyscore //apple_ref/occ/intfcm/zremrangebyscore //apple_ref/occ/intfm/zremrangebyscore //apple_ref/occ/func/zremrangebyscore //apple_ref/occ/ftmplt/zremrangebyscore //apple_ref/occ/defn/zremrangebyscore //apple_ref/occ/macro/zremrangebyscore" --><span class="function">zremrangebyscore</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">key</span> <!-- a logicalPath="//apple_ref/occ/instm/from //apple_ref/occ/clm/from //apple_ref/occ/intfcm/from //apple_ref/occ/intfm/from //apple_ref/occ/func/from //apple_ref/occ/ftmplt/from //apple_ref/occ/defn/from //apple_ref/occ/macro/from" --><span class="function">from</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<span class="param">from</span> 
+        <!-- a logicalPath="//apple_ref/occ/instm/to //apple_ref/occ/clm/to //apple_ref/occ/intfcm/to //apple_ref/occ/intfm/to //apple_ref/occ/func/to //apple_ref/occ/ftmplt/to //apple_ref/occ/defn/to //apple_ref/occ/macro/to" --><span class="function">to</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/to //apple_ref/occ/data/to" --><span class="var">to</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSNumber returning the number of elements removed or -1 if key does not exist.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zrevrange:from:to:;   name=ObjCRedis::zrevrange:from:to: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zrevrange:from:to:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="zrevrange:from:to:">zrevrange:from:to:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Return a range of elements from the sorted set at key, exactly like ZRANGE, but the sorted set is ordered in traversed in reverse order, from the greatest to the smallest score.
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSArray //apple_ref/occ/tdef/NSArray //apple_ref/occ/tag/NSArray //apple_ref/occ/econst/NSArray //apple_ref/occ/struct/NSArray //apple_ref/occ/clconst/NSArray //apple_ref/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/zrevrange //apple_ref/occ/clm/zrevrange //apple_ref/occ/intfcm/zrevrange //apple_ref/occ/intfm/zrevrange //apple_ref/occ/func/zrevrange //apple_ref/occ/ftmplt/zrevrange //apple_ref/occ/defn/zrevrange //apple_ref/occ/macro/zrevrange" --><span class="function">zrevrange</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">key</span> <!-- a logicalPath="//apple_ref/occ/instm/from //apple_ref/occ/clm/from //apple_ref/occ/intfcm/from //apple_ref/occ/intfm/from //apple_ref/occ/func/from //apple_ref/occ/ftmplt/from //apple_ref/occ/defn/from //apple_ref/occ/macro/from" --><span class="function">from</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<span class="param">from</span> <!-- a logicalPath="//apple_ref/occ/instm/to //apple_ref/occ/clm/to //apple_ref/occ/intfcm/to //apple_ref/occ/intfm/to //apple_ref/occ/func/to //apple_ref/occ/ftmplt/to //apple_ref/occ/defn/to //apple_ref/occ/macro/to" --><span class="function">to</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/to //apple_ref/occ/data/to" --><span class="var">to</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSArray of sorted members in range in reverse order.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zrevrank:of:;   name=ObjCRedis::zrevrank:of: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zrevrank:of:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="zrevrank:of:">zrevrank:of:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Return the rank (or index) or member in the sorted set at key, with scores being ordered from high to low.
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/zrevrank //apple_ref/occ/clm/zrevrank //apple_ref/occ/intfcm/zrevrank //apple_ref/occ/intfm/zrevrank //apple_ref/occ/func/zrevrank //apple_ref/occ/ftmplt/zrevrank //apple_ref/occ/defn/zrevrank //apple_ref/occ/macro/zrevrank" --><span class="function">zrevrank</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">value</span> <!-- a logicalPath="//apple_ref/occ/instm/of //apple_ref/occ/clm/of //apple_ref/occ/intfcm/of //apple_ref/occ/intfm/of //apple_ref/occ/func/of //apple_ref/occ/ftmplt/of //apple_ref/occ/defn/of //apple_ref/occ/macro/of" --><span class="function">of</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/key //apple_ref/occ/data/key" --><span class="var">key</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSNumber returning the reverse rank of the given member or -1 if the member was not a member of the sorted set.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zscore:of:;   name=ObjCRedis::zscore:of: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zscore:of:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="zscore:of:">zscore:of:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Return the score associated with the specified element of the sorted set at key.
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/zscore //apple_ref/occ/clm/zscore //apple_ref/occ/intfcm/zscore //apple_ref/occ/intfm/zscore //apple_ref/occ/func/zscore //apple_ref/occ/ftmplt/zscore //apple_ref/occ/defn/zscore //apple_ref/occ/macro/zscore" --><span class="function">zscore</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">value</span> <!-- a logicalPath="//apple_ref/occ/instm/of //apple_ref/occ/clm/of //apple_ref/occ/intfcm/of //apple_ref/occ/intfm/of //apple_ref/occ/func/of //apple_ref/occ/ftmplt/of //apple_ref/occ/defn/of //apple_ref/occ/macro/of" --><span class="function">of</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/key //apple_ref/occ/data/key" --><span class="var">key</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->Returns nil if the 'key' does not exist or the 'member' is not in the sorted set, Otherwise returns an NSNumber with the members score.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zunionstore:to:;   name=ObjCRedis::zunionstore:to: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zunionstore:to:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="zunionstore:to:">zunionstore:to:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Perform a union over a number of sorted sets with default weights and aggregate. (BROKEN!)
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/zunionstore //apple_ref/occ/clm/zunionstore //apple_ref/occ/intfcm/zunionstore //apple_ref/occ/intfm/zunionstore //apple_ref/occ/func/zunionstore //apple_ref/occ/ftmplt/zunionstore //apple_ref/occ/defn/zunionstore //apple_ref/occ/macro/zunionstore" --><span class="function">zunionstore</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSArray //apple_ref/occ/tdef/NSArray //apple_ref/occ/tag/NSArray //apple_ref/occ/econst/NSArray //apple_ref/occ/struct/NSArray //apple_ref/occ/clconst/NSArray //apple_ref/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --><span class="type">*</span>)<span class="param">keys</span> <!-- a logicalPath="//apple_ref/occ/instm/to //apple_ref/occ/clm/to //apple_ref/occ/intfcm/to //apple_ref/occ/intfm/to //apple_ref/occ/func/to //apple_ref/occ/ftmplt/to //apple_ref/occ/defn/to //apple_ref/occ/macro/to" --><span class="function">to</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/key //apple_ref/occ/data/key" --><span class="var">key</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSNumber following Credis error conventions.
+
+<!-- end return value --></p><p></p><hr><!-- headerDoc=instm;  uid=//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zunionstore:to:weights:aggregate:;   name=ObjCRedis::zunionstore:to:weights:aggregate: -->
+<a name="//apple_ref/doc/compositePage/occ/instm/ObjCRedis/zunionstore:to:weights:aggregate:"></a>
+<table border="0"  cellpadding="2" cellspacing="2" width="300"><tr><td valign="top" height="12" colspan="5"><h3><a name="zunionstore:to:weights:aggregate:">zunionstore:to:weights:aggregate:</a></h3>
+</td></tr></table><hr><p><!-- begin abstract --><p>Perform a union over a number of sorted sets with weights and aggregate. (BROKEN!)
+<!-- end abstract --></p>
+<p></p><div class='declaration_indent'>
+<pre>- (<!-- a logicalPath="//apple_ref/occ/cl/NSNumber //apple_ref/occ/tdef/NSNumber //apple_ref/occ/tag/NSNumber //apple_ref/occ/econst/NSNumber //apple_ref/occ/struct/NSNumber //apple_ref/occ/clconst/NSNumber //apple_ref/occ/intf/NSNumber" --><span class="type">NSNumber</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/instm/zunionstore //apple_ref/occ/clm/zunionstore //apple_ref/occ/intfcm/zunionstore //apple_ref/occ/intfm/zunionstore //apple_ref/occ/func/zunionstore //apple_ref/occ/ftmplt/zunionstore //apple_ref/occ/defn/zunionstore //apple_ref/occ/macro/zunionstore" --><span class="function">zunionstore</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSArray //apple_ref/occ/tdef/NSArray //apple_ref/occ/tag/NSArray //apple_ref/occ/econst/NSArray //apple_ref/occ/struct/NSArray //apple_ref/occ/clconst/NSArray //apple_ref/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --><span class="type">*</span>)<span class="param">keys</span> <!-- a logicalPath="//apple_ref/occ/instm/to //apple_ref/occ/clm/to //apple_ref/occ/intfcm/to //apple_ref/occ/intfm/to //apple_ref/occ/func/to //apple_ref/occ/ftmplt/to //apple_ref/occ/defn/to //apple_ref/occ/macro/to" --><span class="function">to</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<span class="param">key</span> 
+        <!-- a logicalPath="//apple_ref/occ/instm/weights //apple_ref/occ/clm/weights //apple_ref/occ/intfcm/weights //apple_ref/occ/intfm/weights //apple_ref/occ/func/weights //apple_ref/occ/ftmplt/weights //apple_ref/occ/defn/weights //apple_ref/occ/macro/weights" --><span class="function">weights</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSArray //apple_ref/occ/tdef/NSArray //apple_ref/occ/tag/NSArray //apple_ref/occ/econst/NSArray //apple_ref/occ/struct/NSArray //apple_ref/occ/clconst/NSArray //apple_ref/occ/intf/NSArray" --><span class="type">NSArray</span><!-- /a --><span class="type">*</span>)<span class="param">weights</span> <!-- a logicalPath="//apple_ref/occ/instm/aggregate //apple_ref/occ/clm/aggregate //apple_ref/occ/intfcm/aggregate //apple_ref/occ/intfm/aggregate //apple_ref/occ/func/aggregate //apple_ref/occ/ftmplt/aggregate //apple_ref/occ/defn/aggregate //apple_ref/occ/macro/aggregate" --><span class="function">aggregate</span><!-- /a -->:(<!-- a logicalPath="//apple_ref/occ/cl/NSString //apple_ref/occ/tdef/NSString //apple_ref/occ/tag/NSString //apple_ref/occ/econst/NSString //apple_ref/occ/struct/NSString //apple_ref/occ/clconst/NSString //apple_ref/occ/intf/NSString" --><span class="type">NSString</span><!-- /a --><span class="type">*</span>)<!-- a logicalPath="//apple_ref/occ/econst/aggr //apple_ref/occ/data/aggr" --><span class="var">aggr</span><!-- /a -->; </pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5><p><!-- begin return value -->An NSNumber following Credis error conventions.
+
+<!-- end return value --></p><p></p><p>Last Updated: Thursday, October 07, 2010
+</p></body></html>
