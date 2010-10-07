@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>ObjCRedis/test_base.nu</string>
+	<string>ObjCRedis/Tests/test_base.nu</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -21,6 +21,20 @@
 	<integer>279</integer>
 	<key>metaData</key>
 	<dict>
+		<key>ObjCRedis/ObjCRedis.h</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>419</integer>
+		</dict>
 		<key>ObjCRedis/ObjCRedis.m</key>
 		<dict>
 			<key>caret</key>
@@ -33,103 +47,90 @@
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>263</integer>
 		</dict>
-		<key>ObjCRedis/credis.h</key>
+		<key>ObjCRedis/Tests/test_base.nu</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>44</integer>
+				<integer>40</integer>
 				<key>line</key>
-				<integer>173</integer>
+				<integer>686</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>287</integer>
+			<integer>714</integer>
 		</dict>
-		<key>ObjCRedis/notest_base_old.nu</key>
+		<key>ObjCRedis/credis.c</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>20</integer>
+				<integer>21</integer>
 				<key>line</key>
-				<integer>337</integer>
+				<integer>636</integer>
 			</dict>
 			<key>columnSelection</key>
 			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>320</integer>
+			<integer>387</integer>
 			<key>selectFrom</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>14</integer>
 				<key>line</key>
-				<integer>0</integer>
+				<integer>636</integer>
 			</dict>
 			<key>selectTo</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>21</integer>
 				<key>line</key>
-				<integer>367</integer>
+				<integer>636</integer>
 			</dict>
 		</dict>
-		<key>ObjCRedis/runtests.nu</key>
+		<key>ObjCRedis/credis.h</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>27</integer>
+				<integer>35</integer>
 				<key>line</key>
-				<integer>5</integer>
+				<integer>406</integer>
 			</dict>
+			<key>columnSelection</key>
+			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>ObjCRedis/test_base.nu</key>
-		<dict>
-			<key>caret</key>
+			<integer>392</integer>
+			<key>selectFrom</key>
 			<dict>
 				<key>column</key>
-				<integer>33</integer>
+				<integer>3</integer>
 				<key>line</key>
-				<integer>16</integer>
+				<integer>405</integer>
 			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>ObjCRedis/test_sets.nu</key>
-		<dict>
-			<key>caret</key>
+			<key>selectTo</key>
 			<dict>
 				<key>column</key>
-				<integer>18</integer>
+				<integer>35</integer>
 				<key>line</key>
-				<integer>0</integer>
+				<integer>406</integer>
 			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
-		<string>ObjCRedis/notest_base_old.nu</string>
-		<string>ObjCRedis/test_base.nu</string>
-		<string>ObjCRedis/test_sets.nu</string>
+		<string>ObjCRedis/Tests/test_base.nu</string>
 		<string>ObjCRedis/credis.h</string>
-		<string>ObjCRedis/runtests.nu</string>
+		<string>ObjCRedis/credis.c</string>
 		<string>ObjCRedis/ObjCRedis.m</string>
+		<string>ObjCRedis/ObjCRedis.h</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>

@@ -23,7 +23,7 @@
 
 /* Begin PBXBuildFile section */
 		0C1EE531124788DA00981F9A /* credis.c in Sources */ = {isa = PBXBuildFile; fileRef = 0C1EE52F124788DA00981F9A /* credis.c */; };
-		0C1EE532124788DA00981F9A /* credis.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C1EE530124788DA00981F9A /* credis.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C1EE532124788DA00981F9A /* credis.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C1EE530124788DA00981F9A /* credis.h */; settings = {ATTRIBUTES = (); }; };
 		0C1EE57E1247A25000981F9A /* ObjCRedis.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C1EE57C1247A25000981F9A /* ObjCRedis.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0C1EE57F1247A25000981F9A /* ObjCRedis.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1EE57D1247A25000981F9A /* ObjCRedis.m */; };
 		0C1EE58D1247A2D700981F9A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0867D69BFE84028FC02AAC07 /* Foundation.framework */; };

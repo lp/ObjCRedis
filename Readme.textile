@@ -1,2 +1,3 @@
-under development,
-come back in a few days for release version...
+h1. ObjCRedis
+                   
+h3. Objective-C Redis Client

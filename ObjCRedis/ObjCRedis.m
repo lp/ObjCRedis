@@ -29,6 +29,13 @@
 #import "NSArray+WithCVector.h"
 #import "NSSet+WithCVector.h"
 
+@interface ObjCRedis ()
+
+// Private Methods
+- (REDIS_AGGREGATE)aggregate:(NSString*)aggregate;
+
+@end
+
 @implementation ObjCRedis
 
 + (id)redis
@@ -378,7 +385,7 @@
 - (NSNumber*)bgrewriteaof { return [NSNumber numberWithInt:credis_bgrewriteaof(rh)]; }
 - (NSNumber*)shutdown { return [NSNumber numberWithInt:credis_shutdown(rh)]; }
 
-// Helper Method
+// Private Methods
 - (REDIS_AGGREGATE)aggregate:(NSString *)aggregate {
 	if ([aggregate isEqualToString:@"NONE"]) {
 		return NONE;

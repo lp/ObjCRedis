@@ -496,7 +496,5 @@
 */
 - (NSNumber*)shutdown;
 
-// Helper Method
-- (REDIS_AGGREGATE)aggregate:(NSString*)aggregate;
 
 @end
