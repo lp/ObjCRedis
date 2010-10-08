@@ -1,13 +1,13 @@
 h1. ObjCRedis
 
 p. An Objective-C client to the Redis 1.x and 2.x key-value store.  The full Redis API is not yet implemented, but still it works and is tested, some updates will follow.  All storage is assumed to be of NSString type, no binary blob supported.
+For now, I only distribute a x86_64 version.
 
 h3. Class documentation:
 * "lp.github.com/ObjCRedis":http://lp.github.com/ObjCRedis
 
 h3. Downloads:
-
-
+* "0.2.3 x86_64 release":http://github.com/downloads/lp/ObjCRedis/ObjCRedis_0o2o3_x86_64.zip
 
 h3. Acknowledgements:
 

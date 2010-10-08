@@ -27,18 +27,6 @@
 		0C1EE57E1247A25000981F9A /* ObjCRedis.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C1EE57C1247A25000981F9A /* ObjCRedis.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0C1EE57F1247A25000981F9A /* ObjCRedis.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1EE57D1247A25000981F9A /* ObjCRedis.m */; };
 		0C1EE58D1247A2D700981F9A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0867D69BFE84028FC02AAC07 /* Foundation.framework */; };
-		0C773A51125F467500AEE176 /* credis.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C1EE530124788DA00981F9A /* credis.h */; settings = {ATTRIBUTES = (); }; };
-		0C773A52125F467500AEE176 /* ObjCRedis.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C1EE57C1247A25000981F9A /* ObjCRedis.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0C773A53125F467500AEE176 /* NSArray+WithCVector.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CA595F2124D09AE00EC403D /* NSArray+WithCVector.h */; settings = {ATTRIBUTES = (); }; };
-		0C773A54125F467500AEE176 /* NSArray+includesHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CA596D1124DBB9200EC403D /* NSArray+includesHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0C773A55125F467500AEE176 /* NSSet+WithCVector.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C8BD58C124FA75A0041F072 /* NSSet+WithCVector.h */; };
-		0C773A57125F467500AEE176 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
-		0C773A59125F467500AEE176 /* credis.c in Sources */ = {isa = PBXBuildFile; fileRef = 0C1EE52F124788DA00981F9A /* credis.c */; };
-		0C773A5A125F467500AEE176 /* ObjCRedis.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1EE57D1247A25000981F9A /* ObjCRedis.m */; };
-		0C773A5B125F467500AEE176 /* NSArray+WithCVector.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA595F3124D09AE00EC403D /* NSArray+WithCVector.m */; };
-		0C773A5C125F467500AEE176 /* NSArray+includesHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA596D2124DBB9200EC403D /* NSArray+includesHelpers.m */; };
-		0C773A5D125F467500AEE176 /* NSSet+WithCVector.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8BD58D124FA75A0041F072 /* NSSet+WithCVector.m */; };
-		0C773A5F125F467500AEE176 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0867D69BFE84028FC02AAC07 /* Foundation.framework */; };
 		0C8BD58E124FA75A0041F072 /* NSSet+WithCVector.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C8BD58C124FA75A0041F072 /* NSSet+WithCVector.h */; };
 		0C8BD58F124FA75A0041F072 /* NSSet+WithCVector.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8BD58D124FA75A0041F072 /* NSSet+WithCVector.m */; };
 		0CA595F4124D09AE00EC403D /* NSArray+WithCVector.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CA595F2124D09AE00EC403D /* NSArray+WithCVector.h */; settings = {ATTRIBUTES = (); }; };
@@ -68,15 +56,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0C773A60125F467500AEE176 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -87,7 +66,6 @@
 		0C1EE57C1247A25000981F9A /* ObjCRedis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjCRedis.h; sourceTree = "<group>"; };
 		0C1EE57D1247A25000981F9A /* ObjCRedis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjCRedis.m; sourceTree = "<group>"; };
 		0C1EE7631249977E00981F9A /* BuildAndRunTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BuildAndRunTests-Info.plist"; sourceTree = "<group>"; };
-		0C773A64125F467500AEE176 /* ObjCRedis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ObjCRedis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C773A65125F467500AEE176 /* Info copy.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info copy.plist"; sourceTree = "<group>"; };
 		0C8BD58C124FA75A0041F072 /* NSSet+WithCVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet+WithCVector.h"; sourceTree = "<group>"; };
 		0C8BD58D124FA75A0041F072 /* NSSet+WithCVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSet+WithCVector.m"; sourceTree = "<group>"; };
@@ -102,14 +80,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0C773A5E125F467500AEE176 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0C773A5F125F467500AEE176 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8DC2EF560486A6940098B216 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -125,7 +95,6 @@
 			isa = PBXGroup;
 			children = (
 				8DC2EF5B0486A6940098B216 /* ObjCRedis_x86_64.framework */,
-				0C773A64125F467500AEE176 /* ObjCRedis.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -222,18 +191,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0C773A50125F467500AEE176 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0C773A51125F467500AEE176 /* credis.h in Headers */,
-				0C773A52125F467500AEE176 /* ObjCRedis.h in Headers */,
-				0C773A53125F467500AEE176 /* NSArray+WithCVector.h in Headers */,
-				0C773A54125F467500AEE176 /* NSArray+includesHelpers.h in Headers */,
-				0C773A55125F467500AEE176 /* NSSet+WithCVector.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8DC2EF500486A6940098B216 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -249,26 +206,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0C773A4F125F467500AEE176 /* ObjCRedis copy */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0C773A61125F467500AEE176 /* Build configuration list for PBXNativeTarget "ObjCRedis copy" */;
-			buildPhases = (
-				0C773A50125F467500AEE176 /* Headers */,
-				0C773A56125F467500AEE176 /* Resources */,
-				0C773A58125F467500AEE176 /* Sources */,
-				0C773A5E125F467500AEE176 /* Frameworks */,
-				0C773A60125F467500AEE176 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "ObjCRedis copy";
-			productInstallPath = "$(HOME)/Library/Frameworks";
-			productName = ObjCRedis;
-			productReference = 0C773A64125F467500AEE176 /* ObjCRedis.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		8DC2EF4F0486A6940098B216 /* ObjCRedis_x86_64 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "ObjCRedis_x86_64" */;
@@ -304,20 +241,11 @@
 			targets = (
 				8DC2EF4F0486A6940098B216 /* ObjCRedis_x86_64 */,
 				0C8BDA4412525BAA0041F072 /* BuildAndTestWithNu_x86_64 */,
-				0C773A4F125F467500AEE176 /* ObjCRedis copy */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0C773A56125F467500AEE176 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0C773A57125F467500AEE176 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8DC2EF520486A6940098B216 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -345,18 +273,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0C773A58125F467500AEE176 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0C773A59125F467500AEE176 /* credis.c in Sources */,
-				0C773A5A125F467500AEE176 /* ObjCRedis.m in Sources */,
-				0C773A5B125F467500AEE176 /* NSArray+WithCVector.m in Sources */,
-				0C773A5C125F467500AEE176 /* NSArray+includesHelpers.m in Sources */,
-				0C773A5D125F467500AEE176 /* NSSet+WithCVector.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8DC2EF540486A6940098B216 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -391,54 +307,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		0C773A62125F467500AEE176 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				COPY_PHASE_STRIP = NO;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_VERSION = A;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_ENABLE_OBJC_GC = supported;
-				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = ObjCRedis_Prefix.pch;
-				INFOPLIST_FILE = "Info copy.plist";
-				INSTALL_PATH = "$(HOME)/Library/Frameworks";
-				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_NAME = ObjCRedis;
-				VALID_ARCHS = x86_64;
-				WRAPPER_EXTENSION = framework;
-			};
-			name = Debug;
-		};
-		0C773A63125F467500AEE176 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_VERSION = A;
-				GCC_ENABLE_OBJC_GC = supported;
-				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = ObjCRedis_Prefix.pch;
-				INFOPLIST_FILE = "Info copy.plist";
-				INSTALL_PATH = "$(HOME)/Library/Frameworks";
-				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_NAME = ObjCRedis;
-				VALID_ARCHS = x86_64;
-				WRAPPER_EXTENSION = framework;
-			};
-			name = Release;
-		};
 		0C8BDA4512525BAA0041F072 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -537,15 +405,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0C773A61125F467500AEE176 /* Build configuration list for PBXNativeTarget "ObjCRedis copy" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0C773A62125F467500AEE176 /* Debug */,
-				0C773A63125F467500AEE176 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		0C8BDA4912525BCD0041F072 /* Build configuration list for PBXAggregateTarget "BuildAndTestWithNu_x86_64" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
