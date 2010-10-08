@@ -21,8 +21,6 @@
 ; 
 ; 
 
-(load "ObjCRedis")
-
 ; Pre-init Reality check
 (class Test_01_Reality is NuTestCase
   
