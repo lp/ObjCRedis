@@ -1,3 +1,5 @@
+h2. Deprecated!  Use "ObjCHiredis":https://github.com/lp/ObjCHiredis instead.
+
 h1. ObjCRedis
 
 p. An Objective-C client to the Redis 1.x and 2.x key-value store.  The full Redis API is not yet implemented, but still it works and is tested, some updates will follow.  All storage is assumed to be of NSString type, no binary blob supported.
